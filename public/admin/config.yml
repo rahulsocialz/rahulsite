@@ -161,7 +161,15 @@ collections:
           - { name: email, label: "Contact email", widget: string }
           - { name: instagramHandle, label: "Instagram handle (e.g. @rahulb91)", widget: string }
           - { name: instagramUrl, label: "Instagram link", widget: string }
+          - name: instagramFeedUrl
+            label: "Instagram feed URL (from behold.so — shows your latest posts on the homepage)"
+            widget: string
+            required: false
           - { name: url, label: "Website address", widget: string }
+          - name: web3formsAccessKey
+            label: "Contact form access key (from web3forms.com — safe to make public, only used to route the form to your email)"
+            widget: string
+            required: false
           - { name: seoTitle, label: "Default SEO title", widget: string }
           - { name: seoDescription, label: "Default SEO description", widget: text }
           - { name: seoImage, label: "Social share image", widget: image, required: false }

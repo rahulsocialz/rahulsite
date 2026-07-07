@@ -12,7 +12,9 @@ export const site = {
   email: settings.email,
   instagramHandle: settings.instagramHandle,
   instagramUrl: settings.instagramUrl,
+  instagramFeedUrl: settings.instagramFeedUrl || "",
   url: settings.url,
+  web3formsAccessKey: settings.web3formsAccessKey || "",
   seo: {
     title: settings.seoTitle,
     description: settings.seoDescription,
