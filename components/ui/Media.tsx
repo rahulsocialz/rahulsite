@@ -14,6 +14,7 @@ export function Media({
   blurDataURL,
   focal = "50% 50%",
   fit = "cover",
+  style,
 }: {
   src: string;
   alt: string;
@@ -24,9 +25,13 @@ export function Media({
   blurDataURL?: string;
   focal?: string;
   fit?: "cover" | "contain";
+  style?: React.CSSProperties;
 }) {
   return (
-    <div className={`relative overflow-hidden ${fit === "cover" ? "bg-surface" : ""} ${className}`}>
+    <div
+      className={`relative overflow-hidden ${fit === "cover" ? "bg-surface" : ""} ${className}`}
+      style={style}
+    >
       <Image
         src={src}
         alt={alt}

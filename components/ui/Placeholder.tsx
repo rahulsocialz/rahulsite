@@ -6,15 +6,18 @@ export function Placeholder({
   className = "",
   labelClassName = "",
   accent,
+  style,
 }: {
   label?: string;
   className?: string;
   labelClassName?: string;
   accent?: string;
+  style?: React.CSSProperties;
 }) {
   return (
     <div
       className={`relative overflow-hidden border bg-surface hairline ${className}`}
+      style={style}
       role="img"
       aria-label={label ? `${label} — image placeholder` : "Image placeholder"}
     >

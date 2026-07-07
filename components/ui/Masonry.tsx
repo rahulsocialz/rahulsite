@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 /* Reliable masonry: items are distributed left-to-right into a fixed number
    of equal columns, so column tops always align (no CSS multi-column gap).
    Varied item heights give the staggered, "uneven but perfect" grid. */
-function useColumns(base = 1, sm = 2, lg = 3) {
+function useColumns(base: number, sm: number, lg: number) {
   const [cols, setCols] = useState(lg);
   useEffect(() => {
     const calc = () => {
@@ -23,18 +23,20 @@ export function Masonry<T>({
   items,
   render,
   gap = "gap-4 lg:gap-5",
+  columns = { base: 1, sm: 2, lg: 3 },
 }: {
   items: T[];
   render: (item: T, index: number) => React.ReactNode;
   gap?: string;
+  columns?: { base: number; sm: number; lg: number };
 }) {
-  const cols = useColumns();
-  const columns: { item: T; index: number }[][] = Array.from({ length: cols }, () => []);
-  items.forEach((item, index) => columns[index % cols].push({ item, index }));
+  const cols = useColumns(columns.base, columns.sm, columns.lg);
+  const buckets: { item: T; index: number }[][] = Array.from({ length: cols }, () => []);
+  items.forEach((item, index) => buckets[index % cols].push({ item, index }));
 
   return (
     <div className={`flex ${gap}`}>
-      {columns.map((col, c) => (
+      {buckets.map((col, c) => (
         <div key={c} className={`flex flex-1 flex-col ${gap}`}>
           {col.map(({ item, index }) => (
             <div key={index}>{render(item, index)}</div>

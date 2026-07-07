@@ -39,6 +39,7 @@ export interface Project {
   featuredImage?: string;
   heroImage?: string;
   gallery?: string[];
+  videos?: string[];
   // Optional — only rendered where present.
   client?: string;
   location?: string;

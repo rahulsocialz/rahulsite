@@ -58,6 +58,7 @@ export default async function ProjectDetail({
 
       <ProjectShowcase
         images={project.gallery ?? []}
+        videos={project.videos ?? []}
         placeholderCount={project.placeholderCount}
         accent={project.accent}
         title={project.title}

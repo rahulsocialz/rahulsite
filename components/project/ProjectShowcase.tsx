@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Placeholder } from "@/components/ui/Placeholder";
 import { Media } from "@/components/ui/Media";
 import { Masonry } from "@/components/ui/Masonry";
+import { vimeoEmbedUrl } from "@/lib/vimeo";
 
 // Varied aspect ratios for the "uneven but perfect" masonry below the hero.
 const ASPECTS = [
@@ -27,13 +28,19 @@ function Chevron({ dir }: { dir: "left" | "right" }) {
   );
 }
 
+// The gallery below the hero mixes photos (click to bring up top) with
+// Vimeo videos (play inline, in place — the hero only cycles photos).
+type GalleryItem = { kind: "image"; src: string } | { kind: "video"; embedUrl: string };
+
 export function ProjectShowcase({
   images,
+  videos = [],
   placeholderCount,
   accent,
   title,
 }: {
   images: string[];
+  videos?: string[];
   placeholderCount: number;
   accent: string;
   title: string;
@@ -58,7 +65,7 @@ export function ProjectShowcase({
     <Placeholder accent={accent} label={pad(active)} className="h-full w-full" />
   );
 
-  const tile = (i: number, aspectClass: string) =>
+  const imageTile = (i: number, aspectClass: string) =>
     hasImages ? (
       <Media
         src={images[i]}
@@ -74,6 +81,14 @@ export function ProjectShowcase({
         className={`${aspectClass} transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.03]`}
       />
     );
+
+  const galleryItems: GalleryItem[] = [
+    ...Array.from({ length: count }, (_, i) => ({ kind: "image" as const, src: hasImages ? images[i] : "" })),
+    ...videos
+      .map(vimeoEmbedUrl)
+      .filter((u): u is string => Boolean(u))
+      .map((embedUrl) => ({ kind: "video" as const, embedUrl })),
+  ];
 
   const arrowBtn =
     "pointer-events-auto flex h-11 w-11 items-center justify-center rounded-pill border border-line-strong bg-bg/60 text-fg backdrop-blur-md transition-[transform,background-color] duration-300 ease-[var(--ease-out)] hover:-translate-y-px hover:bg-bg/80";
@@ -112,22 +127,34 @@ export function ProjectShowcase({
         )}
       </div>
 
-      {/* Scattered masonry below */}
+      {/* Scattered masonry below — photos and videos side by side */}
       <div className="mt-4 lg:mt-5">
         <Masonry
-          items={Array.from({ length: count }, (_, i) => i)}
-          render={(i) => (
-            <button
-              onClick={() => {
-                setActive(i);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-              aria-label={`Show image ${pad(i)}`}
-              className="group block w-full overflow-hidden"
-            >
-              {tile(i, ASPECTS[i % ASPECTS.length])}
-            </button>
-          )}
+          items={galleryItems}
+          render={(item, i) =>
+            item.kind === "video" ? (
+              <div className="aspect-video w-full overflow-hidden bg-surface">
+                <iframe
+                  src={item.embedUrl}
+                  title={`${title}, video`}
+                  className="h-full w-full"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  loading="lazy"
+                />
+              </div>
+            ) : (
+              <button
+                onClick={() => {
+                  setActive(i);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                aria-label={`Show image ${pad(i)}`}
+                className="group block w-full overflow-hidden"
+              >
+                {imageTile(i, ASPECTS[i % ASPECTS.length])}
+              </button>
+            )
+          }
         />
       </div>
     </div>
