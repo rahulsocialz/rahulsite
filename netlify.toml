@@ -1,0 +1,17 @@
+# Netlify build settings for the Next.js site.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Serve the Decap CMS editor at /admin. Real files (index.html, config.yml)
+# are served first; only the bare /admin path falls through to index.html.
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200

@@ -1,0 +1,169 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://rahulb.me
+display_url: https://rahulb.me
+
+collections:
+  # ---------------------------------------------------------------- Projects
+  - name: projects
+    label: "Projects"
+    files:
+      - name: projects
+        label: "All Projects"
+        file: "content/projects.json"
+        description: "Your portfolio. Drag to reorder, or set the Order number. Tick a project to feature it on the homepage or include it in the hero."
+        fields:
+          - name: projects
+            label: "Projects"
+            label_singular: "Project"
+            widget: list
+            summary: "{{fields.title}} — {{fields.subtitle}}"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: subtitle, label: "Subtitle", widget: string }
+              - name: slug
+                label: "Web address (lowercase, dashes, no spaces)"
+                widget: string
+                pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers and dashes only"]
+              - name: categories
+                label: "Categories (choose one or more)"
+                widget: select
+                multiple: true
+                options:
+                  - { label: "Campaigns", value: "campaigns" }
+                  - { label: "Social", value: "social" }
+                  - { label: "Photo", value: "photo" }
+                  - { label: "Video", value: "video" }
+                  - { label: "Art Direction", value: "art-direction" }
+              - { name: description, label: "Description", widget: text }
+              - name: featuredImage
+                label: "Cover image (grid + card)"
+                widget: image
+                required: false
+              - name: heroImage
+                label: "Hero image (used if this is a homepage hero)"
+                widget: image
+                required: false
+              - name: gallery
+                label: "Gallery images"
+                widget: list
+                required: false
+                field: { name: image, label: "Image", widget: image }
+              - { name: featured, label: "Feature on homepage (Selected Works)", widget: boolean, default: false }
+              - { name: hero, label: "Include in homepage hero slideshow", widget: boolean, default: false }
+              - { name: order, label: "Order (lower shows first)", widget: number, value_type: int, default: 99 }
+              - name: accent
+                label: "Accent colour (hex, used before a cover image is added)"
+                widget: string
+                required: false
+                default: "#888888"
+              - name: placeholderCount
+                label: "Placeholder frames (until gallery images are added)"
+                widget: number
+                value_type: int
+                required: false
+                default: 6
+              - { name: client, label: "Client", widget: string, required: false }
+              - { name: location, label: "Location", widget: string, required: false }
+              - { name: year, label: "Year", widget: string, required: false }
+              - { name: externalUrl, label: "External link", widget: string, required: false }
+              - { name: seoTitle, label: "SEO title", widget: string, required: false }
+              - { name: seoDescription, label: "SEO description", widget: text, required: false }
+
+  # ------------------------------------------------------------- Featured In
+  - name: press
+    label: "Featured In"
+    files:
+      - name: press
+        label: "Press Features"
+        file: "content/press.json"
+        description: "Publications that have featured your work. Add as many as you like — a Load More button appears on the page after eight."
+        fields:
+          - name: press
+            label: "Features"
+            label_singular: "Feature"
+            widget: list
+            summary: "{{fields.publication}} — {{fields.title}}"
+            fields:
+              - name: publication
+                label: "Publication"
+                widget: select
+                options: ["Billboard", "Rolling Stone", "Variety", "NME", "Clash", "Wonderland"]
+              - { name: title, label: "Article title", widget: string }
+              - { name: date, label: "Date (e.g. June 2024)", widget: string }
+              - { name: url, label: "Link to article", widget: string, required: false }
+
+  # ------------------------------------------------------------------ Awards
+  - name: awards
+    label: "Awards"
+    files:
+      - name: awards
+        label: "Awards"
+        file: "content/awards.json"
+        description: "Awards shown on the homepage."
+        fields:
+          - name: awards
+            label: "Awards"
+            label_singular: "Award"
+            widget: list
+            summary: "{{fields.name}} — {{fields.detail}}"
+            fields:
+              - { name: name, label: "Award name", widget: string }
+              - { name: detail, label: "Detail (e.g. Winner, Camila Cabello)", widget: string }
+
+  # ---------------------------------------------------------------- Homepage
+  - name: home
+    label: "Homepage"
+    files:
+      - name: home
+        label: "Hero, About & Instagram"
+        file: "content/home.json"
+        fields:
+          - name: hero
+            label: "Hero"
+            widget: object
+            fields:
+              - { name: headline, label: "Headline (one line per line break)", widget: text }
+              - { name: supporting, label: "Supporting line", widget: text }
+              - { name: cta, label: "Button label", widget: string }
+          - name: about
+            label: "About"
+            widget: object
+            fields:
+              - { name: heading, label: "Heading (one line per line break)", widget: text }
+              - { name: body, label: "Body (blank line between paragraphs)", widget: text }
+              - { name: image, label: "Portrait photo", widget: image, required: false }
+          - name: instagram
+            label: "Instagram row"
+            widget: object
+            fields:
+              - name: images
+                label: "Six images"
+                widget: list
+                required: false
+                field: { name: image, label: "Image", widget: image }
+
+  # ------------------------------------------------------------ Site Settings
+  - name: settings
+    label: "Site Settings"
+    files:
+      - name: general
+        label: "General & SEO"
+        file: "content/settings.json"
+        fields:
+          - { name: name, label: "Your name", widget: string }
+          - { name: role, label: "Role (e.g. Photographer & Director)", widget: string }
+          - { name: email, label: "Contact email", widget: string }
+          - { name: instagramHandle, label: "Instagram handle (e.g. @rahulb91)", widget: string }
+          - { name: instagramUrl, label: "Instagram link", widget: string }
+          - { name: url, label: "Website address", widget: string }
+          - { name: seoTitle, label: "Default SEO title", widget: string }
+          - { name: seoDescription, label: "Default SEO description", widget: text }
+          - { name: seoImage, label: "Social share image", widget: image, required: false }
