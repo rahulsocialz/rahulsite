@@ -5,7 +5,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Placeholder } from "@/components/ui/Placeholder";
 import { Media } from "@/components/ui/Media";
 import { Masonry } from "@/components/ui/Masonry";
-import { vimeoEmbedUrl } from "@/lib/vimeo";
+import { detectEmbed, type Embed } from "@/lib/embeds";
+import { TikTokEmbed } from "./TikTokEmbed";
+import { InstagramEmbed } from "./InstagramEmbed";
 
 // Varied aspect ratios for the "uneven but perfect" masonry below the hero.
 const ASPECTS = [
@@ -29,8 +31,9 @@ function Chevron({ dir }: { dir: "left" | "right" }) {
 }
 
 // The gallery below the hero mixes photos (click to bring up top) with
-// Vimeo videos (play inline, in place — the hero only cycles photos).
-type GalleryItem = { kind: "image"; src: string } | { kind: "video"; embedUrl: string };
+// videos — Vimeo, TikTok or Instagram links, auto-detected — that play
+// inline in place. The hero at the top only cycles through photos.
+type GalleryItem = { kind: "image"; src: string } | { kind: "video"; embed: Embed };
 
 export function ProjectShowcase({
   images,
@@ -85,9 +88,9 @@ export function ProjectShowcase({
   const galleryItems: GalleryItem[] = [
     ...Array.from({ length: count }, (_, i) => ({ kind: "image" as const, src: hasImages ? images[i] : "" })),
     ...videos
-      .map(vimeoEmbedUrl)
-      .filter((u): u is string => Boolean(u))
-      .map((embedUrl) => ({ kind: "video" as const, embedUrl })),
+      .map(detectEmbed)
+      .filter((e): e is Embed => e !== null)
+      .map((embed) => ({ kind: "video" as const, embed })),
   ];
 
   const arrowBtn =
@@ -133,15 +136,21 @@ export function ProjectShowcase({
           items={galleryItems}
           render={(item, i) =>
             item.kind === "video" ? (
-              <div className="aspect-video w-full overflow-hidden bg-surface">
-                <iframe
-                  src={item.embedUrl}
-                  title={`${title}, video`}
-                  className="h-full w-full"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  loading="lazy"
-                />
-              </div>
+              item.embed.platform === "youtube" || item.embed.platform === "vimeo" ? (
+                <div className="aspect-video w-full overflow-hidden bg-surface">
+                  <iframe
+                    src={item.embed.embedUrl}
+                    title={`${title}, video`}
+                    className="h-full w-full"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  />
+                </div>
+              ) : item.embed.platform === "tiktok" ? (
+                <TikTokEmbed videoId={item.embed.tiktokVideoId!} url={item.embed.url} />
+              ) : (
+                <InstagramEmbed url={item.embed.url} />
+              )
             ) : (
               <button
                 onClick={() => {

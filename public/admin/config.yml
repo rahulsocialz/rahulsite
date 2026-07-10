@@ -55,10 +55,10 @@ collections:
                 required: false
                 field: { name: image, label: "Image", widget: image }
               - name: videos
-                label: "Videos (paste Vimeo links — e.g. https://vimeo.com/123456789)"
+                label: "Videos (paste a YouTube, Vimeo, TikTok or Instagram post link)"
                 widget: list
                 required: false
-                field: { name: url, label: "Vimeo link", widget: string }
+                field: { name: url, label: "Video link", widget: string }
               - { name: featured, label: "Feature on homepage (Selected Works)", widget: boolean, default: false }
               - { name: hero, label: "Include in homepage hero slideshow", widget: boolean, default: false }
               - { name: order, label: "Order (lower shows first)", widget: number, value_type: int, default: 99 }
