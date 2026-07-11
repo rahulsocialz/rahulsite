@@ -580,11 +580,11 @@
       ],
       "accent": "#4b57b0",
       "featured": false,
-      "hero": false,
+      "hero": true,
       "order": 9,
       "placeholderCount": 6,
       "featuredImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
-      "heroImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
+      "heroImage": "/images/uploads/renee-rapp-bite-me/02.jpg",
       "gallery": [
         {
           "image": "/images/uploads/renee-rapp-bite-me/01.jpg",
@@ -755,7 +755,7 @@
       ],
       "accent": "#2f9bd6",
       "featured": false,
-      "hero": false,
+      "hero": true,
       "order": 11,
       "placeholderCount": 6,
       "featuredImage": "/images/uploads/coldplay/01.jpg",
@@ -895,11 +895,11 @@
       ],
       "accent": "#c6982f",
       "featured": false,
-      "hero": false,
+      "hero": true,
       "order": 15,
       "placeholderCount": 6,
       "featuredImage": "/images/uploads/katseye-gnarly-campaign/01.jpg",
-      "heroImage": "/images/uploads/katseye-gnarly-campaign/01.jpg",
+      "heroImage": "/images/uploads/katseye-gnarly-campaign/08.jpg",
       "gallery": [
         {
           "image": "/images/uploads/katseye-gnarly-campaign/01.jpg",
@@ -1036,11 +1036,11 @@
       ],
       "accent": "#d98a3d",
       "featured": false,
-      "hero": false,
+      "hero": true,
       "order": 16,
       "placeholderCount": 6,
       "featuredImage": "/images/uploads/camila-cabello-havana/01.jpg",
-      "heroImage": "/images/uploads/camila-cabello-havana/01.jpg",
+      "heroImage": "/images/uploads/camila-cabello-havana/02.jpg",
       "gallery": [
         {
           "image": "/images/uploads/camila-cabello-havana/01.jpg",

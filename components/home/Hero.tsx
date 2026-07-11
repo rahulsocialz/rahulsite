@@ -151,18 +151,25 @@ export function Hero() {
             ))}
         </div>
 
-        {/* Scrim for legibility (bottom + left for text, faint top for nav) */}
+        {/* Scrim for legibility (bottom + left for text, faint top for nav).
+            Always dark, regardless of site theme — a light-mode scrim here
+            reads as a hazy white wash over the photo rather than a vignette. */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, var(--bg) 1%, transparent 60%), linear-gradient(100deg, var(--bg) 5%, transparent 52%), linear-gradient(to bottom, var(--bg) 0%, transparent 14%)",
+              "linear-gradient(to top, #090909 1%, transparent 60%), linear-gradient(100deg, #090909 5%, transparent 52%), linear-gradient(to bottom, #090909 0%, transparent 14%)",
           }}
         />
 
-        {/* Text over the image */}
-        <div className="absolute inset-0 z-10 flex items-end">
+        {/* Text over the image — forced light regardless of site theme, to
+            match the always-dark scrim above (a hero photo needs its own
+            consistent contrast, independent of the page's light/dark mode). */}
+        <div
+          className="absolute inset-0 z-10 flex items-end"
+          style={{ "--text": "#f2f0ea", "--text-secondary": "rgba(242,240,234,0.75)" } as React.CSSProperties}
+        >
           <div className="shell w-full pb-12 lg:pb-16">
             <div className="flex items-end justify-between gap-8">
               <div className="max-w-3xl">
