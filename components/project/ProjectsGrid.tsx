@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { categories, categoryLabel, sorted, type CategoryKey } from "@/data/projects";
 import { ProjectCard } from "./ProjectCard";
@@ -31,6 +31,25 @@ export function ProjectsGrid() {
   const filtered =
     filter === "all" ? sorted : sorted.filter((p) => p.categories.includes(filter));
   const shown = filtered.slice(0, visible);
+  const hasMore = shown.length < filtered.length;
+
+  // Auto-load the next page as the sentinel scrolls into view, instead of
+  // waiting for a manual click. rootMargin fires it a little early so the
+  // next batch is ready before the user hits the true bottom.
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!hasMore) return;
+    const el = sentinelRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) setVisible((v) => v + PAGE);
+      },
+      { rootMargin: "600px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [hasMore]);
 
   return (
     <div>
@@ -79,16 +98,7 @@ export function ProjectsGrid() {
         </motion.div>
       </AnimatePresence>
 
-      {shown.length < filtered.length && (
-        <div className="mt-10 flex justify-center">
-          <button
-            onClick={() => setVisible((v) => v + PAGE)}
-            className="group inline-flex items-center gap-2.5 rounded-pill border border-line-strong px-10 py-4 text-[0.72rem] font-medium uppercase tracking-[0.14em] transition-[transform,border-color] duration-300 ease-[var(--ease-out)] hover:-translate-y-px hover:border-fg"
-          >
-            Load More
-          </button>
-        </div>
-      )}
+      {hasMore && <div ref={sentinelRef} aria-hidden className="h-1" />}
     </div>
   );
 }
