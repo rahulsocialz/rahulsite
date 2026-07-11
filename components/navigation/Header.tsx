@@ -47,7 +47,7 @@ export function Header() {
       >
         <Link
           href="/"
-          className="text-[0.72rem] font-semibold uppercase tracking-[0.22em]"
+          className="text-fg text-[0.72rem] font-semibold uppercase tracking-[0.22em]"
         >
           Rahul Bhatt
         </Link>

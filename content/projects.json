@@ -2336,6 +2336,43 @@
       "seoTitle": "",
       "seoDescription": "",
       "videos": []
+    },
+    {
+      "slug": "alicia-keys-santa-baby-rollout",
+      "title": "Alicia Keys",
+      "subtitle": "Santa Baby Album Roll Out",
+      "description": "",
+      "categories": [
+        "campaigns",
+        "photo"
+      ],
+      "accent": "#c6982f",
+      "featured": false,
+      "hero": false,
+      "order": 34,
+      "placeholderCount": 6,
+      "featuredImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
+      "heroImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
+      "featuredFocalPoint": "center",
+      "gallery": [
+        {
+          "image": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/alicia-keys-santa-baby-rollout/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
+      ],
+      "videos": [],
+      "client": "",
+      "location": "",
+      "year": "",
+      "externalUrl": "",
+      "seoTitle": "",
+      "seoDescription": ""
     }
   ]
 }
