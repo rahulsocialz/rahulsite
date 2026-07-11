@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
-  { href: "/projects", label: "Work", match: "/projects" },
   { href: "/", label: "Home", exact: true },
+  { href: "/projects", label: "Work", match: "/projects" },
   { href: "/#awards", label: "Awards" },
   { href: "/featured-in", label: "Featured In", match: "/featured-in" },
 ];
