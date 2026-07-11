@@ -7,6 +7,8 @@ const marks: Record<string, { text: string; className: string }> = {
   NME: { text: "NME", className: "wm-nme" },
   Clash: { text: "CLASH", className: "wm-clash" },
   Wonderland: { text: "Wonderland.", className: "wm-wonderland" },
+  Vogue: { text: "VOGUE", className: "wm-vogue" },
+  "Vogue Magazine": { text: "VOGUE", className: "wm-vogue" },
 };
 
 export function PublicationMark({

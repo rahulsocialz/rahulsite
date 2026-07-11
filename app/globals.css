@@ -260,6 +260,7 @@ body {
 .wm-nme { font-weight: 900; letter-spacing: 0.08em; }
 .wm-clash { font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; }
 .wm-wonderland { font-family: Georgia, "Times New Roman", serif; font-weight: 600; letter-spacing: 0.01em; }
+.wm-vogue { font-family: Georgia, "Times New Roman", serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; }
 
 /* ============================================================
    LIGHT-MODE MULTI-COLOUR ("wow factor")
