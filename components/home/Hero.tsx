@@ -177,7 +177,7 @@ export function Hero() {
                 <div className="mt-4">
                   <Headline
                     lines={site.hero.headline}
-                    className="headline-multi font-medium leading-[1.0] tracking-[-0.03em] text-[clamp(2.4rem,6vw,5.4rem)]"
+                    className="headline-multi font-medium leading-[1.0] tracking-[-0.03em] text-[clamp(2.1rem,5vw,4.6rem)]"
                   />
                 </div>
                 <p className="lead fade-in mt-5 max-w-md" style={{ animationDelay: "0.7s" }}>
