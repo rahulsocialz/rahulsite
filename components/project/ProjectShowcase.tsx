@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Placeholder } from "@/components/ui/Placeholder";
 import { Media } from "@/components/ui/Media";
@@ -11,7 +11,7 @@ import type { GalleryImage } from "@/data/projects";
 import { TikTokEmbed } from "./TikTokEmbed";
 import { InstagramEmbed } from "./InstagramEmbed";
 
-// Varied aspect ratios for the "uneven but perfect" masonry below the hero.
+// Varied aspect ratios for the "uneven but perfect" masonry grid.
 const ASPECTS = [
   "aspect-[4/5]",
   "aspect-[4/3]",
@@ -32,12 +32,55 @@ function Chevron({ dir }: { dir: "left" | "right" }) {
   );
 }
 
-// The gallery below the hero mixes photos (click to bring up top) with
-// videos — Vimeo, TikTok or Instagram links, auto-detected — that play
-// inline in place. The hero at the top only cycles through photos.
+function CloseIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+      <path d="M6 6l12 12M18 6L6 18" />
+    </svg>
+  );
+}
+
+function PlayIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M8 5v14l11-7z" />
+    </svg>
+  );
+}
+
+// A single grid of photos and videos (Vimeo, YouTube, TikTok or Instagram
+// links, auto-detected). Clicking any tile opens a lightbox showing that
+// item full-size, with arrows to step through every item and an X to close —
+// nothing on the page scrolls or re-flows when you pick a different one.
 type GalleryItem =
   | { kind: "image"; src: string; caption?: string; focalPoint?: string }
   | { kind: "video"; embed: Embed };
+
+// Vimeo/YouTube support ?autoplay=1 on their embed URL; TikTok/Instagram
+// embeds don't, so they just open ready to press play.
+function autoplaySrc(embed: Embed) {
+  if (!embed.embedUrl) return embed.embedUrl;
+  const sep = embed.embedUrl.includes("?") ? "&" : "?";
+  return `${embed.embedUrl}${sep}autoplay=1`;
+}
+
+function VideoEmbed({ embed, title, autoplay }: { embed: Embed; title: string; autoplay?: boolean }) {
+  if (embed.platform === "youtube" || embed.platform === "vimeo") {
+    return (
+      <div className="aspect-video w-full overflow-hidden bg-surface">
+        <iframe
+          src={autoplay ? autoplaySrc(embed) : embed.embedUrl}
+          title={`${title}, video`}
+          className="h-full w-full"
+          allow="autoplay; fullscreen; picture-in-picture"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+  if (embed.platform === "tiktok") return <TikTokEmbed videoId={embed.tiktokVideoId!} url={embed.url} />;
+  return <InstagramEmbed url={embed.url} />;
+}
 
 export function ProjectShowcase({
   images,
@@ -54,23 +97,42 @@ export function ProjectShowcase({
 }) {
   const hasImages = images.length > 0;
   const count = hasImages ? images.length : Math.max(placeholderCount, 1);
-  const [active, setActive] = useState(0);
   const pad = (n: number) => String(n + 1).padStart(2, "0");
-  const go = useCallback((delta: number) => setActive((a) => (a + delta + count) % count), [count]);
 
-  // Hero shows the whole photo (contain) so vertical shots aren't cropped.
-  const hero = hasImages ? (
-    <Media
-      src={images[active].image}
-      alt={`${title}, image ${pad(active)}`}
-      sizes="(min-width:1024px) 80vw, 100vw"
-      priority
-      fit="contain"
-      className="h-full w-full"
-    />
-  ) : (
-    <Placeholder accent={accent} label={pad(active)} className="h-full w-full" />
+  const galleryItems: GalleryItem[] = [
+    ...Array.from({ length: count }, (_, i) => ({
+      kind: "image" as const,
+      src: hasImages ? images[i].image : "",
+      caption: hasImages ? images[i].caption : undefined,
+      focalPoint: hasImages ? images[i].focalPoint : undefined,
+    })),
+    ...videos
+      .map(detectEmbed)
+      .filter((e): e is Embed => e !== null)
+      .map((embed) => ({ kind: "video" as const, embed })),
+  ];
+
+  const [lightbox, setLightbox] = useState<number | null>(null);
+  const stepLightbox = useCallback(
+    (delta: number) => setLightbox((i) => (i === null ? i : (i + delta + galleryItems.length) % galleryItems.length)),
+    [galleryItems.length]
   );
+
+  useEffect(() => {
+    if (lightbox === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "ArrowLeft") stepLightbox(-1);
+      if (e.key === "ArrowRight") stepLightbox(1);
+    };
+    window.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [lightbox, stepLightbox]);
 
   const imageTile = (i: number, aspectClass: string) =>
     hasImages ? (
@@ -90,100 +152,129 @@ export function ProjectShowcase({
       />
     );
 
-  const galleryItems: GalleryItem[] = [
-    ...Array.from({ length: count }, (_, i) => ({
-      kind: "image" as const,
-      src: hasImages ? images[i].image : "",
-      caption: hasImages ? images[i].caption : undefined,
-      focalPoint: hasImages ? images[i].focalPoint : undefined,
-    })),
-    ...videos
-      .map(detectEmbed)
-      .filter((e): e is Embed => e !== null)
-      .map((embed) => ({ kind: "video" as const, embed })),
-  ];
-
   const arrowBtn =
-    "pointer-events-auto flex h-11 w-11 items-center justify-center rounded-pill border border-line-strong bg-bg/60 text-fg backdrop-blur-md transition-[transform,background-color] duration-300 ease-[var(--ease-out)] hover:-translate-y-px hover:bg-bg/80";
+    "pointer-events-auto flex h-11 w-11 items-center justify-center rounded-pill border border-white/20 bg-black/40 text-white backdrop-blur-md transition-[transform,background-color] duration-300 ease-[var(--ease-out)] hover:-translate-y-px hover:bg-black/60";
+
+  const current = lightbox !== null ? galleryItems[lightbox] : null;
 
   return (
     <div>
-      {/* Hero image with arrows */}
-      <div className="relative h-[58vh] min-h-[400px] w-full overflow-hidden sm:h-[68vh]">
-        <AnimatePresence mode="wait">
+      <Masonry
+        items={galleryItems}
+        render={(item, i) =>
+          item.kind === "video" ? (
+            <div className="group relative">
+              <VideoEmbed embed={item.embed} title={title} />
+              <button
+                onClick={() => setLightbox(i)}
+                aria-label={`Play ${title} video`}
+                className="absolute inset-0 z-10 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/10"
+              >
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-fg shadow-lg transition-transform duration-300 group-hover:scale-105">
+                  <PlayIcon />
+                </span>
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={() => setLightbox(i)}
+              aria-label={`Show image ${pad(i)}`}
+              className="group relative block w-full overflow-hidden"
+            >
+              {imageTile(i, ASPECTS[i % ASPECTS.length])}
+              {item.caption && (
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-1 bg-gradient-to-t from-black/70 to-transparent px-3 pb-2 pt-8 text-left text-[0.7rem] text-white opacity-0 transition-[opacity,transform] duration-300 ease-[var(--ease-out)] group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  {item.caption}
+                </span>
+              )}
+            </button>
+          )
+        }
+      />
+
+      <AnimatePresence>
+        {current && (
           <motion.div
-            key={active}
-            className="absolute inset-0"
+            key="lightbox"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/92 p-4 sm:p-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.45 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setLightbox(null)}
           >
-            {hero}
-          </motion.div>
-        </AnimatePresence>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightbox(null);
+              }}
+              aria-label="Close"
+              className={`${arrowBtn} absolute right-4 top-4 sm:right-6 sm:top-6`}
+            >
+              <CloseIcon />
+            </button>
 
-        {count > 1 && (
-          <>
-            <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-4 sm:px-6">
-              <button className={arrowBtn} onClick={() => go(-1)} aria-label="Previous image">
-                <Chevron dir="left" />
-              </button>
-              <button className={arrowBtn} onClick={() => go(1)} aria-label="Next image">
-                <Chevron dir="right" />
-              </button>
-            </div>
-            <div className="absolute bottom-4 right-5 font-mono text-[0.7rem] text-fg/70">
-              {pad(active)} / {pad(count - 1)}
-            </div>
-          </>
-        )}
-      </div>
+            {galleryItems.length > 1 && (
+              <div className="pointer-events-none absolute inset-x-0 top-1/2 flex -translate-y-1/2 items-center justify-between px-3 sm:px-6">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    stepLightbox(-1);
+                  }}
+                  aria-label="Previous"
+                  className={arrowBtn}
+                >
+                  <Chevron dir="left" />
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    stepLightbox(1);
+                  }}
+                  aria-label="Next"
+                  className={arrowBtn}
+                >
+                  <Chevron dir="right" />
+                </button>
+              </div>
+            )}
 
-      {/* Scattered masonry below — photos and videos side by side */}
-      <div className="mt-4 lg:mt-5">
-        <Masonry
-          items={galleryItems}
-          render={(item, i) =>
-            item.kind === "video" ? (
-              item.embed.platform === "youtube" || item.embed.platform === "vimeo" ? (
-                <div className="aspect-video w-full overflow-hidden bg-surface">
-                  <iframe
-                    src={item.embed.embedUrl}
-                    title={`${title}, video`}
-                    className="h-full w-full"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    loading="lazy"
-                  />
-                </div>
-              ) : item.embed.platform === "tiktok" ? (
-                <TikTokEmbed videoId={item.embed.tiktokVideoId!} url={item.embed.url} />
+            <div
+              className="flex max-w-[92vw] flex-col items-center gap-3"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {current.kind === "image" ? (
+                <>
+                  <div className="relative h-[70vh] w-[92vw] max-w-5xl sm:h-[78vh]">
+                    <Media
+                      src={current.src}
+                      alt={`${title}, image ${pad(lightbox!)}`}
+                      sizes="92vw"
+                      priority
+                      fit="contain"
+                      className="h-full w-full"
+                    />
+                  </div>
+                  {current.caption && <p className="text-center text-[0.8rem] text-white/80">{current.caption}</p>}
+                </>
               ) : (
-                <InstagramEmbed url={item.embed.url} />
-              )
-            ) : (
-              <button
-                onClick={() => {
-                  setActive(i);
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-                aria-label={`Show image ${pad(i)}`}
-                className="group relative block w-full overflow-hidden"
-              >
-                {imageTile(i, ASPECTS[i % ASPECTS.length])}
-                {item.caption && (
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-1 bg-gradient-to-t from-black/70 to-transparent px-3 pb-2 pt-8 text-left text-[0.7rem] text-white opacity-0 transition-[opacity,transform] duration-300 ease-[var(--ease-out)] group-hover:translate-y-0 group-hover:opacity-100"
-                  >
-                    {item.caption}
-                  </span>
-                )}
-              </button>
-            )
-          }
-        />
-      </div>
+                <div className="w-[92vw] max-w-3xl">
+                  <VideoEmbed embed={current.embed} title={title} autoplay />
+                </div>
+              )}
+            </div>
+
+            {galleryItems.length > 1 && (
+              <div className="mt-4 font-mono text-[0.7rem] text-white/60">
+                {pad(lightbox!)} / {pad(galleryItems.length - 1)}
+              </div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
