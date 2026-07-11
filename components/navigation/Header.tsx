@@ -7,6 +7,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "/projects", label: "Work", match: "/projects" },
+  { href: "/", label: "Home", exact: true },
   { href: "/#awards", label: "Awards" },
   { href: "/featured-in", label: "Featured In", match: "/featured-in" },
 ];
@@ -39,7 +40,7 @@ export function Header() {
         </Link>
         <nav aria-label="Primary" className="flex items-center gap-6 sm:gap-9">
           {links.map((l) => {
-            const active = l.match ? pathname.startsWith(l.match) : false;
+            const active = l.exact ? pathname === l.href : l.match ? pathname.startsWith(l.match) : false;
             return (
               <Link
                 key={l.label}
