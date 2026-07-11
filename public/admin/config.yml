@@ -120,9 +120,8 @@ collections:
             summary: "{{fields.publication}} — {{fields.title}}"
             fields:
               - name: publication
-                label: "Publication"
-                widget: select
-                options: ["Billboard", "Rolling Stone", "Variety", "NME", "Clash", "Wonderland"]
+                label: "Publication (type any name — Billboard, Rolling Stone, Variety, NME, Clash and Wonderland get a styled logo-style wordmark; anything else shows as plain styled text)"
+                widget: string
               - { name: title, label: "Article title", widget: string }
               - { name: date, label: "Date (e.g. June 2024)", widget: string }
               - { name: url, label: "Link to article", widget: string, required: false }
