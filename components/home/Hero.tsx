@@ -10,6 +10,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { useAccent } from "@/components/layout/Providers";
 import { heroProjects, projects } from "@/data/projects";
 import { site } from "@/data/site";
+import { focalPosition } from "@/lib/focal";
 
 const slides = (heroProjects.length ? heroProjects : projects).slice(0, 4);
 const PANELS = 6;
@@ -30,6 +31,7 @@ function Frame({ index, priority }: { index: number; priority?: boolean }) {
           fill
           priority={priority}
           sizes="100vw"
+          style={{ objectPosition: focalPosition(p.featuredFocalPoint) }}
           className="object-cover"
         />
       </div>

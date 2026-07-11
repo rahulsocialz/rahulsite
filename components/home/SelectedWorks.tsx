@@ -3,6 +3,7 @@ import { featuredProjects, categoryLabel } from "@/data/projects";
 import { ProjectCard } from "@/components/project/ProjectCard";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Divider } from "@/components/ui/Divider";
+import { focalPosition } from "@/lib/focal";
 
 /* Six featured projects in a tight row. */
 export function SelectedWorks() {
@@ -28,6 +29,7 @@ export function SelectedWorks() {
               title: p.title,
               subtitle: p.subtitle,
               image: p.featuredImage,
+              focal: focalPosition(p.featuredFocalPoint),
               accent: p.accent,
               categories: p.categories.slice(0, 1).map(categoryLabel),
             }}

@@ -6,6 +6,8 @@ import { Placeholder } from "@/components/ui/Placeholder";
 import { Media } from "@/components/ui/Media";
 import { Masonry } from "@/components/ui/Masonry";
 import { detectEmbed, type Embed } from "@/lib/embeds";
+import { focalPosition } from "@/lib/focal";
+import type { GalleryImage } from "@/data/projects";
 import { TikTokEmbed } from "./TikTokEmbed";
 import { InstagramEmbed } from "./InstagramEmbed";
 
@@ -33,7 +35,9 @@ function Chevron({ dir }: { dir: "left" | "right" }) {
 // The gallery below the hero mixes photos (click to bring up top) with
 // videos — Vimeo, TikTok or Instagram links, auto-detected — that play
 // inline in place. The hero at the top only cycles through photos.
-type GalleryItem = { kind: "image"; src: string } | { kind: "video"; embed: Embed };
+type GalleryItem =
+  | { kind: "image"; src: string; caption?: string; focalPoint?: string }
+  | { kind: "video"; embed: Embed };
 
 export function ProjectShowcase({
   images,
@@ -42,7 +46,7 @@ export function ProjectShowcase({
   accent,
   title,
 }: {
-  images: string[];
+  images: GalleryImage[];
   videos?: string[];
   placeholderCount: number;
   accent: string;
@@ -57,7 +61,7 @@ export function ProjectShowcase({
   // Hero shows the whole photo (contain) so vertical shots aren't cropped.
   const hero = hasImages ? (
     <Media
-      src={images[active]}
+      src={images[active].image}
       alt={`${title}, image ${pad(active)}`}
       sizes="(min-width:1024px) 80vw, 100vw"
       priority
@@ -71,9 +75,10 @@ export function ProjectShowcase({
   const imageTile = (i: number, aspectClass: string) =>
     hasImages ? (
       <Media
-        src={images[i]}
+        src={images[i].image}
         alt={`${title}, image ${pad(i)}`}
         sizes="(min-width:1024px) 30vw, 50vw"
+        focal={focalPosition(images[i].focalPoint)}
         className={aspectClass}
         imgClassName="transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.03]"
       />
@@ -86,7 +91,12 @@ export function ProjectShowcase({
     );
 
   const galleryItems: GalleryItem[] = [
-    ...Array.from({ length: count }, (_, i) => ({ kind: "image" as const, src: hasImages ? images[i] : "" })),
+    ...Array.from({ length: count }, (_, i) => ({
+      kind: "image" as const,
+      src: hasImages ? images[i].image : "",
+      caption: hasImages ? images[i].caption : undefined,
+      focalPoint: hasImages ? images[i].focalPoint : undefined,
+    })),
     ...videos
       .map(detectEmbed)
       .filter((e): e is Embed => e !== null)
@@ -158,9 +168,17 @@ export function ProjectShowcase({
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 aria-label={`Show image ${pad(i)}`}
-                className="group block w-full overflow-hidden"
+                className="group relative block w-full overflow-hidden"
               >
                 {imageTile(i, ASPECTS[i % ASPECTS.length])}
+                {item.caption && (
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-1 bg-gradient-to-t from-black/70 to-transparent px-3 pb-2 pt-8 text-left text-[0.7rem] text-white opacity-0 transition-[opacity,transform] duration-300 ease-[var(--ease-out)] group-hover:translate-y-0 group-hover:opacity-100"
+                  >
+                    {item.caption}
+                  </span>
+                )}
               </button>
             )
           }

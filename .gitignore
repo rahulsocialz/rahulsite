@@ -1,0 +1,11 @@
+node_modules
+node_modules.nosync
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.netlify
+
+# Sample placeholder photography is generated at build time.
+/public/images/samples/

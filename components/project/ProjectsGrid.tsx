@@ -6,6 +6,7 @@ import { categories, categoryLabel, sorted, type CategoryKey } from "@/data/proj
 import { ProjectCard } from "./ProjectCard";
 import { FilterTab } from "@/components/ui/Pill";
 import { Masonry } from "@/components/ui/Masonry";
+import { focalPosition } from "@/lib/focal";
 
 const PAGE = 9;
 
@@ -66,6 +67,7 @@ export function ProjectsGrid() {
                   title: p.title,
                   subtitle: p.subtitle,
                   image: p.featuredImage,
+                  focal: focalPosition(p.featuredFocalPoint),
                   accent: p.accent,
                   categories: p.categories.map(categoryLabel),
                 }}

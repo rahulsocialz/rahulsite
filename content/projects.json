@@ -17,16 +17,56 @@
       "featuredImage": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
       "heroImage": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
       "gallery": [
-        "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
-        "/images/uploads/olivia-rodrigo-linkbuds/02.jpg",
-        "/images/uploads/olivia-rodrigo-linkbuds/03.jpg",
-        "/images/uploads/olivia-rodrigo-linkbuds/04.jpg",
-        "/images/uploads/olivia-rodrigo-linkbuds/05.jpg",
-        "/images/uploads/olivia-rodrigo-linkbuds/06.jpg",
-        "/images/uploads/olivia-rodrigo-linkbuds/07.jpg",
-        "/images/uploads/olivia-rodrigo-linkbuds/08.jpg",
-        "/images/uploads/olivia-rodrigo-linkbuds/09.jpg",
-        "/images/uploads/olivia-rodrigo-linkbuds/10.jpg"
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-linkbuds/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -52,23 +92,91 @@
       "featuredImage": "/images/uploads/katseye-beautiful-chaos-tour/01.jpg",
       "heroImage": "/images/uploads/katseye-beautiful-chaos-tour/01.jpg",
       "gallery": [
-        "/images/uploads/katseye-beautiful-chaos-tour/01.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/02.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/03.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/04.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/05.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/06.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/07.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/08.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/09.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/10.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/11.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/12.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/13.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/14.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/15.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/16.jpg",
-        "/images/uploads/katseye-beautiful-chaos-tour/17.jpg"
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/13.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/14.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/15.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/16.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-beautiful-chaos-tour/17.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -95,18 +203,66 @@
       "featuredImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
       "gallery": [
-        "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/02.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/03.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/04.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/05.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/06.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/07.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/08.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/09.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/10.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/11.jpg",
-        "/images/uploads/camila-cabello-cxoxo-campaign/12.jpg"
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-cxoxo-campaign/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -157,14 +313,46 @@
       "featuredImage": "/images/uploads/katseye-gap-x-complex/01.jpg",
       "heroImage": "/images/uploads/katseye-gap-x-complex/01.jpg",
       "gallery": [
-        "/images/uploads/katseye-gap-x-complex/01.jpg",
-        "/images/uploads/katseye-gap-x-complex/02.jpg",
-        "/images/uploads/katseye-gap-x-complex/03.jpg",
-        "/images/uploads/katseye-gap-x-complex/04.jpg",
-        "/images/uploads/katseye-gap-x-complex/05.jpg",
-        "/images/uploads/katseye-gap-x-complex/06.jpg",
-        "/images/uploads/katseye-gap-x-complex/07.jpg",
-        "/images/uploads/katseye-gap-x-complex/08.jpg"
+        {
+          "image": "/images/uploads/katseye-gap-x-complex/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gap-x-complex/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gap-x-complex/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gap-x-complex/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gap-x-complex/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gap-x-complex/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gap-x-complex/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gap-x-complex/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -191,13 +379,41 @@
       "featuredImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
       "heroImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
       "gallery": [
-        "/images/uploads/summer-walker-album-spend-it/01.jpg",
-        "/images/uploads/summer-walker-album-spend-it/02.jpg",
-        "/images/uploads/summer-walker-album-spend-it/03.jpg",
-        "/images/uploads/summer-walker-album-spend-it/04.jpg",
-        "/images/uploads/summer-walker-album-spend-it/05.jpg",
-        "/images/uploads/summer-walker-album-spend-it/06.jpg",
-        "/images/uploads/summer-walker-album-spend-it/07.jpg"
+        {
+          "image": "/images/uploads/summer-walker-album-spend-it/01.jpg",
+          "caption": "",
+          "focalPoint": "top"
+        },
+        {
+          "image": "/images/uploads/summer-walker-album-spend-it/02.jpg",
+          "caption": "",
+          "focalPoint": "top"
+        },
+        {
+          "image": "/images/uploads/summer-walker-album-spend-it/03.jpg",
+          "caption": "",
+          "focalPoint": "top"
+        },
+        {
+          "image": "/images/uploads/summer-walker-album-spend-it/04.jpg",
+          "caption": "",
+          "focalPoint": "top"
+        },
+        {
+          "image": "/images/uploads/summer-walker-album-spend-it/05.jpg",
+          "caption": "",
+          "focalPoint": "top"
+        },
+        {
+          "image": "/images/uploads/summer-walker-album-spend-it/06.jpg",
+          "caption": "",
+          "focalPoint": "top"
+        },
+        {
+          "image": "/images/uploads/summer-walker-album-spend-it/07.jpg",
+          "caption": "",
+          "focalPoint": "top"
+        }
       ],
       "client": "",
       "location": "",
@@ -205,7 +421,8 @@
       "externalUrl": "",
       "seoTitle": "",
       "seoDescription": "",
-      "videos": []
+      "videos": [],
+      "featuredFocalPoint": "top"
     },
     {
       "slug": "olivia-rodrigo-guts-tour-photo-book",
@@ -223,14 +440,46 @@
       "featuredImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
       "heroImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
       "gallery": [
-        "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
-        "/images/uploads/olivia-rodrigo-guts-tour-photo-book/02.jpg",
-        "/images/uploads/olivia-rodrigo-guts-tour-photo-book/03.jpg",
-        "/images/uploads/olivia-rodrigo-guts-tour-photo-book/04.jpg",
-        "/images/uploads/olivia-rodrigo-guts-tour-photo-book/05.jpg",
-        "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
-        "/images/uploads/olivia-rodrigo-guts-tour-photo-book/07.jpg",
-        "/images/uploads/olivia-rodrigo-guts-tour-photo-book/08.jpg"
+        {
+          "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -256,17 +505,61 @@
       "featuredImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
       "gallery": [
-        "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/02.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/03.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/04.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/05.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/06.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/07.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/08.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/09.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/10.jpg",
-        "/images/uploads/camila-cabello-yours-c-tour/11.jpg"
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-yours-c-tour/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -293,13 +586,41 @@
       "featuredImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
       "heroImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
       "gallery": [
-        "/images/uploads/renee-rapp-bite-me/01.jpg",
-        "/images/uploads/renee-rapp-bite-me/02.jpg",
-        "/images/uploads/renee-rapp-bite-me/03.jpg",
-        "/images/uploads/renee-rapp-bite-me/04.jpg",
-        "/images/uploads/renee-rapp-bite-me/05.jpg",
-        "/images/uploads/renee-rapp-bite-me/06.jpg",
-        "/images/uploads/renee-rapp-bite-me/07.jpg"
+        {
+          "image": "/images/uploads/renee-rapp-bite-me/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/renee-rapp-bite-me/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/renee-rapp-bite-me/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/renee-rapp-bite-me/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/renee-rapp-bite-me/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/renee-rapp-bite-me/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/renee-rapp-bite-me/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -325,24 +646,96 @@
       "featuredImage": "/images/uploads/dream-academy/01.jpg",
       "heroImage": "/images/uploads/dream-academy/01.jpg",
       "gallery": [
-        "/images/uploads/dream-academy/01.jpg",
-        "/images/uploads/dream-academy/02.jpg",
-        "/images/uploads/dream-academy/03.jpg",
-        "/images/uploads/dream-academy/04.jpg",
-        "/images/uploads/dream-academy/05.jpg",
-        "/images/uploads/dream-academy/06.jpg",
-        "/images/uploads/dream-academy/07.jpg",
-        "/images/uploads/dream-academy/08.jpg",
-        "/images/uploads/dream-academy/09.jpg",
-        "/images/uploads/dream-academy/10.jpg",
-        "/images/uploads/dream-academy/11.jpg",
-        "/images/uploads/dream-academy/12.jpg",
-        "/images/uploads/dream-academy/13.jpg",
-        "/images/uploads/dream-academy/14.jpg",
-        "/images/uploads/dream-academy/15.jpg",
-        "/images/uploads/dream-academy/16.jpg",
-        "/images/uploads/dream-academy/17.jpg",
-        "/images/uploads/dream-academy/18.jpg"
+        {
+          "image": "/images/uploads/dream-academy/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/13.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/14.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/15.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/16.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/17.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/dream-academy/18.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -368,10 +761,26 @@
       "featuredImage": "/images/uploads/coldplay/01.jpg",
       "heroImage": "/images/uploads/coldplay/01.jpg",
       "gallery": [
-        "/images/uploads/coldplay/01.jpg",
-        "/images/uploads/coldplay/02.jpg",
-        "/images/uploads/coldplay/03.jpg",
-        "/images/uploads/coldplay/04.jpg"
+        {
+          "image": "/images/uploads/coldplay/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/coldplay/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/coldplay/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/coldplay/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -397,8 +806,16 @@
       "featuredImage": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
       "heroImage": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
       "gallery": [
-        "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
-        "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/02.jpg"
+        {
+          "image": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -448,8 +865,16 @@
       "featuredImage": "/images/uploads/jungkook-3d-single/01.jpg",
       "heroImage": "/images/uploads/jungkook-3d-single/01.jpg",
       "gallery": [
-        "/images/uploads/jungkook-3d-single/01.jpg",
-        "/images/uploads/jungkook-3d-single/02.jpg"
+        {
+          "image": "/images/uploads/jungkook-3d-single/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/jungkook-3d-single/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -476,29 +901,121 @@
       "featuredImage": "/images/uploads/katseye-gnarly-campaign/01.jpg",
       "heroImage": "/images/uploads/katseye-gnarly-campaign/01.jpg",
       "gallery": [
-        "/images/uploads/katseye-gnarly-campaign/01.jpg",
-        "/images/uploads/katseye-gnarly-campaign/02.jpg",
-        "/images/uploads/katseye-gnarly-campaign/03.jpg",
-        "/images/uploads/katseye-gnarly-campaign/04.jpg",
-        "/images/uploads/katseye-gnarly-campaign/05.jpg",
-        "/images/uploads/katseye-gnarly-campaign/06.jpg",
-        "/images/uploads/katseye-gnarly-campaign/07.jpg",
-        "/images/uploads/katseye-gnarly-campaign/08.jpg",
-        "/images/uploads/katseye-gnarly-campaign/09.jpg",
-        "/images/uploads/katseye-gnarly-campaign/10.jpg",
-        "/images/uploads/katseye-gnarly-campaign/11.jpg",
-        "/images/uploads/katseye-gnarly-campaign/12.jpg",
-        "/images/uploads/katseye-gnarly-campaign/13.jpg",
-        "/images/uploads/katseye-gnarly-campaign/14.jpg",
-        "/images/uploads/katseye-gnarly-campaign/15.jpg",
-        "/images/uploads/katseye-gnarly-campaign/16.jpg",
-        "/images/uploads/katseye-gnarly-campaign/17.jpg",
-        "/images/uploads/katseye-gnarly-campaign/18.jpg",
-        "/images/uploads/katseye-gnarly-campaign/19.jpg",
-        "/images/uploads/katseye-gnarly-campaign/20.jpg",
-        "/images/uploads/katseye-gnarly-campaign/21.jpg",
-        "/images/uploads/katseye-gnarly-campaign/22.jpg",
-        "/images/uploads/katseye-gnarly-campaign/23.jpg"
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/13.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/14.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/15.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/16.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/17.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/18.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/19.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/20.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/21.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/22.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gnarly-campaign/23.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -525,11 +1042,31 @@
       "featuredImage": "/images/uploads/camila-cabello-havana/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-havana/01.jpg",
       "gallery": [
-        "/images/uploads/camila-cabello-havana/01.jpg",
-        "/images/uploads/camila-cabello-havana/02.jpg",
-        "/images/uploads/camila-cabello-havana/03.jpg",
-        "/images/uploads/camila-cabello-havana/04.jpg",
-        "/images/uploads/camila-cabello-havana/05.jpg"
+        {
+          "image": "/images/uploads/camila-cabello-havana/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-havana/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-havana/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-havana/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-havana/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -555,16 +1092,56 @@
       "featuredImage": "/images/uploads/katseye-pinky-up/01.jpg",
       "heroImage": "/images/uploads/katseye-pinky-up/01.jpg",
       "gallery": [
-        "/images/uploads/katseye-pinky-up/01.jpg",
-        "/images/uploads/katseye-pinky-up/02.jpg",
-        "/images/uploads/katseye-pinky-up/03.jpg",
-        "/images/uploads/katseye-pinky-up/04.jpg",
-        "/images/uploads/katseye-pinky-up/05.jpg",
-        "/images/uploads/katseye-pinky-up/06.jpg",
-        "/images/uploads/katseye-pinky-up/07.jpg",
-        "/images/uploads/katseye-pinky-up/08.jpg",
-        "/images/uploads/katseye-pinky-up/09.jpg",
-        "/images/uploads/katseye-pinky-up/10.jpg"
+        {
+          "image": "/images/uploads/katseye-pinky-up/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-pinky-up/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-pinky-up/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-pinky-up/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-pinky-up/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-pinky-up/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-pinky-up/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-pinky-up/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-pinky-up/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-pinky-up/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -590,16 +1167,56 @@
       "featuredImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
       "heroImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
       "gallery": [
-        "/images/uploads/olivia-rodrigo-lancome/01.jpg",
-        "/images/uploads/olivia-rodrigo-lancome/02.jpg",
-        "/images/uploads/olivia-rodrigo-lancome/03.jpg",
-        "/images/uploads/olivia-rodrigo-lancome/04.jpg",
-        "/images/uploads/olivia-rodrigo-lancome/05.jpg",
-        "/images/uploads/olivia-rodrigo-lancome/06.jpg",
-        "/images/uploads/olivia-rodrigo-lancome/07.jpg",
-        "/images/uploads/olivia-rodrigo-lancome/08.jpg",
-        "/images/uploads/olivia-rodrigo-lancome/09.jpg",
-        "/images/uploads/olivia-rodrigo-lancome/10.jpg"
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/olivia-rodrigo-lancome/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -625,25 +1242,101 @@
       "featuredImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
       "gallery": [
-        "/images/uploads/camila-cabello-over-the-years/01.jpg",
-        "/images/uploads/camila-cabello-over-the-years/02.jpg",
-        "/images/uploads/camila-cabello-over-the-years/03.jpg",
-        "/images/uploads/camila-cabello-over-the-years/04.jpg",
-        "/images/uploads/camila-cabello-over-the-years/05.jpg",
-        "/images/uploads/camila-cabello-over-the-years/06.jpg",
-        "/images/uploads/camila-cabello-over-the-years/07.jpg",
-        "/images/uploads/camila-cabello-over-the-years/08.jpg",
-        "/images/uploads/camila-cabello-over-the-years/09.jpg",
-        "/images/uploads/camila-cabello-over-the-years/10.jpg",
-        "/images/uploads/camila-cabello-over-the-years/11.jpg",
-        "/images/uploads/camila-cabello-over-the-years/12.jpg",
-        "/images/uploads/camila-cabello-over-the-years/13.jpg",
-        "/images/uploads/camila-cabello-over-the-years/14.jpg",
-        "/images/uploads/camila-cabello-over-the-years/15.jpg",
-        "/images/uploads/camila-cabello-over-the-years/16.jpg",
-        "/images/uploads/camila-cabello-over-the-years/17.jpg",
-        "/images/uploads/camila-cabello-over-the-years/18.jpg",
-        "/images/uploads/camila-cabello-over-the-years/19.jpg"
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/13.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/14.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/15.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/16.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/17.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/18.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-over-the-years/19.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -669,19 +1362,71 @@
       "featuredImage": "/images/uploads/katseye-gabriela/01.jpg",
       "heroImage": "/images/uploads/katseye-gabriela/01.jpg",
       "gallery": [
-        "/images/uploads/katseye-gabriela/01.jpg",
-        "/images/uploads/katseye-gabriela/02.jpg",
-        "/images/uploads/katseye-gabriela/03.jpg",
-        "/images/uploads/katseye-gabriela/04.jpg",
-        "/images/uploads/katseye-gabriela/05.jpg",
-        "/images/uploads/katseye-gabriela/06.jpg",
-        "/images/uploads/katseye-gabriela/07.jpg",
-        "/images/uploads/katseye-gabriela/08.jpg",
-        "/images/uploads/katseye-gabriela/09.jpg",
-        "/images/uploads/katseye-gabriela/10.jpg",
-        "/images/uploads/katseye-gabriela/11.jpg",
-        "/images/uploads/katseye-gabriela/12.jpg",
-        "/images/uploads/katseye-gabriela/13.jpg"
+        {
+          "image": "/images/uploads/katseye-gabriela/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-gabriela/13.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -708,14 +1453,46 @@
       "featuredImage": "/images/uploads/james-arthur-creative-direction/01.jpg",
       "heroImage": "/images/uploads/james-arthur-creative-direction/01.jpg",
       "gallery": [
-        "/images/uploads/james-arthur-creative-direction/01.jpg",
-        "/images/uploads/james-arthur-creative-direction/02.jpg",
-        "/images/uploads/james-arthur-creative-direction/03.jpg",
-        "/images/uploads/james-arthur-creative-direction/04.jpg",
-        "/images/uploads/james-arthur-creative-direction/05.jpg",
-        "/images/uploads/james-arthur-creative-direction/06.jpg",
-        "/images/uploads/james-arthur-creative-direction/07.jpg",
-        "/images/uploads/james-arthur-creative-direction/08.jpg"
+        {
+          "image": "/images/uploads/james-arthur-creative-direction/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/james-arthur-creative-direction/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/james-arthur-creative-direction/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/james-arthur-creative-direction/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/james-arthur-creative-direction/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/james-arthur-creative-direction/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/james-arthur-creative-direction/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/james-arthur-creative-direction/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -741,13 +1518,41 @@
       "featuredImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
       "heroImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
       "gallery": [
-        "/images/uploads/fifth-harmony-over-the-years/01.jpg",
-        "/images/uploads/fifth-harmony-over-the-years/02.jpg",
-        "/images/uploads/fifth-harmony-over-the-years/03.jpg",
-        "/images/uploads/fifth-harmony-over-the-years/04.jpg",
-        "/images/uploads/fifth-harmony-over-the-years/05.jpg",
-        "/images/uploads/fifth-harmony-over-the-years/06.jpg",
-        "/images/uploads/fifth-harmony-over-the-years/07.jpg"
+        {
+          "image": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/fifth-harmony-over-the-years/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/fifth-harmony-over-the-years/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/fifth-harmony-over-the-years/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/fifth-harmony-over-the-years/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/fifth-harmony-over-the-years/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/fifth-harmony-over-the-years/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -773,23 +1578,91 @@
       "featuredImage": "/images/uploads/little-mix-over-the-years/01.jpg",
       "heroImage": "/images/uploads/little-mix-over-the-years/01.jpg",
       "gallery": [
-        "/images/uploads/little-mix-over-the-years/01.jpg",
-        "/images/uploads/little-mix-over-the-years/02.jpg",
-        "/images/uploads/little-mix-over-the-years/03.jpg",
-        "/images/uploads/little-mix-over-the-years/04.jpg",
-        "/images/uploads/little-mix-over-the-years/05.jpg",
-        "/images/uploads/little-mix-over-the-years/06.jpg",
-        "/images/uploads/little-mix-over-the-years/07.jpg",
-        "/images/uploads/little-mix-over-the-years/08.jpg",
-        "/images/uploads/little-mix-over-the-years/09.jpg",
-        "/images/uploads/little-mix-over-the-years/10.jpg",
-        "/images/uploads/little-mix-over-the-years/11.jpg",
-        "/images/uploads/little-mix-over-the-years/12.jpg",
-        "/images/uploads/little-mix-over-the-years/13.jpg",
-        "/images/uploads/little-mix-over-the-years/14.jpg",
-        "/images/uploads/little-mix-over-the-years/15.jpg",
-        "/images/uploads/little-mix-over-the-years/16.jpg",
-        "/images/uploads/little-mix-over-the-years/17.jpg"
+        {
+          "image": "/images/uploads/little-mix-over-the-years/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/13.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/14.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/15.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/16.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/little-mix-over-the-years/17.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -815,13 +1688,41 @@
       "featuredImage": "/images/uploads/posters/01.jpg",
       "heroImage": "/images/uploads/posters/01.jpg",
       "gallery": [
-        "/images/uploads/posters/01.jpg",
-        "/images/uploads/posters/02.jpg",
-        "/images/uploads/posters/03.jpg",
-        "/images/uploads/posters/04.jpg",
-        "/images/uploads/posters/05.jpg",
-        "/images/uploads/posters/06.jpg",
-        "/images/uploads/posters/07.jpg"
+        {
+          "image": "/images/uploads/posters/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/posters/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/posters/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/posters/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/posters/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/posters/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/posters/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -872,27 +1773,111 @@
       "featuredImage": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
       "gallery": [
-        "/images/uploads/camila-cabello-familia-campaign/01.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/02.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/03.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/04.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/05.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/06.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/07.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/08.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/09.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/10.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/11.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/12.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/13.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/14.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/15.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/16.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/17.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/18.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/19.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/20.jpg",
-        "/images/uploads/camila-cabello-familia-campaign/21.jpg"
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/13.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/14.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/15.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/16.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/17.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/18.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/19.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/20.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-familia-campaign/21.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -918,7 +1903,11 @@
       "featuredImage": "/images/uploads/one-direction-over-the-years/01.jpg",
       "heroImage": "/images/uploads/one-direction-over-the-years/01.jpg",
       "gallery": [
-        "/images/uploads/one-direction-over-the-years/01.jpg"
+        {
+          "image": "/images/uploads/one-direction-over-the-years/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -945,28 +1934,116 @@
       "featuredImage": "/images/uploads/katseye-on-the-road/01.jpg",
       "heroImage": "/images/uploads/katseye-on-the-road/01.jpg",
       "gallery": [
-        "/images/uploads/katseye-on-the-road/01.jpg",
-        "/images/uploads/katseye-on-the-road/02.jpg",
-        "/images/uploads/katseye-on-the-road/03.jpg",
-        "/images/uploads/katseye-on-the-road/04.jpg",
-        "/images/uploads/katseye-on-the-road/05.jpg",
-        "/images/uploads/katseye-on-the-road/06.jpg",
-        "/images/uploads/katseye-on-the-road/07.jpg",
-        "/images/uploads/katseye-on-the-road/08.jpg",
-        "/images/uploads/katseye-on-the-road/09.jpg",
-        "/images/uploads/katseye-on-the-road/10.jpg",
-        "/images/uploads/katseye-on-the-road/11.jpg",
-        "/images/uploads/katseye-on-the-road/12.jpg",
-        "/images/uploads/katseye-on-the-road/13.jpg",
-        "/images/uploads/katseye-on-the-road/14.jpg",
-        "/images/uploads/katseye-on-the-road/15.jpg",
-        "/images/uploads/katseye-on-the-road/16.jpg",
-        "/images/uploads/katseye-on-the-road/17.jpg",
-        "/images/uploads/katseye-on-the-road/18.jpg",
-        "/images/uploads/katseye-on-the-road/19.jpg",
-        "/images/uploads/katseye-on-the-road/20.jpg",
-        "/images/uploads/katseye-on-the-road/21.jpg",
-        "/images/uploads/katseye-on-the-road/22.jpg"
+        {
+          "image": "/images/uploads/katseye-on-the-road/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/13.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/14.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/15.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/16.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/17.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/18.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/19.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/20.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/21.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-on-the-road/22.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -1016,10 +2093,26 @@
       "featuredImage": "/images/uploads/camila-cabello-uefa/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-uefa/01.jpg",
       "gallery": [
-        "/images/uploads/camila-cabello-uefa/01.jpg",
-        "/images/uploads/camila-cabello-uefa/02.jpg",
-        "/images/uploads/camila-cabello-uefa/03.jpg",
-        "/images/uploads/camila-cabello-uefa/04.jpg"
+        {
+          "image": "/images/uploads/camila-cabello-uefa/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-uefa/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-uefa/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/camila-cabello-uefa/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -1045,22 +2138,86 @@
       "featuredImage": "/images/uploads/katseye-debut-music-video/01.jpg",
       "heroImage": "/images/uploads/katseye-debut-music-video/01.jpg",
       "gallery": [
-        "/images/uploads/katseye-debut-music-video/01.jpg",
-        "/images/uploads/katseye-debut-music-video/02.jpg",
-        "/images/uploads/katseye-debut-music-video/03.jpg",
-        "/images/uploads/katseye-debut-music-video/04.jpg",
-        "/images/uploads/katseye-debut-music-video/05.jpg",
-        "/images/uploads/katseye-debut-music-video/06.jpg",
-        "/images/uploads/katseye-debut-music-video/07.jpg",
-        "/images/uploads/katseye-debut-music-video/08.jpg",
-        "/images/uploads/katseye-debut-music-video/09.jpg",
-        "/images/uploads/katseye-debut-music-video/10.jpg",
-        "/images/uploads/katseye-debut-music-video/11.jpg",
-        "/images/uploads/katseye-debut-music-video/12.jpg",
-        "/images/uploads/katseye-debut-music-video/13.jpg",
-        "/images/uploads/katseye-debut-music-video/14.jpg",
-        "/images/uploads/katseye-debut-music-video/15.jpg",
-        "/images/uploads/katseye-debut-music-video/16.jpg"
+        {
+          "image": "/images/uploads/katseye-debut-music-video/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/13.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/14.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/15.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/katseye-debut-music-video/16.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -1086,7 +2243,11 @@
       "featuredImage": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
       "gallery": [
-        "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg"
+        {
+          "image": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",
@@ -1112,18 +2273,66 @@
       "featuredImage": "/images/uploads/syco/01.jpg",
       "heroImage": "/images/uploads/syco/01.jpg",
       "gallery": [
-        "/images/uploads/syco/01.jpg",
-        "/images/uploads/syco/02.jpg",
-        "/images/uploads/syco/03.jpg",
-        "/images/uploads/syco/04.jpg",
-        "/images/uploads/syco/05.jpg",
-        "/images/uploads/syco/06.jpg",
-        "/images/uploads/syco/07.jpg",
-        "/images/uploads/syco/08.jpg",
-        "/images/uploads/syco/09.jpg",
-        "/images/uploads/syco/10.jpg",
-        "/images/uploads/syco/11.jpg",
-        "/images/uploads/syco/12.jpg"
+        {
+          "image": "/images/uploads/syco/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/02.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/03.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/04.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/05.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/06.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/07.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/08.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/09.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/10.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/11.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        },
+        {
+          "image": "/images/uploads/syco/12.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
       ],
       "client": "",
       "location": "",

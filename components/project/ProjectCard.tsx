@@ -11,6 +11,7 @@ export interface ProjectCardData {
   title: string;
   subtitle: string;
   image?: string;
+  focal?: string;
   accent?: string;
   categories?: string[];
   blurDataURL?: string;
@@ -53,6 +54,7 @@ export function ProjectCard({
             sizes={sizes}
             priority={priority}
             blurDataURL={project.blurDataURL}
+            focal={project.focal}
             className={aspect}
             imgClassName="transition-transform duration-[900ms] ease-[var(--ease-out)] group-hover:scale-[1.03]"
           />

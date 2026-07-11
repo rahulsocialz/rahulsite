@@ -49,11 +49,35 @@ collections:
                 label: "Hero image (used if this is a homepage hero)"
                 widget: image
                 required: false
+              - name: featuredFocalPoint
+                label: "Cover image crop focus (if a head or subject gets cut off on the grid/hero, nudge this)"
+                widget: select
+                options:
+                  - { label: "Top", value: "top" }
+                  - { label: "Center", value: "center" }
+                  - { label: "Bottom", value: "bottom" }
+                default: "center"
+                required: false
               - name: gallery
                 label: "Gallery images"
                 widget: list
                 required: false
-                field: { name: image, label: "Image", widget: image }
+                summary: "{{fields.caption}}"
+                fields:
+                  - { name: image, label: "Image", widget: image }
+                  - name: caption
+                    label: "Caption (optional — shows in a small label when someone hovers the image, e.g. \"DSP photo\". Leave blank for nothing.)"
+                    widget: string
+                    required: false
+                  - name: focalPoint
+                    label: "Crop focus (if a head or subject gets cut off, nudge this)"
+                    widget: select
+                    options:
+                      - { label: "Top", value: "top" }
+                      - { label: "Center", value: "center" }
+                      - { label: "Bottom", value: "bottom" }
+                    default: "center"
+                    required: false
               - name: videos
                 label: "Videos (paste a YouTube, Vimeo, TikTok or Instagram post link)"
                 widget: list

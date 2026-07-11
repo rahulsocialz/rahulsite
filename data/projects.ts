@@ -24,6 +24,12 @@ export function categoryLabel(key: string) {
   return categoryLabels[key as CategoryKey] ?? key;
 }
 
+export interface GalleryImage {
+  image: string;
+  caption?: string;
+  focalPoint?: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -38,7 +44,8 @@ export interface Project {
   // Images (empty until added in the CMS — a placeholder renders meanwhile).
   featuredImage?: string;
   heroImage?: string;
-  gallery?: string[];
+  featuredFocalPoint?: string;
+  gallery?: GalleryImage[];
   videos?: string[];
   // Optional — only rendered where present.
   client?: string;
@@ -68,6 +75,6 @@ export const sorted = projects;
 export const featuredProjects = projects.filter((p) => p.featured);
 export const heroProjects = projects.filter((p) => p.hero);
 
-export function galleryImages(p: Project): string[] {
+export function galleryImages(p: Project): GalleryImage[] {
   return p.gallery && p.gallery.length > 0 ? p.gallery : [];
 }
