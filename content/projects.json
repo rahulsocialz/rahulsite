@@ -428,7 +428,7 @@
         "photo"
       ],
       "accent": "#3f9e6e",
-      "featured": false,
+      "featured": true,
       "hero": false,
       "order": 7,
       "placeholderCount": 6,
@@ -574,7 +574,7 @@
         "video"
       ],
       "accent": "#4b57b0",
-      "featured": false,
+      "featured": true,
       "hero": true,
       "order": 9,
       "placeholderCount": 6,
@@ -749,7 +749,7 @@
         "photo"
       ],
       "accent": "#2f9bd6",
-      "featured": false,
+      "featured": true,
       "hero": true,
       "order": 11,
       "placeholderCount": 6,
@@ -889,7 +889,7 @@
         "art-direction"
       ],
       "accent": "#c6982f",
-      "featured": false,
+      "featured": true,
       "hero": true,
       "order": 15,
       "placeholderCount": 6,
@@ -1030,7 +1030,7 @@
         "photo"
       ],
       "accent": "#d98a3d",
-      "featured": false,
+      "featured": true,
       "hero": true,
       "order": 16,
       "placeholderCount": 6,
@@ -1441,7 +1441,7 @@
         "photo"
       ],
       "accent": "#4b57b0",
-      "featured": false,
+      "featured": true,
       "hero": false,
       "order": 21,
       "placeholderCount": 6,

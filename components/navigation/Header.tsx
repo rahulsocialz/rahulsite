@@ -23,6 +23,12 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // On the homepage, before scrolling, the header floats transparently over
+  // the full-bleed hero photo rather than the page background — force the
+  // logo/nav/toggle to a light colour there so they stay legible regardless
+  // of site theme or the photo underneath (same fix as the hero's own text).
+  const overPhoto = pathname === "/" && !scrolled;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
@@ -31,7 +37,14 @@ export function Header() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="shell flex h-[68px] items-center justify-between">
+      <div
+        className="shell flex h-[68px] items-center justify-between"
+        style={
+          overPhoto
+            ? ({ "--text": "#f2f0ea", "--text-secondary": "rgba(242,240,234,0.75)", "--border": "rgba(255,255,255,0.28)" } as React.CSSProperties)
+            : undefined
+        }
+      >
         <Link
           href="/"
           className="text-[0.72rem] font-semibold uppercase tracking-[0.22em]"
