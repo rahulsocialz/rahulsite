@@ -262,6 +262,18 @@ body {
 .wm-wonderland { font-family: Georgia, "Times New Roman", serif; font-weight: 600; letter-spacing: 0.01em; }
 .wm-vogue { font-family: Georgia, "Times New Roman", serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; }
 
+/* Instagram's own resize handshake for the iframe it swaps in over our
+   blockquote is unreliable (see InstagramEmbed.tsx) — force that iframe,
+   wherever it lands, to fill the fixed-aspect box we give it instead. */
+.ig-embed-fixed iframe {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  inset: 0 !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
 /* ============================================================
    LIGHT-MODE MULTI-COLOUR ("wow factor")
    Dark mode stays monochrome; light mode brings colour through the

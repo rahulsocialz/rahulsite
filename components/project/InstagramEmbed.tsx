@@ -38,14 +38,36 @@ export function InstagramEmbed({ url }: { url: string }) {
     };
   }, [url]);
 
+  // Instagram is meant to resize the eventual iframe itself via a postMessage
+  // handshake once its content loads — but this is unreliable in practice
+  // (well-documented flakiness for Reels specifically) and can silently never
+  // fire, leaving the iframe stuck at a ~2px placeholder height. Rather than
+  // depend on that, this wraps the embed in a fixed-aspect box and forces
+  // whatever iframe Instagram inserts to fill it via the ig-embed-fixed CSS
+  // rule (global.css), so the post is reliably visible either way.
+  const permalink = `${url}${url.includes("?") ? "&" : "?"}utm_source=ig_embed&utm_campaign=loading`;
+
   return (
-    <div ref={ref} className="flex justify-center overflow-hidden bg-surface">
+    <div
+      ref={ref}
+      className="ig-embed-fixed relative mx-auto aspect-[9/16] w-full max-w-[400px] overflow-hidden bg-surface"
+    >
       <blockquote
         className="instagram-media"
-        data-instgrm-permalink={url}
+        data-instgrm-captioned
+        data-instgrm-permalink={permalink}
         data-instgrm-version="14"
-        style={{ width: "100%", maxWidth: 540, minWidth: 326 }}
-      />
+        style={{ background: "#FFF", border: 0, margin: 0, padding: 0, width: "100%", height: "100%" }}
+      >
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-full w-full items-center justify-center text-center text-[0.8rem] text-[#3897f0]"
+        >
+          View this post on Instagram
+        </a>
+      </blockquote>
     </div>
   );
 }

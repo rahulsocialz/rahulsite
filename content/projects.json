@@ -7,7 +7,7 @@
       "slug": "olivia-rodrigo-linkbuds",
       "client": "",
       "featuredImage": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 1,
       "gallery": [
         {
@@ -196,7 +196,7 @@
       "slug": "camila-cabello-cxoxo-campaign",
       "client": "",
       "featuredImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
-      "featured": false,
+      "featured": true,
       "order": 3,
       "gallery": [
         {
@@ -282,7 +282,7 @@
       "slug": "jon-batiste-world-music-radio",
       "client": "",
       "featuredImage": "",
-      "featured": false,
+      "featured": true,
       "order": 4,
       "gallery": [],
       "location": "",
@@ -300,13 +300,13 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "/images/uploads/katseye-gap-x-complex/01.jpg",
+      "heroImage": "/images/uploads/katseye-gap-x-complex/02.jpg",
       "externalUrl": "",
       "accent": "#4b4fb0",
       "slug": "katseye-gap-x-complex",
       "client": "",
-      "featuredImage": "/images/uploads/katseye-gap-x-complex/01.jpg",
-      "featured": false,
+      "featuredImage": "/images/uploads/katseye-gap-x-complex/02.jpg",
+      "featured": true,
       "order": 5,
       "gallery": [
         {
@@ -372,7 +372,7 @@
       "slug": "summer-walker-album-spend-it",
       "client": "",
       "featuredImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
-      "featured": false,
+      "featured": true,
       "order": 6,
       "gallery": [
         {
@@ -434,7 +434,7 @@
       "slug": "olivia-rodrigo-guts-tour-photo-book",
       "client": "",
       "featuredImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 7,
       "gallery": [
         {
@@ -579,7 +579,7 @@
       "slug": "renee-rapp-bite-me",
       "client": "",
       "featuredImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 9,
       "gallery": [
         {
@@ -755,7 +755,7 @@
       "slug": "coldplay",
       "client": "",
       "featuredImage": "/images/uploads/coldplay/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 11,
       "gallery": [
         {
@@ -853,13 +853,13 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "/images/uploads/jungkook-3d-single/01.jpg",
+      "heroImage": "/images/uploads/jungkook-3d-single/02.jpg",
       "externalUrl": "",
       "accent": "#6e4fc0",
       "slug": "jungkook-3d-single",
       "client": "",
-      "featuredImage": "/images/uploads/jungkook-3d-single/01.jpg",
-      "featured": false,
+      "featuredImage": "/images/uploads/jungkook-3d-single/02.jpg",
+      "featured": true,
       "order": 14,
       "gallery": [
         {
@@ -894,7 +894,7 @@
       "slug": "katseye-gnarly-campaign",
       "client": "",
       "featuredImage": "/images/uploads/katseye-gnarly-campaign/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 15,
       "gallery": [
         {
@@ -1035,7 +1035,7 @@
       "slug": "camila-cabello-havana",
       "client": "",
       "featuredImage": "/images/uploads/camila-cabello-havana/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 16,
       "gallery": [
         {
@@ -1161,7 +1161,7 @@
       "slug": "olivia-rodrigo-lancome",
       "client": "",
       "featuredImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
-      "featured": false,
+      "featured": true,
       "order": 18,
       "gallery": [
         {
@@ -1446,7 +1446,7 @@
       "slug": "james-arthur-creative-direction",
       "client": "",
       "featuredImage": "/images/uploads/james-arthur-creative-direction/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 21,
       "gallery": [
         {

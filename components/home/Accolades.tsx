@@ -41,8 +41,8 @@ export function Accolades() {
         <div>
           <Eyebrow as="h2" className="mb-6">Featured In</Eyebrow>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-3">
-            {press.map((p) => (
-              <li key={p.publication}>
+            {press.map((p, i) => (
+              <li key={`${p.publication}-${i}`}>
                 <a
                   href={p.url ?? "#"}
                   target={p.url ? "_blank" : undefined}
