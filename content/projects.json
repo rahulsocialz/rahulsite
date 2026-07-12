@@ -1,21 +1,14 @@
 {
   "projects": [
     {
-      "slug": "olivia-rodrigo-linkbuds",
-      "title": "Olivia Rodrigo",
-      "subtitle": "LinkBuds Campaign",
-      "description": "",
-      "categories": [
-        "campaigns",
-        "photo"
-      ],
-      "accent": "#3f6fe0",
-      "featured": false,
-      "hero": false,
-      "order": 1,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
       "heroImage": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
+      "externalUrl": "",
+      "accent": "#3f6fe0",
+      "slug": "olivia-rodrigo-linkbuds",
+      "client": "",
+      "featuredImage": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
+      "featured": true,
+      "order": 1,
       "gallery": [
         {
           "image": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
@@ -63,29 +56,30 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "LinkBuds Campaign",
+      "title": "Olivia Rodrigo",
+      "videos": [],
+      "hero": true,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "katseye-beautiful-chaos-tour",
-      "title": "KATSEYE",
-      "subtitle": "Beautiful Chaos Tour",
-      "description": "",
       "categories": [
+        "campaigns",
         "photo"
       ],
-      "accent": "#6e4fc0",
-      "featured": false,
-      "hero": false,
-      "order": 2,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/katseye-beautiful-chaos-tour/01.jpg",
-      "heroImage": "/images/uploads/katseye-beautiful-chaos-tour/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
+      "heroImage": "/images/uploads/01.-group-2.jpg",
+      "externalUrl": "",
+      "accent": "#6e4fc0",
+      "slug": "katseye-beautiful-chaos-tour",
+      "client": "",
+      "featuredImage": "/images/uploads/01.-group-2.jpg",
+      "featured": false,
+      "order": 2,
       "gallery": [
         {
           "image": "/images/uploads/katseye-beautiful-chaos-tour/01.jpg",
@@ -173,30 +167,37 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Beautiful Chaos Tour",
+      "title": "KATSEYE",
+      "videos": [
+        "https://www.instagram.com/reel/DRIyc8jjYnA/",
+        "https://www.instagram.com/reel/DRQLvSlEWof/",
+        "https://www.instagram.com/reel/DRdDNmzEeZr/",
+        "https://www.instagram.com/reel/DRp2jNdkesC/",
+        "https://www.tiktok.com/@katseyeworld/video/7583025276418919710?lang=en"
+      ],
+      "featuredFocalPoint": "top",
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "photo",
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "Content Coverage Included: Photos for Socials, Press and Local Affiliates and Nightly Recap Videos",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "camila-cabello-cxoxo-campaign",
-      "title": "Camila Cabello",
-      "subtitle": "C,XOXO Album Campaign",
-      "description": "",
-      "categories": [
-        "campaigns",
-        "photo"
-      ],
-      "accent": "#c6982f",
-      "featured": false,
-      "hero": false,
-      "order": 3,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
+      "externalUrl": "",
+      "accent": "#c6982f",
+      "slug": "camila-cabello-cxoxo-campaign",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
+      "featured": false,
+      "order": 3,
       "gallery": [
         {
           "image": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
@@ -259,54 +260,54 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
-      "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "jon-batiste-world-music-radio",
-      "title": "Jon Batiste",
-      "subtitle": "World Music Radio Campaign",
-      "description": "",
-      "categories": [
-        "campaigns"
-      ],
-      "accent": "#d98a3d",
-      "featured": false,
+      "subtitle": "C,XOXO Album Campaign",
+      "title": "Camila Cabello",
+      "videos": [],
       "hero": false,
-      "order": 4,
-      "placeholderCount": 6,
-      "featuredImage": "",
-      "heroImage": "",
-      "gallery": [],
-      "client": "",
-      "location": "",
-      "year": "",
-      "externalUrl": "",
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "katseye-gap-x-complex",
-      "title": "KATSEYE",
-      "subtitle": "Gap x Complex",
-      "description": "",
       "categories": [
         "campaigns",
         "photo"
       ],
-      "accent": "#4b4fb0",
-      "featured": false,
-      "hero": false,
-      "order": 5,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/katseye-gap-x-complex/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
+      "heroImage": "",
+      "externalUrl": "",
+      "accent": "#d98a3d",
+      "slug": "jon-batiste-world-music-radio",
+      "client": "",
+      "featuredImage": "",
+      "featured": false,
+      "order": 4,
+      "gallery": [],
+      "location": "",
+      "subtitle": "World Music Radio Campaign",
+      "title": "Jon Batiste",
+      "videos": [],
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "campaigns"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/katseye-gap-x-complex/01.jpg",
+      "externalUrl": "",
+      "accent": "#4b4fb0",
+      "slug": "katseye-gap-x-complex",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-gap-x-complex/01.jpg",
+      "featured": false,
+      "order": 5,
       "gallery": [
         {
           "image": "/images/uploads/katseye-gap-x-complex/01.jpg",
@@ -349,30 +350,30 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Gap x Complex",
+      "title": "KATSEYE",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "summer-walker-album-spend-it",
-      "title": "Summer Walker",
-      "subtitle": "Album Artwork & “Spend It”",
-      "description": "",
       "categories": [
-        "art-direction",
+        "campaigns",
         "photo"
       ],
-      "accent": "#e06a50",
-      "featured": false,
-      "hero": false,
-      "order": 6,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
+      "externalUrl": "",
+      "accent": "#e06a50",
+      "slug": "summer-walker-album-spend-it",
+      "client": "",
+      "featuredImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
+      "featured": false,
+      "order": 6,
       "gallery": [
         {
           "image": "/images/uploads/summer-walker-album-spend-it/01.jpg",
@@ -410,30 +411,31 @@
           "focalPoint": "top"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
-      "seoTitle": "",
-      "seoDescription": "",
+      "subtitle": "Album Artwork & “Spend It”",
+      "title": "Summer Walker",
       "videos": [],
-      "featuredFocalPoint": "top"
-    },
-    {
-      "slug": "olivia-rodrigo-guts-tour-photo-book",
-      "title": "Olivia Rodrigo",
-      "subtitle": "GUTS Tour Photo Book",
-      "description": "",
+      "featuredFocalPoint": "top",
+      "hero": false,
+      "seoTitle": "",
       "categories": [
+        "art-direction",
         "photo"
       ],
-      "accent": "#3f9e6e",
-      "featured": true,
-      "hero": false,
-      "order": 7,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
+      "externalUrl": "",
+      "accent": "#3f9e6e",
+      "slug": "olivia-rodrigo-guts-tour-photo-book",
+      "client": "",
+      "featuredImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
+      "featured": true,
+      "order": 7,
       "gallery": [
         {
           "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
@@ -476,29 +478,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "GUTS Tour Photo Book",
+      "title": "Olivia Rodrigo",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "camila-cabello-yours-c-tour",
-      "title": "Camila Cabello",
-      "subtitle": "Yours, C Tour",
-      "description": "",
       "categories": [
         "photo"
       ],
-      "accent": "#d24f9e",
-      "featured": false,
-      "hero": false,
-      "order": 8,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
+      "externalUrl": "",
+      "accent": "#d24f9e",
+      "slug": "camila-cabello-yours-c-tour",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
+      "featured": false,
+      "order": 8,
       "gallery": [
         {
           "image": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
@@ -556,30 +558,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Yours, C Tour",
+      "title": "Camila Cabello",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "renee-rapp-bite-me",
-      "title": "Renee Rapp",
-      "subtitle": "Bite Me",
-      "description": "",
-      "categories": [
-        "photo",
-        "video"
-      ],
-      "accent": "#4b57b0",
-      "featured": true,
-      "hero": true,
-      "order": 9,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
       "heroImage": "/images/uploads/renee-rapp-bite-me/02.jpg",
+      "externalUrl": "",
+      "accent": "#4b57b0",
+      "slug": "renee-rapp-bite-me",
+      "client": "",
+      "featuredImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
+      "featured": true,
+      "order": 9,
       "gallery": [
         {
           "image": "/images/uploads/renee-rapp-bite-me/01.jpg",
@@ -617,29 +618,30 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Bite Me",
+      "title": "Renee Rapp",
+      "videos": [],
+      "hero": true,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "photo",
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "dream-academy",
-      "title": "Dream Academy",
-      "subtitle": "",
-      "description": "",
-      "categories": [
-        "photo"
-      ],
-      "accent": "#8a5fd6",
-      "featured": false,
-      "hero": false,
-      "order": 10,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/dream-academy/01.jpg",
       "heroImage": "/images/uploads/dream-academy/01.jpg",
+      "externalUrl": "",
+      "accent": "#8a5fd6",
+      "slug": "dream-academy",
+      "client": "",
+      "featuredImage": "/images/uploads/dream-academy/01.jpg",
+      "featured": false,
+      "order": 10,
       "gallery": [
         {
           "image": "/images/uploads/dream-academy/01.jpg",
@@ -732,29 +734,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
-      "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "coldplay",
-      "title": "Coldplay",
       "subtitle": "",
-      "description": "",
+      "title": "Dream Academy",
+      "videos": [],
+      "hero": false,
+      "seoTitle": "",
       "categories": [
         "photo"
       ],
-      "accent": "#2f9bd6",
-      "featured": true,
-      "hero": true,
-      "order": 11,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/coldplay/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/coldplay/01.jpg",
+      "externalUrl": "",
+      "accent": "#2f9bd6",
+      "slug": "coldplay",
+      "client": "",
+      "featuredImage": "/images/uploads/coldplay/01.jpg",
+      "featured": true,
+      "order": 11,
       "gallery": [
         {
           "image": "/images/uploads/coldplay/01.jpg",
@@ -777,29 +779,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "",
+      "title": "Coldplay",
+      "videos": [],
+      "hero": true,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "billie-eilish-hit-me-hard-and-soft-3d-film",
-      "title": "Billie Eilish",
-      "subtitle": "Hit Me Hard and Soft — 3D Film",
-      "description": "",
-      "categories": [
-        "art-direction"
-      ],
-      "accent": "#c65f3f",
-      "featured": false,
-      "hero": false,
-      "order": 12,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
       "heroImage": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
+      "externalUrl": "",
+      "accent": "#c65f3f",
+      "slug": "billie-eilish-hit-me-hard-and-soft-3d-film",
+      "client": "",
+      "featuredImage": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
+      "featured": false,
+      "order": 12,
       "gallery": [
         {
           "image": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
@@ -812,53 +814,53 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Hit Me Hard and Soft — 3D Film",
+      "title": "Billie Eilish",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "art-direction"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "katseye-director-music-videos",
-      "title": "KATSEYE",
-      "subtitle": "Director, Music Videos",
-      "description": "",
-      "categories": [
-        "video"
-      ],
-      "accent": "#3f6fe0",
-      "featured": false,
-      "hero": false,
-      "order": 13,
-      "placeholderCount": 6,
-      "featuredImage": "",
       "heroImage": "",
-      "gallery": [],
-      "client": "",
-      "location": "",
-      "year": "",
       "externalUrl": "",
+      "accent": "#3f6fe0",
+      "slug": "katseye-director-music-videos",
+      "client": "",
+      "featuredImage": "",
+      "featured": false,
+      "order": 13,
+      "gallery": [],
+      "location": "",
+      "subtitle": "Director, Music Videos",
+      "title": "KATSEYE",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "jungkook-3d-single",
-      "title": "Jungkook",
-      "subtitle": "3D Single",
-      "description": "",
       "categories": [
         "video"
       ],
-      "accent": "#6e4fc0",
-      "featured": false,
-      "hero": false,
-      "order": 14,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/jungkook-3d-single/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/jungkook-3d-single/01.jpg",
+      "externalUrl": "",
+      "accent": "#6e4fc0",
+      "slug": "jungkook-3d-single",
+      "client": "",
+      "featuredImage": "/images/uploads/jungkook-3d-single/01.jpg",
+      "featured": false,
+      "order": 14,
       "gallery": [
         {
           "image": "/images/uploads/jungkook-3d-single/01.jpg",
@@ -871,30 +873,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "3D Single",
+      "title": "Jungkook",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "katseye-gnarly-campaign",
-      "title": "KATSEYE",
-      "subtitle": "Gnarly Campaign",
-      "description": "",
-      "categories": [
-        "campaigns",
-        "art-direction"
-      ],
-      "accent": "#c6982f",
-      "featured": true,
-      "hero": true,
-      "order": 15,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/katseye-gnarly-campaign/01.jpg",
       "heroImage": "/images/uploads/katseye-gnarly-campaign/08.jpg",
+      "externalUrl": "",
+      "accent": "#c6982f",
+      "slug": "katseye-gnarly-campaign",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-gnarly-campaign/01.jpg",
+      "featured": true,
+      "order": 15,
       "gallery": [
         {
           "image": "/images/uploads/katseye-gnarly-campaign/01.jpg",
@@ -1012,30 +1013,30 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Gnarly Campaign",
+      "title": "KATSEYE",
+      "videos": [],
+      "hero": true,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "campaigns",
+        "art-direction"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "camila-cabello-havana",
-      "title": "Camila Cabello",
-      "subtitle": "Havana — Music Video",
-      "description": "",
-      "categories": [
-        "video",
-        "photo"
-      ],
-      "accent": "#d98a3d",
-      "featured": true,
-      "hero": true,
-      "order": 16,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/camila-cabello-havana/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-havana/02.jpg",
+      "externalUrl": "",
+      "accent": "#d98a3d",
+      "slug": "camila-cabello-havana",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-havana/01.jpg",
+      "featured": true,
+      "order": 16,
       "gallery": [
         {
           "image": "/images/uploads/camila-cabello-havana/01.jpg",
@@ -1063,29 +1064,30 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Havana — Music Video",
+      "title": "Camila Cabello",
+      "videos": [],
+      "hero": true,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "video",
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "katseye-pinky-up",
-      "title": "KATSEYE",
-      "subtitle": "Pinky Up — Music Video",
-      "description": "",
-      "categories": [
-        "video"
-      ],
-      "accent": "#4b4fb0",
-      "featured": false,
-      "hero": false,
-      "order": 17,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/katseye-pinky-up/01.jpg",
       "heroImage": "/images/uploads/katseye-pinky-up/01.jpg",
+      "externalUrl": "",
+      "accent": "#4b4fb0",
+      "slug": "katseye-pinky-up",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-pinky-up/01.jpg",
+      "featured": false,
+      "order": 17,
       "gallery": [
         {
           "image": "/images/uploads/katseye-pinky-up/01.jpg",
@@ -1138,29 +1140,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Pinky Up — Music Video",
+      "title": "KATSEYE",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "olivia-rodrigo-lancome",
-      "title": "Olivia Rodrigo",
-      "subtitle": "Lancôme",
-      "description": "",
-      "categories": [
-        "campaigns"
-      ],
-      "accent": "#e06a50",
-      "featured": false,
-      "hero": false,
-      "order": 18,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
       "heroImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
+      "externalUrl": "",
+      "accent": "#e06a50",
+      "slug": "olivia-rodrigo-lancome",
+      "client": "",
+      "featuredImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
+      "featured": false,
+      "order": 18,
       "gallery": [
         {
           "image": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
@@ -1213,29 +1215,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Lancôme",
+      "title": "Olivia Rodrigo",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "campaigns"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "camila-cabello-over-the-years",
-      "title": "Camila Cabello",
-      "subtitle": "Over the Years",
-      "description": "",
-      "categories": [
-        "photo"
-      ],
-      "accent": "#3f9e6e",
-      "featured": false,
-      "hero": false,
-      "order": 19,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
+      "externalUrl": "",
+      "accent": "#3f9e6e",
+      "slug": "camila-cabello-over-the-years",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
+      "featured": false,
+      "order": 19,
       "gallery": [
         {
           "image": "/images/uploads/camila-cabello-over-the-years/01.jpg",
@@ -1333,29 +1335,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Over the Years",
+      "title": "Camila Cabello",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "katseye-gabriela",
-      "title": "KATSEYE",
-      "subtitle": "Gabriela — Music Video",
-      "description": "",
-      "categories": [
-        "video"
-      ],
-      "accent": "#d24f9e",
-      "featured": false,
-      "hero": false,
-      "order": 20,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/katseye-gabriela/01.jpg",
       "heroImage": "/images/uploads/katseye-gabriela/01.jpg",
+      "externalUrl": "",
+      "accent": "#d24f9e",
+      "slug": "katseye-gabriela",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-gabriela/01.jpg",
+      "featured": false,
+      "order": 20,
       "gallery": [
         {
           "image": "/images/uploads/katseye-gabriela/01.jpg",
@@ -1423,30 +1425,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Gabriela — Music Video",
+      "title": "KATSEYE",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "james-arthur-creative-direction",
-      "title": "James Arthur",
-      "subtitle": "Creative Direction",
-      "description": "",
-      "categories": [
-        "art-direction",
-        "photo"
-      ],
-      "accent": "#4b57b0",
-      "featured": true,
-      "hero": false,
-      "order": 21,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/james-arthur-creative-direction/01.jpg",
       "heroImage": "/images/uploads/james-arthur-creative-direction/01.jpg",
+      "externalUrl": "",
+      "accent": "#4b57b0",
+      "slug": "james-arthur-creative-direction",
+      "client": "",
+      "featuredImage": "/images/uploads/james-arthur-creative-direction/01.jpg",
+      "featured": true,
+      "order": 21,
       "gallery": [
         {
           "image": "/images/uploads/james-arthur-creative-direction/01.jpg",
@@ -1489,29 +1490,30 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Creative Direction",
+      "title": "James Arthur",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "fifth-harmony-over-the-years",
-      "title": "Fifth Harmony",
-      "subtitle": "Over the Years",
-      "description": "",
       "categories": [
+        "art-direction",
         "photo"
       ],
-      "accent": "#8a5fd6",
-      "featured": false,
-      "hero": false,
-      "order": 22,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
+      "externalUrl": "",
+      "accent": "#8a5fd6",
+      "slug": "fifth-harmony-over-the-years",
+      "client": "",
+      "featuredImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
+      "featured": false,
+      "order": 22,
       "gallery": [
         {
           "image": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
@@ -1549,29 +1551,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
-      "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "little-mix-over-the-years",
-      "title": "Little Mix",
       "subtitle": "Over the Years",
-      "description": "",
+      "title": "Fifth Harmony",
+      "videos": [],
+      "hero": false,
+      "seoTitle": "",
       "categories": [
         "photo"
       ],
-      "accent": "#2f9bd6",
-      "featured": false,
-      "hero": false,
-      "order": 23,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/little-mix-over-the-years/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/little-mix-over-the-years/01.jpg",
+      "externalUrl": "",
+      "accent": "#2f9bd6",
+      "slug": "little-mix-over-the-years",
+      "client": "",
+      "featuredImage": "/images/uploads/little-mix-over-the-years/01.jpg",
+      "featured": false,
+      "order": 23,
       "gallery": [
         {
           "image": "/images/uploads/little-mix-over-the-years/01.jpg",
@@ -1659,29 +1661,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Over the Years",
+      "title": "Little Mix",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "posters",
-      "title": "Posters",
-      "subtitle": "Campaign Artwork",
-      "description": "",
-      "categories": [
-        "art-direction"
-      ],
-      "accent": "#c65f3f",
-      "featured": false,
-      "hero": false,
-      "order": 24,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/posters/01.jpg",
       "heroImage": "/images/uploads/posters/01.jpg",
+      "externalUrl": "",
+      "accent": "#c65f3f",
+      "slug": "posters",
+      "client": "",
+      "featuredImage": "/images/uploads/posters/01.jpg",
+      "featured": false,
+      "order": 24,
       "gallery": [
         {
           "image": "/images/uploads/posters/01.jpg",
@@ -1719,54 +1721,53 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Campaign Artwork",
+      "title": "Posters",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "art-direction"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
+      "heroImage": "",
+      "externalUrl": "",
+      "accent": "#3f6fe0",
       "slug": "boygenius-the-film",
-      "title": "boygenius",
+      "client": "",
+      "featuredImage": "",
+      "featured": false,
+      "order": 25,
+      "gallery": [],
+      "location": "",
       "subtitle": "The Film",
-      "description": "",
+      "title": "boygenius",
+      "videos": [],
+      "hero": false,
+      "seoTitle": "",
       "categories": [
         "video"
       ],
-      "accent": "#3f6fe0",
-      "featured": false,
-      "hero": false,
-      "order": 25,
       "placeholderCount": 6,
-      "featuredImage": "",
-      "heroImage": "",
-      "gallery": [],
-      "client": "",
-      "location": "",
+      "description": "",
       "year": "",
-      "externalUrl": "",
-      "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "seoDescription": ""
     },
     {
-      "slug": "camila-cabello-familia-campaign",
-      "title": "Camila Cabello",
-      "subtitle": "Familia Campaign",
-      "description": "",
-      "categories": [
-        "campaigns",
-        "photo"
-      ],
-      "accent": "#6e4fc0",
-      "featured": false,
-      "hero": false,
-      "order": 26,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
+      "externalUrl": "",
+      "accent": "#6e4fc0",
+      "slug": "camila-cabello-familia-campaign",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
+      "featured": false,
+      "order": 26,
       "gallery": [
         {
           "image": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
@@ -1874,29 +1875,30 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Familia Campaign",
+      "title": "Camila Cabello",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "one-direction-over-the-years",
-      "title": "One Direction",
-      "subtitle": "Over the Years",
-      "description": "",
       "categories": [
+        "campaigns",
         "photo"
       ],
-      "accent": "#c6982f",
-      "featured": false,
-      "hero": false,
-      "order": 27,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/one-direction-over-the-years/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/one-direction-over-the-years/01.jpg",
+      "externalUrl": "",
+      "accent": "#c6982f",
+      "slug": "one-direction-over-the-years",
+      "client": "",
+      "featuredImage": "/images/uploads/one-direction-over-the-years/01.jpg",
+      "featured": false,
+      "order": 27,
       "gallery": [
         {
           "image": "/images/uploads/one-direction-over-the-years/01.jpg",
@@ -1904,30 +1906,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Over the Years",
+      "title": "One Direction",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "katseye-on-the-road",
-      "title": "KATSEYE",
-      "subtitle": "On the Road",
-      "description": "",
-      "categories": [
-        "photo",
-        "social"
-      ],
-      "accent": "#d98a3d",
-      "featured": false,
-      "hero": false,
-      "order": 28,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/katseye-on-the-road/01.jpg",
       "heroImage": "/images/uploads/katseye-on-the-road/01.jpg",
+      "externalUrl": "",
+      "accent": "#d98a3d",
+      "slug": "katseye-on-the-road",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-on-the-road/01.jpg",
+      "featured": false,
+      "order": 28,
       "gallery": [
         {
           "image": "/images/uploads/katseye-on-the-road/01.jpg",
@@ -2040,53 +2041,54 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "On the Road",
+      "title": "KATSEYE",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "photo",
+        "social"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
+      "heroImage": "",
+      "externalUrl": "",
+      "accent": "#4b4fb0",
       "slug": "ben-platt-cherry-on-top",
-      "title": "Ben Platt",
+      "client": "",
+      "featuredImage": "",
+      "featured": false,
+      "order": 29,
+      "gallery": [],
+      "location": "",
       "subtitle": "Cherry On Top — Music Video",
-      "description": "",
+      "title": "Ben Platt",
+      "videos": [],
+      "hero": false,
+      "seoTitle": "",
       "categories": [
         "video"
       ],
-      "accent": "#4b4fb0",
-      "featured": false,
-      "hero": false,
-      "order": 29,
       "placeholderCount": 6,
-      "featuredImage": "",
-      "heroImage": "",
-      "gallery": [],
-      "client": "",
-      "location": "",
+      "description": "",
       "year": "",
-      "externalUrl": "",
-      "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "seoDescription": ""
     },
     {
-      "slug": "camila-cabello-uefa",
-      "title": "Camila Cabello",
-      "subtitle": "x UEFA",
-      "description": "",
-      "categories": [
-        "campaigns"
-      ],
-      "accent": "#e06a50",
-      "featured": false,
-      "hero": false,
-      "order": 30,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/camila-cabello-uefa/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-uefa/01.jpg",
+      "externalUrl": "",
+      "accent": "#e06a50",
+      "slug": "camila-cabello-uefa",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-uefa/01.jpg",
+      "featured": false,
+      "order": 30,
       "gallery": [
         {
           "image": "/images/uploads/camila-cabello-uefa/01.jpg",
@@ -2109,29 +2111,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "x UEFA",
+      "title": "Camila Cabello",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "campaigns"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "katseye-debut-music-video",
-      "title": "KATSEYE",
-      "subtitle": "Debut — Music Video",
-      "description": "",
-      "categories": [
-        "video"
-      ],
-      "accent": "#3f9e6e",
-      "featured": false,
-      "hero": false,
-      "order": 31,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/katseye-debut-music-video/01.jpg",
       "heroImage": "/images/uploads/katseye-debut-music-video/01.jpg",
+      "externalUrl": "",
+      "accent": "#3f9e6e",
+      "slug": "katseye-debut-music-video",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-debut-music-video/01.jpg",
+      "featured": false,
+      "order": 31,
       "gallery": [
         {
           "image": "/images/uploads/katseye-debut-music-video/01.jpg",
@@ -2214,29 +2216,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Debut — Music Video",
+      "title": "KATSEYE",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
+      "categories": [
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     },
     {
-      "slug": "camila-cabello-never-be-the-same-tour",
-      "title": "Camila Cabello",
-      "subtitle": "Never Be The Same Tour",
-      "description": "",
-      "categories": [
-        "photo"
-      ],
-      "accent": "#d24f9e",
-      "featured": false,
-      "hero": false,
-      "order": 32,
-      "placeholderCount": 6,
-      "featuredImage": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
       "heroImage": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
+      "externalUrl": "",
+      "accent": "#d24f9e",
+      "slug": "camila-cabello-never-be-the-same-tour",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
+      "featured": false,
+      "order": 32,
       "gallery": [
         {
           "image": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
@@ -2244,29 +2246,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Never Be The Same Tour",
+      "title": "Camila Cabello",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "syco",
-      "title": "Syco",
-      "subtitle": "",
-      "description": "",
       "categories": [
         "photo"
       ],
-      "accent": "#4b57b0",
-      "featured": false,
-      "hero": false,
-      "order": 33,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/syco/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/syco/01.jpg",
+      "externalUrl": "",
+      "accent": "#4b57b0",
+      "slug": "syco",
+      "client": "",
+      "featuredImage": "/images/uploads/syco/01.jpg",
+      "featured": false,
+      "order": 33,
       "gallery": [
         {
           "image": "/images/uploads/syco/01.jpg",
@@ -2329,31 +2331,29 @@
           "focalPoint": "center"
         }
       ],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "",
+      "title": "Syco",
+      "videos": [],
+      "hero": false,
       "seoTitle": "",
-      "seoDescription": "",
-      "videos": []
-    },
-    {
-      "slug": "alicia-keys-santa-baby-rollout",
-      "title": "Alicia Keys",
-      "subtitle": "Santa Baby Album Roll Out",
-      "description": "",
       "categories": [
-        "campaigns",
         "photo"
       ],
-      "accent": "#c6982f",
-      "featured": false,
-      "hero": false,
-      "order": 34,
       "placeholderCount": 6,
-      "featuredImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
+      "description": "",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
       "heroImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
-      "featuredFocalPoint": "center",
+      "externalUrl": "",
+      "accent": "#c6982f",
+      "slug": "alicia-keys-santa-baby-rollout",
+      "client": "",
+      "featuredImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
+      "featured": false,
+      "order": 34,
       "gallery": [
         {
           "image": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
@@ -2366,12 +2366,20 @@
           "focalPoint": "center"
         }
       ],
-      "videos": [],
-      "client": "",
       "location": "",
-      "year": "",
-      "externalUrl": "",
+      "subtitle": "Santa Baby Album Roll Out",
+      "title": "Alicia Keys",
+      "videos": [],
+      "featuredFocalPoint": "center",
+      "hero": false,
       "seoTitle": "",
+      "categories": [
+        "campaigns",
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
       "seoDescription": ""
     }
   ]
