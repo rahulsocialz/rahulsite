@@ -1,44 +1,42 @@
 import Link from "next/link";
-import { featuredProjects, categoryLabel } from "@/data/projects";
-import { ProjectCard } from "@/components/project/ProjectCard";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Divider } from "@/components/ui/Divider";
-import { focalPosition } from "@/lib/focal";
+import { categories, categoryLabel, projects } from "@/data/projects";
 
-/* Six featured projects in a tight row. */
+/* Selected Work — a set index rather than a gallery. Each category is a
+   line with its live count; the whole list is the table of contents for
+   the archive. Counts come straight from the project data. */
+const counts = categories.map((c) => ({
+  key: c.key,
+  label: c.key === "all" ? "All Projects" : categoryLabel(c.key),
+  count:
+    c.key === "all"
+      ? projects.length
+      : projects.filter((p) => p.categories.includes(c.key as never)).length,
+}));
+
 export function SelectedWorks() {
-  const works = featuredProjects.slice(0, 6);
   return (
-    <section className="py-7 lg:py-10">
-      <Divider />
-      <div className="shell mt-6 flex items-end justify-between">
-        <Eyebrow as="h2">Selected Works</Eyebrow>
-        <Link
-          href="/projects"
-          className="link text-[0.72rem] uppercase tracking-[0.14em] light:text-[var(--accent)]"
-        >
-          View All Projects
-        </Link>
-      </div>
-      <div className="shell mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
-        {works.map((p, i) => (
-          <ProjectCard
-            key={p.slug}
-            project={{
-              slug: p.slug,
-              title: p.title,
-              subtitle: p.subtitle,
-              image: p.featuredImage,
-              focal: focalPosition(p.featuredFocalPoint),
-              accent: p.accent,
-              categories: p.categories.slice(0, 1).map(categoryLabel),
-            }}
-            aspect="aspect-[4/5]"
-            sizes="(min-width:1024px) 16vw, (min-width:640px) 33vw, 50vw"
-            priority={i < 3}
-          />
+    <section className="shell border-b border-[var(--line-soft)] py-10 lg:py-14">
+      <h2 className="d3">Selected Work</h2>
+      <span aria-hidden className="mt-5 block h-px w-12 bg-[var(--ink)]" />
+
+      <ul className="mt-8 max-w-xl">
+        {counts.map(({ key, label, count }) => (
+          <li key={key}>
+            <Link
+              href={key === "all" ? "/projects" : `/projects?category=${key}`}
+              className="group flex min-h-11 items-center justify-between gap-6 border-b border-[var(--line-soft)] py-3 transition-colors hover:border-[var(--ink)]"
+            >
+              <span className="meta transition-opacity group-hover:opacity-60">{label}</span>
+              <span className="flex items-center gap-6">
+                <span className="meta tabular-nums text-[var(--muted)]">({count})</span>
+                <span aria-hidden className="text-[var(--muted)] transition-transform duration-300 group-hover:rotate-90">
+                  +
+                </span>
+              </span>
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Anton, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Providers from "@/components/layout/Providers";
-import Texture from "@/components/layout/Texture";
+import { PaperTexture } from "@/components/layout/PaperTexture";
+import { SideRail } from "@/components/layout/SideRail";
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/layout/Footer";
 import { site } from "@/data/site";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist", display: "swap" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono", display: "swap" });
+// Oversized narrow condensed display face — headlines only.
+const display = Anton({ subsets: ["latin"], weight: "400", variable: "--font-display", display: "swap" });
+// Monospace carries everything else: labels, metadata, captions, body, UI.
+const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono-face", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -30,13 +33,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB" className={`dark ${geist.variable} ${geistMono.variable}`} suppressHydrationWarning>
-      <body className="font-sans antialiased">
+    <html lang="en-GB" className={`${display.variable} ${mono.variable}`} suppressHydrationWarning>
+      <body className="antialiased">
         <Providers>
-          <Texture />
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <PaperTexture />
+          <SideRail />
+          <div className="relative z-10 has-rail">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
         </Providers>
         {/* Netlify Identity: handles login for the /admin content editor. */}
         <Script

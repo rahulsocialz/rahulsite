@@ -29,7 +29,7 @@ export function Media({
 }) {
   return (
     <div
-      className={`relative overflow-hidden ${fit === "cover" ? "bg-surface" : ""} ${className}`}
+      className={`relative overflow-hidden ${fit === "cover" ? "bg-[#0c0c0a]" : ""} ${className}`}
       style={style}
     >
       <Image

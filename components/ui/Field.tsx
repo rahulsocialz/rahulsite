@@ -1,28 +1,35 @@
-/* Minimal underline form field, editorial styling. Label sits above; the
-   line warms to the accent colour on focus. */
+/* Mono-labelled underline field. The rule darkens on focus, and the field
+   only flags as invalid via :user-invalid — after the visitor has actually
+   interacted with it, not on first paint. */
 export function Field({
   label,
   name,
   type = "text",
   textarea = false,
+  select = false,
+  options = [],
   required = false,
   autoComplete,
   placeholder,
+  rows = 3,
+  className = "",
 }: {
   label: string;
   name: string;
   type?: string;
   textarea?: boolean;
+  select?: boolean;
+  options?: string[];
   required?: boolean;
   autoComplete?: string;
   placeholder?: string;
+  rows?: number;
+  className?: string;
 }) {
   const id = `field-${name}`;
-  const cls =
-    "w-full border-b hairline bg-transparent pb-3 pt-1 text-[0.95rem] outline-none transition-colors duration-300 placeholder:text-muted/50 focus:border-[var(--accent)]";
   return (
-    <div>
-      <label htmlFor={id} className="eyebrow mb-3 block">
+    <div className={className}>
+      <label htmlFor={id} className="label mb-2 block text-[var(--muted)]">
         {label}
       </label>
       {textarea ? (
@@ -30,10 +37,21 @@ export function Field({
           id={id}
           name={name}
           required={required}
-          rows={4}
+          rows={rows}
           placeholder={placeholder}
-          className={`${cls} resize-none`}
+          className="field-input resize-none"
         />
+      ) : select ? (
+        <select id={id} name={name} required={required} defaultValue="" className="field-input">
+          <option value="" disabled>
+            {placeholder ?? "Select"}
+          </option>
+          {options.map((o) => (
+            <option key={o} value={o}>
+              {o}
+            </option>
+          ))}
+        </select>
       ) : (
         <input
           id={id}
@@ -42,7 +60,7 @@ export function Field({
           required={required}
           autoComplete={autoComplete}
           placeholder={placeholder}
-          className={cls}
+          className="field-input"
         />
       )}
     </div>

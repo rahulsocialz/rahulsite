@@ -1,17 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { pageTransition } from "@/lib/motion";
-
-/* Page transition: opacity + a whisper of scale (100 → 99 → 100). */
+/* Page transition: a plain fade-up, CSS-driven so it costs nothing and is
+   disabled automatically under prefers-reduced-motion. */
 export default function Template({ children }: { children: React.ReactNode }) {
-  return (
-    <motion.div
-      initial={pageTransition.initial}
-      animate={pageTransition.animate}
-      transition={pageTransition.transition}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className="fade-up">{children}</div>;
 }
