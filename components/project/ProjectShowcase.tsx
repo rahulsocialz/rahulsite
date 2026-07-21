@@ -7,7 +7,7 @@ import { Media } from "@/components/ui/Media";
 import { Masonry } from "@/components/ui/Masonry";
 import { detectEmbed, type Embed } from "@/lib/embeds";
 import { focalPosition } from "@/lib/focal";
-import type { GalleryImage } from "@/data/projects";
+import type { GalleryImage, ProjectVideo } from "@/data/projects";
 import { TikTokEmbed } from "./TikTokEmbed";
 import { InstagramEmbed } from "./InstagramEmbed";
 
@@ -53,8 +53,8 @@ function PlayIcon() {
 // item full-size, with arrows to step through every item and an X to close —
 // nothing on the page scrolls or re-flows when you pick a different one.
 type GalleryItem =
-  | { kind: "image"; src: string; caption?: string; focalPoint?: string }
-  | { kind: "video"; embed: Embed };
+  | { kind: "image"; imgIndex: number; src: string; caption?: string; focalPoint?: string }
+  | { kind: "video"; embed: Embed; caption?: string };
 
 // Vimeo/YouTube support ?autoplay=1 on their embed URL; TikTok/Instagram
 // embeds don't, so they just open ready to press play.
@@ -90,7 +90,7 @@ export function ProjectShowcase({
   title,
 }: {
   images: GalleryImage[];
-  videos?: string[];
+  videos?: ProjectVideo[];
   placeholderCount: number;
   accent: string;
   title: string;
@@ -99,17 +99,20 @@ export function ProjectShowcase({
   const count = hasImages ? images.length : Math.max(placeholderCount, 1);
   const pad = (n: number) => String(n + 1).padStart(2, "0");
 
+  // Videos lead the grid (e.g. award-winning trailers belong up top), photos
+  // follow.
   const galleryItems: GalleryItem[] = [
+    ...videos.flatMap((v): GalleryItem[] => {
+      const embed = detectEmbed(v.url);
+      return embed ? [{ kind: "video" as const, embed, caption: v.caption }] : [];
+    }),
     ...Array.from({ length: count }, (_, i) => ({
       kind: "image" as const,
+      imgIndex: i,
       src: hasImages ? images[i].image : "",
       caption: hasImages ? images[i].caption : undefined,
       focalPoint: hasImages ? images[i].focalPoint : undefined,
     })),
-    ...videos
-      .map(detectEmbed)
-      .filter((e): e is Embed => e !== null)
-      .map((embed) => ({ kind: "video" as const, embed })),
   ];
 
   const [lightbox, setLightbox] = useState<number | null>(null);
@@ -134,20 +137,20 @@ export function ProjectShowcase({
     };
   }, [lightbox, stepLightbox]);
 
-  const imageTile = (i: number, aspectClass: string) =>
+  const imageTile = (imgIndex: number, aspectClass: string) =>
     hasImages ? (
       <Media
-        src={images[i].image}
-        alt={`${title}, image ${pad(i)}`}
+        src={images[imgIndex].image}
+        alt={`${title}, image ${pad(imgIndex)}`}
         sizes="(min-width:1024px) 30vw, 50vw"
-        focal={focalPosition(images[i].focalPoint)}
+        focal={focalPosition(images[imgIndex].focalPoint)}
         className={aspectClass}
         imgClassName="transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.03]"
       />
     ) : (
       <Placeholder
         accent={accent}
-        label={pad(i)}
+        label={pad(imgIndex)}
         className={`${aspectClass} transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.03]`}
       />
     );
@@ -174,14 +177,22 @@ export function ProjectShowcase({
                   <PlayIcon />
                 </span>
               </button>
+              {item.caption && (
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/70 to-transparent px-3 pb-2 pt-8 text-left text-[0.7rem] text-white"
+                >
+                  {item.caption}
+                </span>
+              )}
             </div>
           ) : (
             <button
               onClick={() => setLightbox(i)}
-              aria-label={`Show image ${pad(i)}`}
+              aria-label={`Show image ${pad(item.imgIndex)}`}
               className="group relative block w-full overflow-hidden"
             >
-              {imageTile(i, ASPECTS[i % ASPECTS.length])}
+              {imageTile(item.imgIndex, ASPECTS[i % ASPECTS.length])}
               {item.caption && (
                 <span
                   aria-hidden
@@ -251,7 +262,7 @@ export function ProjectShowcase({
                   <div className="relative h-[70vh] w-[92vw] max-w-5xl sm:h-[78vh]">
                     <Media
                       src={current.src}
-                      alt={`${title}, image ${pad(lightbox!)}`}
+                      alt={`${title}, image ${pad(current.imgIndex)}`}
                       sizes="92vw"
                       priority
                       fit="contain"
@@ -261,9 +272,12 @@ export function ProjectShowcase({
                   {current.caption && <p className="text-center text-[0.8rem] text-white/80">{current.caption}</p>}
                 </>
               ) : (
-                <div className="w-[92vw] max-w-3xl">
-                  <VideoEmbed embed={current.embed} title={title} autoplay />
-                </div>
+                <>
+                  <div className="w-[92vw] max-w-3xl">
+                    <VideoEmbed embed={current.embed} title={title} autoplay />
+                  </div>
+                  {current.caption && <p className="text-center text-[0.8rem] text-white/80">{current.caption}</p>}
+                </>
               )}
             </div>
 

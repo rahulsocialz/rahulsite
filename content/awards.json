@@ -2,7 +2,8 @@
   "awards": [
     {
       "name": "iHeart Radio Favorite Tour Photographer ",
-      "detail": "KATSEYE - Beautiful Chaos Tour"
+      "detail": "KATSEYE - Beautiful Chaos Tour",
+      "link": "/projects/katseye-beautiful-chaos-tour"
     },
     {
       "name": "GRAMMY® Next",
@@ -10,15 +11,18 @@
     },
     {
       "name": "Hollywood Music Video Award",
-      "detail": "C,XOXO Deluxe Album Trailer"
+      "detail": "C,XOXO Deluxe Album Trailer",
+      "link": "/projects/camila-cabello-cxoxo-campaign"
     },
     {
       "name": "Clio Award",
-      "detail": "Jon Batiste Album Trailer"
+      "detail": "Jon Batiste Album Trailer",
+      "link": "/projects/jon-batiste-world-music-radio"
     },
     {
       "name": "Clio Award",
-      "detail": "C,XOXO Album Trailer"
+      "detail": "C,XOXO Album Trailer",
+      "link": "/projects/camila-cabello-cxoxo-campaign"
     }
   ]
 }

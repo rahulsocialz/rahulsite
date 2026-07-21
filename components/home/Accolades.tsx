@@ -26,15 +26,40 @@ export function Accolades() {
             whileInView="show"
             viewport={{ once: true, margin: "-15%" }}
           >
-            {awards.map((a) => (
-              <motion.li key={`${a.name}-${a.detail}`} variants={fadeItem} className="flex items-start gap-4">
-                <Laurel className="mt-0.5 opacity-70" />
-                <div>
-                  <p className="text-[0.95rem] font-medium">{a.name}</p>
-                  <p className="mt-0.5 text-caption text-muted">{a.detail}</p>
-                </div>
-              </motion.li>
-            ))}
+            {awards.map((a) => {
+              const external = a.link?.startsWith("http");
+              const body = (
+                <>
+                  <Laurel className="mt-0.5 opacity-70" />
+                  <div>
+                    <p className="text-[0.95rem] font-medium">{a.name}</p>
+                    <p className="mt-0.5 text-caption text-muted">{a.detail}</p>
+                  </div>
+                </>
+              );
+              return (
+                <motion.li key={`${a.name}-${a.detail}`} variants={fadeItem}>
+                  {a.link ? (
+                    external ? (
+                      <a
+                        href={a.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-start gap-4 transition-opacity hover:opacity-70"
+                      >
+                        {body}
+                      </a>
+                    ) : (
+                      <Link href={a.link} className="group flex items-start gap-4 transition-opacity hover:opacity-70">
+                        {body}
+                      </Link>
+                    )
+                  ) : (
+                    <div className="flex items-start gap-4">{body}</div>
+                  )}
+                </motion.li>
+              );
+            })}
           </motion.ul>
         </div>
 

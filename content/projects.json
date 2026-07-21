@@ -60,7 +60,7 @@
       "subtitle": "LinkBuds Campaign",
       "title": "Olivia Rodrigo",
       "videos": [],
-      "hero": true,
+      "hero": false,
       "seoTitle": "",
       "categories": [
         "campaigns",
@@ -78,7 +78,7 @@
       "slug": "katseye-beautiful-chaos-tour",
       "client": "",
       "featuredImage": "/images/uploads/01.-group-2.jpg",
-      "featured": false,
+      "featured": true,
       "order": 2,
       "gallery": [
         {
@@ -171,10 +171,13 @@
       "subtitle": "Beautiful Chaos Tour",
       "title": "KATSEYE",
       "videos": [
-        "https://www.tiktok.com/@katseyeworld/video/7583025276418919710?lang=en"
+        {
+          "url": "https://www.tiktok.com/@katseyeworld/video/7583025276418919710?lang=en",
+          "caption": ""
+        }
       ],
       "featuredFocalPoint": "top",
-      "hero": false,
+      "hero": true,
       "seoTitle": "",
       "categories": [
         "photo",
@@ -259,7 +262,20 @@
       "location": "",
       "subtitle": "C,XOXO Album Campaign",
       "title": "Camila Cabello",
-      "videos": [],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=uCzvtBt0SUo",
+          "caption": ""
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=tFSMUAbHElo",
+          "caption": ""
+        },
+        {
+          "url": "https://youtube.com/playlist?list=PLYJxet10hn1U&si=ClExPD9jYuuisfF5",
+          "caption": "Album Visualizers"
+        }
+      ],
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -272,19 +288,34 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "",
+      "heroImage": "/images/uploads/jon-batiste-world-music-radio/01.jpg",
       "externalUrl": "",
       "accent": "#d98a3d",
       "slug": "jon-batiste-world-music-radio",
       "client": "",
-      "featuredImage": "",
-      "featured": true,
+      "featuredImage": "/images/uploads/jon-batiste-world-music-radio/01.jpg",
+      "featured": false,
       "order": 4,
-      "gallery": [],
+      "gallery": [
+        {
+          "image": "/images/uploads/jon-batiste-world-music-radio/01.jpg",
+          "caption": "",
+          "focalPoint": "center"
+        }
+      ],
       "location": "",
       "subtitle": "World Music Radio Campaign",
       "title": "Jon Batiste",
-      "videos": [],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=ET4U-Of0C1g",
+          "caption": ""
+        },
+        {
+          "url": "https://youtube.com/playlist?list=PL9tY0BWXOZFtzPChiOvSgTKoBfIbacuv2&si=igUjHBOnqnkhVTKV",
+          "caption": ""
+        }
+      ],
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -302,7 +333,7 @@
       "slug": "katseye-gap-x-complex",
       "client": "",
       "featuredImage": "/images/uploads/katseye-gap-x-complex/02.jpg",
-      "featured": true,
+      "featured": false,
       "order": 5,
       "gallery": [
         {
@@ -424,12 +455,12 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
+      "heroImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
       "externalUrl": "",
       "accent": "#3f9e6e",
       "slug": "olivia-rodrigo-guts-tour-photo-book",
       "client": "",
-      "featuredImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/01.jpg",
+      "featuredImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
       "featured": false,
       "order": 7,
       "gallery": [
@@ -566,7 +597,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredFocalPoint": "top"
     },
     {
       "heroImage": "/images/uploads/renee-rapp-bite-me/02.jpg",
@@ -574,7 +606,7 @@
       "accent": "#4b57b0",
       "slug": "renee-rapp-bite-me",
       "client": "",
-      "featuredImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
+      "featuredImage": "/images/uploads/renee-rapp-bite-me/02.jpg",
       "featured": false,
       "order": 9,
       "gallery": [
@@ -617,8 +649,13 @@
       "location": "",
       "subtitle": "Bite Me",
       "title": "Renee Rapp",
-      "videos": [],
-      "hero": true,
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=tiPWzFLiz4A",
+          "caption": ""
+        }
+      ],
+      "hero": false,
       "seoTitle": "",
       "categories": [
         "photo",
@@ -855,7 +892,7 @@
       "slug": "jungkook-3d-single",
       "client": "",
       "featuredImage": "/images/uploads/jungkook-3d-single/02.jpg",
-      "featured": true,
+      "featured": false,
       "order": 14,
       "gallery": [
         {
@@ -872,7 +909,20 @@
       "location": "",
       "subtitle": "3D Single",
       "title": "Jungkook",
-      "videos": [],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=b3KdowoBzP4&list=PL5hrGMysD_GsReohQFLeXrKWI_SMTib3N&index=9",
+          "caption": ""
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=gZ45pwT6HWw&list=PL5hrGMysD_GsReohQFLeXrKWI_SMTib3N&index=11",
+          "caption": ""
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=UiBCks4fCYA&list=PL5hrGMysD_GsReohQFLeXrKWI_SMTib3N&index=12",
+          "caption": ""
+        }
+      ],
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -1013,7 +1063,7 @@
       "subtitle": "Gnarly Campaign",
       "title": "KATSEYE",
       "videos": [],
-      "hero": true,
+      "hero": false,
       "seoTitle": "",
       "categories": [
         "campaigns",
@@ -1215,7 +1265,7 @@
       "subtitle": "Lancôme",
       "title": "Olivia Rodrigo",
       "videos": [],
-      "hero": false,
+      "hero": true,
       "seoTitle": "",
       "categories": [
         "campaigns"
@@ -1223,7 +1273,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredFocalPoint": "left"
     },
     {
       "heroImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
@@ -1436,12 +1487,12 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "/images/uploads/james-arthur-creative-direction/01.jpg",
+      "heroImage": "/images/uploads/james-arthur-creative-direction/05.jpg",
       "externalUrl": "",
       "accent": "#4b57b0",
       "slug": "james-arthur-creative-direction",
       "client": "",
-      "featuredImage": "/images/uploads/james-arthur-creative-direction/01.jpg",
+      "featuredImage": "/images/uploads/james-arthur-creative-direction/05.jpg",
       "featured": false,
       "order": 21,
       "gallery": [
@@ -1884,7 +1935,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredFocalPoint": "top"
     },
     {
       "heroImage": "/images/uploads/one-direction-over-the-years/01.jpg",
@@ -1893,7 +1945,7 @@
       "slug": "one-direction-over-the-years",
       "client": "",
       "featuredImage": "/images/uploads/one-direction-over-the-years/01.jpg",
-      "featured": false,
+      "featured": true,
       "order": 27,
       "gallery": [
         {
@@ -2257,12 +2309,12 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "/images/uploads/syco/01.jpg",
+      "heroImage": "/images/uploads/syco/02.jpg",
       "externalUrl": "",
       "accent": "#4b57b0",
       "slug": "syco",
       "client": "",
-      "featuredImage": "/images/uploads/syco/01.jpg",
+      "featuredImage": "/images/uploads/syco/02.jpg",
       "featured": false,
       "order": 33,
       "gallery": [
@@ -2339,7 +2391,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredFocalPoint": "top"
     },
     {
       "heroImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",

@@ -18,7 +18,11 @@ const ROTATE_MS = 7000;
 
 const heroSrc = (p: (typeof slides)[number]) => p.heroImage || p.featuredImage;
 
-/* Full-bleed hero photograph, or a tinted placeholder until one is added. */
+/* Full-bleed hero photograph, or a tinted placeholder until one is added.
+   Slightly oversized (scale 1.15) so every photo has real crop margin on
+   all sides — without it, a photo narrower than the hero's own aspect
+   ratio only ever crops top/bottom, leaving the focal point's left/right
+   setting with nothing to actually shift. */
 function Frame({ index, priority }: { index: number; priority?: boolean }) {
   const p = slides[index];
   const src = heroSrc(p);
@@ -31,7 +35,11 @@ function Frame({ index, priority }: { index: number; priority?: boolean }) {
           fill
           priority={priority}
           sizes="100vw"
-          style={{ objectPosition: focalPosition(p.featuredFocalPoint) }}
+          style={{
+            objectPosition: focalPosition(p.featuredFocalPoint),
+            transform: "scale(1.15)",
+            transformOrigin: focalPosition(p.featuredFocalPoint),
+          }}
           className="object-cover"
         />
       </div>

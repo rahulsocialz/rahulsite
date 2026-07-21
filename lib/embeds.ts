@@ -13,18 +13,25 @@ export interface Embed {
   tiktokVideoId?: string;
 }
 
-function youtubeId(url: string): string | null {
-  // Covers watch?v=, youtu.be/, /embed/ and /shorts/ shapes, any param order.
+// Covers watch?v= (with an optional playlist via &list=), youtu.be/, /embed/
+// and /shorts/ shapes, and a bare playlist link (list= with no v=), any
+// param order.
+function youtubeEmbedUrl(url: string): string | null {
   try {
     const u = new URL(url);
+    const list = u.searchParams.get("list");
+
     if (/(^|\.)youtube\.com$/i.test(u.hostname)) {
       const v = u.searchParams.get("v");
-      if (v) return v;
+      if (v) return `https://www.youtube-nocookie.com/embed/${v}${list ? `?list=${list}` : ""}`;
       const path = u.pathname.match(/\/(embed|shorts)\/([\w-]{11})/);
-      if (path) return path[2];
+      if (path) return `https://www.youtube-nocookie.com/embed/${path[2]}`;
+      if (list) return `https://www.youtube-nocookie.com/embed/videoseries?list=${list}`;
+      return null;
     }
     if (/(^|\.)youtu\.be$/i.test(u.hostname)) {
-      return u.pathname.slice(1).split("/")[0] || null;
+      const id = u.pathname.slice(1).split("/")[0];
+      return id ? `https://www.youtube-nocookie.com/embed/${id}${list ? `?list=${list}` : ""}` : null;
     }
   } catch {
     return null;
@@ -33,8 +40,8 @@ function youtubeId(url: string): string | null {
 }
 
 export function detectEmbed(url: string): Embed | null {
-  const yt = youtubeId(url);
-  if (yt) return { platform: "youtube", url, embedUrl: `https://www.youtube-nocookie.com/embed/${yt}` };
+  const ytEmbed = youtubeEmbedUrl(url);
+  if (ytEmbed) return { platform: "youtube", url, embedUrl: ytEmbed };
 
   if (/vimeo\.com/i.test(url)) {
     const id = url.match(/vimeo\.com\/(?:.*\/)?(\d+)/)?.[1];

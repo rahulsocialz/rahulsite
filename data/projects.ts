@@ -30,6 +30,11 @@ export interface GalleryImage {
   focalPoint?: string;
 }
 
+export interface ProjectVideo {
+  url: string;
+  caption?: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -46,7 +51,7 @@ export interface Project {
   heroImage?: string;
   featuredFocalPoint?: string;
   gallery?: GalleryImage[];
-  videos?: string[];
+  videos?: ProjectVideo[];
   // Optional — only rendered where present.
   client?: string;
   location?: string;

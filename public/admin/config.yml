@@ -50,12 +50,18 @@ collections:
                 widget: image
                 required: false
               - name: featuredFocalPoint
-                label: "Cover image crop focus (if a head or subject gets cut off on the grid/hero, nudge this)"
+                label: "Cover image crop focus (if a head or subject gets cut off, or on the homepage hero the headline text covers them, nudge this)"
                 widget: select
                 options:
+                  - { label: "Top-left", value: "top-left" }
                   - { label: "Top", value: "top" }
+                  - { label: "Top-right", value: "top-right" }
+                  - { label: "Left", value: "left" }
                   - { label: "Center", value: "center" }
+                  - { label: "Right", value: "right" }
+                  - { label: "Bottom-left", value: "bottom-left" }
                   - { label: "Bottom", value: "bottom" }
+                  - { label: "Bottom-right", value: "bottom-right" }
                 default: "center"
                 required: false
               - name: gallery
@@ -73,16 +79,28 @@ collections:
                     label: "Crop focus (if a head or subject gets cut off, nudge this)"
                     widget: select
                     options:
+                      - { label: "Top-left", value: "top-left" }
                       - { label: "Top", value: "top" }
+                      - { label: "Top-right", value: "top-right" }
+                      - { label: "Left", value: "left" }
                       - { label: "Center", value: "center" }
+                      - { label: "Right", value: "right" }
+                      - { label: "Bottom-left", value: "bottom-left" }
                       - { label: "Bottom", value: "bottom" }
+                      - { label: "Bottom-right", value: "bottom-right" }
                     default: "center"
                     required: false
               - name: videos
-                label: "Videos (paste a YouTube, Vimeo, TikTok or Instagram post link)"
+                label: "Videos (paste a YouTube, Vimeo, TikTok or Instagram post link — YouTube playlist links work too)"
                 widget: list
                 required: false
-                field: { name: url, label: "Video link", widget: string }
+                summary: "{{fields.caption}}{{fields.url}}"
+                fields:
+                  - { name: url, label: "Video link", widget: string }
+                  - name: caption
+                    label: "Caption (optional — shows as a small label, e.g. \"Album Visualizers\". Leave blank for nothing.)"
+                    widget: string
+                    required: false
               - { name: featured, label: "Feature on homepage (Selected Works)", widget: boolean, default: false }
               - { name: hero, label: "Include in homepage hero slideshow", widget: boolean, default: false }
               - { name: order, label: "Order (lower shows first)", widget: number, value_type: int, default: 99 }
@@ -143,6 +161,10 @@ collections:
             fields:
               - { name: name, label: "Award name", widget: string }
               - { name: detail, label: "Detail (e.g. Winner, Camila Cabello)", widget: string }
+              - name: link
+                label: "Link (optional — e.g. to the project page it's for, or a press release)"
+                widget: string
+                required: false
 
   # ---------------------------------------------------------------- Homepage
   - name: home
