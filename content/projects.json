@@ -840,6 +840,14 @@
       "seoDescription": "",
       "media": [
         {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=xQl4jd77bGY"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=6oqywcXsQik"
+        },
+        {
           "type": "image",
           "image": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
           "focalPoint": "center"
