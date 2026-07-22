@@ -16,7 +16,7 @@ collections:
       - name: projects
         label: "All Projects"
         file: "content/projects.json"
-        description: "Your portfolio. Drag to reorder, or set the Order number. Tick a project to feature it on the homepage or include it in the hero."
+        description: "Your portfolio. Drag entries up/down to reorder the Work/Archive page, or set the Order number directly. Tick Feature and/or Hero to also show a project on the homepage, and use their position numbers to control where it lands there."
         fields:
           - name: projects
             label: "Projects"
@@ -68,7 +68,8 @@ collections:
                 label: "Gallery images"
                 widget: list
                 required: false
-                summary: "{{fields.caption}}"
+                collapsed: true
+                summary: "{{fields.image}}"
                 fields:
                   - { name: image, label: "Image", widget: image }
                   - name: caption
@@ -94,16 +95,31 @@ collections:
                 label: "Videos (paste a YouTube, Vimeo, TikTok or Instagram post link — YouTube playlist links work too)"
                 widget: list
                 required: false
-                summary: "{{fields.caption}}{{fields.url}}"
+                collapsed: true
+                summary: "{{fields.url}}"
                 fields:
                   - { name: url, label: "Video link", widget: string }
                   - name: caption
                     label: "Caption (optional — shows as a small label, e.g. \"Album Visualizers\". Leave blank for nothing.)"
                     widget: string
                     required: false
-              - { name: featured, label: "Feature on homepage (Selected Works)", widget: boolean, default: false }
-              - { name: hero, label: "Include in homepage hero slideshow", widget: boolean, default: false }
-              - { name: order, label: "Order (lower shows first)", widget: number, value_type: int, default: 99 }
+              - { name: featured, label: "Feature on homepage (Instagram-row strip)", widget: boolean, default: false }
+              - name: featuredOrder
+                label: "Position in that homepage strip (lower shows first, left to right) — only matters if Feature is ticked"
+                widget: number
+                value_type: int
+                required: false
+              - { name: hero, label: "Include in homepage hero collage (top of homepage)", widget: boolean, default: false }
+              - name: heroOrder
+                label: "Position in the hero collage (lower shows first) — only matters if Hero is ticked"
+                widget: number
+                value_type: int
+                required: false
+              - name: order
+                label: "Order on the Work/Archive page (lower shows first)"
+                widget: number
+                value_type: int
+                default: 99
               - name: accent
                 label: "Accent colour (hex, used before a cover image is added)"
                 widget: string
