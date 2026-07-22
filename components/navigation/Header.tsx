@@ -9,6 +9,7 @@ import { site } from "@/data/site";
 /* Work and Featured In are real pages; About, Contact and Instagram are
    sections of the homepage, so they resolve to anchors from anywhere. */
 const links = [
+  { href: "/", label: "Home", match: "/", exact: true },
   { href: "/projects", label: "Work", match: "/projects" },
   { href: "/#about", label: "About" },
   { href: "/featured-in", label: "Featured In", match: "/featured-in" },
@@ -44,7 +45,7 @@ export function Header() {
         <div className="flex items-center gap-5 sm:gap-8">
           <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
             {links.map((l) => {
-              const active = l.match ? pathname.startsWith(l.match) : false;
+              const active = l.match ? ("exact" in l && l.exact ? pathname === l.match : pathname.startsWith(l.match)) : false;
               return (
                 <Link
                   key={l.label}

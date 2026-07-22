@@ -10,7 +10,7 @@ interface BeholdPost {
   sizes?: { medium?: { mediaUrl?: string } };
 }
 
-const TILE_COUNT = 12;
+const TILE_COUNT = 6;
 
 /* Recent moments as a contact sheet rather than a social widget: a tight
    grid of frames on black stock, sprocket rails top and bottom, frame
@@ -61,7 +61,7 @@ export function Instagram() {
 
       <div className="mt-8 bg-[#0c0c0a] p-2">
         <Sprockets />
-        <div className="grid grid-cols-3 gap-1 sm:grid-cols-4 lg:grid-cols-6">
+        <div className="grid grid-cols-3 gap-1 sm:grid-cols-6">
           {tiles.map((i) => {
             const post = posts?.[i];
             const feedImage = post?.sizes?.medium?.mediaUrl;

@@ -105,15 +105,14 @@ export function ProjectsGrid() {
           <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-12">
             {shown.map((p, i) => {
               const slot = CYCLE[i % CYCLE.length];
+              // Tall and short rows alternate; every module in a row
+              // stretches to the same height, so the archive lines up.
+              const height = slot.tall
+                ? "min-h-[22rem] sm:min-h-[26rem]"
+                : "min-h-[18rem] sm:min-h-[20rem]";
               return (
-                <div key={p.slug} className={slot.span}>
-                  <ArchiveModule
-                    p={p}
-                    index={i}
-                    variant={slot.variant}
-                    aspect={slot.aspect}
-                    priority={i < 2}
-                  />
+                <div key={p.slug} className={`${slot.span} ${height}`}>
+                  <ArchiveModule p={p} index={i} variant={slot.variant} priority={i < 2} />
                 </div>
               );
             })}

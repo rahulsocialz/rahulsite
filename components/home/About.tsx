@@ -1,5 +1,6 @@
 import { site } from "@/data/site";
 import { Media } from "@/components/ui/Media";
+import { FilmEdge } from "@/components/analog/Analog";
 import { awards } from "@/data/awards";
 import Link from "next/link";
 
@@ -13,22 +14,30 @@ export function About() {
       <span aria-hidden className="mt-5 block h-px w-12 bg-[var(--ink)]" />
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,34ch)_1fr] lg:gap-14">
-        <div className="relative max-w-sm">
-          {site.about.image ? (
-            <Media
-              src={site.about.image}
-              alt={site.name}
-              sizes="(min-width:1024px) 20rem, 80vw"
-              className="aspect-[4/5] w-full"
-            />
-          ) : (
-            <span className="block aspect-[4/5] w-full bg-[var(--paper-2)]" />
-          )}
+        {/* Portrait mounted in a film carrier, like every other photograph
+            on the site */}
+        <div className="max-w-sm">
+          <div className="film relative">
+            <FilmEdge side="l" text="01 · 400" />
+            <FilmEdge side="r" text="400 · 36 EXP" />
+            <div className="px-[1.375rem] py-[1.375rem]">
+              {site.about.image ? (
+                <Media
+                  src={site.about.image}
+                  alt={site.name}
+                  sizes="(min-width:1024px) 20rem, 80vw"
+                  className="aspect-[4/5] w-full"
+                />
+              ) : (
+                <span className="block aspect-[4/5] w-full bg-[#141412]" />
+              )}
+            </div>
+          </div>
         </div>
 
         <div>
           {site.about.heading.length > 0 && (
-            <h3 className="display mb-6 text-[clamp(1.4rem,2.2vw,2rem)]">
+            <h3 className="display mb-7 text-[clamp(1.3rem,2vw,1.8rem)] leading-[1.2]">
               {site.about.heading.map((line) => (
                 <span key={line} className="block">
                   {line}

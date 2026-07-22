@@ -27,7 +27,53 @@ function Caption({ p, tone = "light" }: { p: Project; tone?: "light" | "dark" })
   );
 }
 
-/* A photograph with its caption set over the bottom of the frame. */
+/* A photograph with its caption set in a black bar beneath it. */
+function StackModule({
+  p,
+  className = "",
+  mobileAspect = "aspect-[16/10]",
+  sizes,
+  priority = false,
+}: {
+  p: Project;
+  className?: string;
+  mobileAspect?: string;
+  sizes: string;
+  priority?: boolean;
+}) {
+  const src = cover(p);
+  return (
+    <Link
+      href={`/projects/${p.slug}`}
+      className={`group flex flex-col bg-[var(--surface)] text-[#ebe6da] ${className}`}
+    >
+      <span className={`relative w-full ${mobileAspect} sm:aspect-auto sm:min-h-[14rem] sm:flex-1`}>
+        <span className="absolute inset-0">
+          {src ? (
+            <Media
+              src={src}
+              alt={`${p.title} — ${p.subtitle}`}
+              sizes={sizes}
+              priority={priority}
+              focal={focalPosition(p.featuredFocalPoint)}
+              className="h-full w-full"
+              imgClassName="transition-transform duration-[900ms] ease-[var(--ease-out)] group-hover:scale-[1.02]"
+            />
+          ) : (
+            <span className="block h-full w-full bg-[#141412]" />
+          )}
+        </span>
+      </span>
+      <div className="shrink-0 p-5">
+        <Caption p={p} />
+      </div>
+    </Link>
+  );
+}
+
+/* A photograph with its caption set over the bottom of the frame — used
+   where the tile should read as one continuous image rather than a boxed
+   card. */
 function OverlayModule({
   p,
   className = "",
@@ -90,7 +136,7 @@ export function Hero() {
         <div className="flex flex-col justify-between py-10 pr-0 lg:py-14 lg:pr-10">
           <div>
             {/* Sized to the rail so the longest word never runs past it */}
-            <h1 className="display text-[clamp(1.9rem,3.4vw,3.15rem)] leading-[0.96]">
+            <h1 className="display text-[clamp(1.9rem,3.4vw,3.15rem)] leading-[1.14]">
               {site.hero.headline.map((line) => (
                 <span key={line} className="block">
                   {line}
@@ -130,30 +176,12 @@ export function Hero() {
               />
             )}
 
-            {/* Black module: photograph over a set caption */}
             {b && (
-              <Link
-                href={`/projects/${b.slug}`}
-                className="group flex flex-col bg-[var(--surface)] text-[#ebe6da] sm:col-span-5 sm:row-span-2"
-              >
-                {cover(b) && (
-                  <span className="relative aspect-[16/10] w-full sm:aspect-auto sm:min-h-[14rem] sm:flex-1">
-                    <span className="absolute inset-0">
-                      <Media
-                        src={cover(b)}
-                        alt={`${b.title} — ${b.subtitle}`}
-                        sizes="(min-width:1024px) 32vw, 100vw"
-                        focal={focalPosition(b.featuredFocalPoint)}
-                        className="h-full w-full"
-                        imgClassName="transition-transform duration-[900ms] ease-[var(--ease-out)] group-hover:scale-[1.02]"
-                      />
-                    </span>
-                  </span>
-                )}
-                <div className="shrink-0 p-5">
-                  <Caption p={b} />
-                </div>
-              </Link>
+              <StackModule
+                p={b}
+                sizes="(min-width:1024px) 32vw, 100vw"
+                className="sm:col-span-5 sm:row-span-2"
+              />
             )}
 
             {/* Film rail with the picked frame circled in grease pencil */}
@@ -168,23 +196,23 @@ export function Hero() {
             </div>
 
             {c && (
-              <>
-                {/* Photograph and its caption card are separate modules here,
-                    so the frame itself stays clean */}
-                <OverlayModule
-                  p={c}
-                  caption={false}
-                  sizes="(min-width:1024px) 34vw, 100vw"
-                  className="aspect-[16/9] sm:col-span-6"
-                />
-                {/* Cream metadata block — the paper caption card */}
-                <Link
-                  href={`/projects/${c.slug}`}
-                  className="group hidden flex-col justify-center border border-[var(--line-soft)] bg-[var(--paper-2)] p-4 sm:col-span-3 sm:flex"
-                >
-                  <Caption p={c} tone="dark" />
-                </Link>
-              </>
+              <OverlayModule
+                p={c}
+                caption={false}
+                sizes="(min-width:1024px) 34vw, 100vw"
+                className="aspect-[16/9] sm:col-span-6"
+              />
+            )}
+
+            {/* Cream metadata block — Camila's own caption, paired with her
+                photo above so the two tiles read as one connected pair. */}
+            {c && (
+              <Link
+                href={`/projects/${c.slug}`}
+                className="group hidden flex-col justify-center border border-[var(--line-soft)] bg-[var(--paper-2)] p-4 sm:col-span-3 sm:flex"
+              >
+                <Caption p={c} tone="dark" />
+              </Link>
             )}
 
             {d && (

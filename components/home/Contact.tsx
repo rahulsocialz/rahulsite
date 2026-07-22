@@ -7,16 +7,6 @@ import { Tape } from "@/components/analog/Analog";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
-const PROJECT_TYPES = [
-  "Campaign",
-  "Album / Single Rollout",
-  "Tour / Live",
-  "Music Video",
-  "Social Content",
-  "Art Direction",
-  "Other",
-];
-
 /* Contact lives on the homepage only. Submitted via Web3Forms (web3forms.com)
    so messages land straight in the inbox with no server of our own. The access
    key is public by design — it only routes mail to the registered address, it
@@ -56,34 +46,10 @@ export function Contact() {
         <div>
           <h2 className="d3">Contact</h2>
           <span aria-hidden className="mt-5 block h-px w-12 bg-[var(--ink)]" />
-
-          <ul className="mt-8 space-y-4">
-            <li className="meta text-[var(--muted)]">
-              Los Angeles, CA
-              <br />
-              Worldwide
-            </li>
-            <li>
-              <a href={`mailto:${site.email}`} className="ul-link meta">
-                {site.email}
-              </a>
-            </li>
-            <li>
-              <a
-                href={site.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ul-link meta"
-              >
-                {site.instagramHandle}
-              </a>
-            </li>
-          </ul>
         </div>
 
-        <div className="relative max-w-3xl">
+        <div className="relative max-w-2xl">
           <Tape className="-top-4 right-6 hidden lg:block" rotate={7} />
-          <p className="d2">Let&apos;s work together.</p>
 
           <form onSubmit={handleSubmit} className="mt-8 grid gap-7">
             {/* Web3Forms routing + spam protection — hidden, never shown */}
@@ -109,16 +75,9 @@ export function Contact() {
                 autoComplete="email"
                 placeholder="you@example.com"
               />
-              <Field
-                label="Company / Artist"
-                name="company"
-                autoComplete="organization"
-                placeholder="Who you're with"
-              />
-              <Field label="Project Type" name="project_type" select options={PROJECT_TYPES} placeholder="Select" />
             </div>
 
-            <Field label="Project Description" name="message" textarea required rows={4} />
+            <Field label="Message" name="message" textarea required rows={4} />
 
             <div>
               <button
@@ -126,7 +85,7 @@ export function Contact() {
                 disabled={status === "sending"}
                 className="label flex min-h-11 w-full items-center justify-center bg-[var(--ink)] px-8 py-4 text-[var(--paper)] transition-opacity duration-300 hover:opacity-85 disabled:opacity-50 sm:w-auto sm:min-w-[18rem]"
               >
-                {status === "sending" ? "Sending…" : "Send Enquiry"}
+                {status === "sending" ? "Sending…" : "Send Message"}
               </button>
 
               {status === "sent" && (
@@ -141,6 +100,25 @@ export function Contact() {
               )}
             </div>
           </form>
+
+          <div className="mt-8 flex flex-wrap gap-x-10 gap-y-3">
+            <a
+              href={site.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ul-link meta text-[var(--muted)]"
+            >
+              Instagram {site.instagramHandle}
+            </a>
+            <a
+              href={site.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ul-link meta text-[var(--muted)]"
+            >
+              {site.url.replace(/^https?:\/\//, "")}
+            </a>
+          </div>
         </div>
       </div>
     </section>

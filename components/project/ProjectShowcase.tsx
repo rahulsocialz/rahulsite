@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from "react";
 import { Media } from "@/components/ui/Media";
-import { FilmEdge, CircledNumber, Sprockets } from "@/components/analog/Analog";
+import { CircledNumber, Sprockets } from "@/components/analog/Analog";
 import { detectEmbed, type Embed } from "@/lib/embeds";
 import { focalPosition } from "@/lib/focal";
 import type { GalleryImage, ProjectVideo } from "@/data/projects";
@@ -20,8 +20,17 @@ type Item =
   | { kind: "image"; src: string; caption?: string; focalPoint?: string }
   | { kind: "video"; embed: Embed; caption?: string };
 
-// Repeating layout rhythm: wide, then a pair, then a tall single.
-const LAYOUT = ["wide", "pair", "pair", "single", "wide", "single"] as const;
+/* The sequence sits on whole rows that add up to 12, alternating a
+   full-width plate, a pair, and a three-up. Every frame stretches to its
+   row height so the spread lines up edge to edge. */
+const LAYOUT: { span: string; tall: boolean }[] = [
+  { span: "sm:col-span-12", tall: true }, // full-width plate
+  { span: "sm:col-span-6", tall: true }, // pair
+  { span: "sm:col-span-6", tall: true },
+  { span: "sm:col-span-4", tall: false }, // three-up
+  { span: "sm:col-span-4", tall: false },
+  { span: "sm:col-span-4", tall: false },
+];
 
 function VideoEmbed({ embed, title }: { embed: Embed; title: string }) {
   if (embed.platform === "youtube" || embed.platform === "vimeo") {
@@ -102,51 +111,47 @@ export function ProjectShowcase({
 
       <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-12">
         {items.map((item, i) => {
-          const shape = LAYOUT[i % LAYOUT.length];
-          const span =
-            shape === "wide" ? "sm:col-span-12" : shape === "pair" ? "sm:col-span-6" : "sm:col-span-7";
-          const aspect =
-            shape === "wide" ? "aspect-[16/9]" : shape === "pair" ? "aspect-[4/5]" : "aspect-[3/4]";
+          const slot = LAYOUT[i % LAYOUT.length];
+          const height = slot.tall
+            ? "min-h-[24rem] sm:min-h-[30rem]"
+            : "min-h-[18rem] sm:min-h-[22rem]";
 
+          // Videos keep their own 16:9 player rather than being stretched.
           if (item.kind === "video") {
             return (
-              <div key={i} className={`${span} relative`}>
-                <div className="film relative">
-                  <FilmEdge side="l" text={`${pad(i)} · 400`} />
-                  <FilmEdge side="r" text="400 · 36 EXP" />
-                  <div className="px-[1.375rem] py-[1.375rem]">
-                    <VideoEmbed embed={item.embed} title={title} />
-                    {item.caption && <p className="meta pt-3 text-[#cfcabc]/80">{item.caption}</p>}
-                  </div>
-                </div>
+              <div key={i} className={slot.span}>
+                <VideoEmbed embed={item.embed} title={title} />
+                {item.caption && <p className="meta pt-3 text-[var(--muted)]">{item.caption}</p>}
               </div>
             );
           }
 
           return (
-            <div key={i} className={span}>
+            <div key={i} className={`${slot.span} ${height}`}>
               <button
                 type="button"
                 onClick={() => setOpen(i)}
                 aria-label={`View frame ${pad(i)}`}
-                className="film group relative block w-full text-left"
+                className="group relative flex h-full w-full flex-col text-left"
               >
-                <FilmEdge side="l" text={`${pad(i)} · 400`} />
-                <FilmEdge side="r" text="400 · 36 EXP" />
-                <div className="px-[1.375rem] py-[1.375rem]">
-                  <Media
-                    src={item.src}
-                    alt={item.caption || `${title}, frame ${pad(i)}`}
-                    sizes="(min-width:1024px) 60vw, 100vw"
-                    focal={focalPosition(item.focalPoint)}
-                    className={`w-full ${aspect}`}
-                    imgClassName="transition-transform duration-[900ms] ease-[var(--ease-out)] group-hover:scale-[1.02]"
-                  />
-                  {item.caption && <p className="meta pt-3 text-[#cfcabc]/80">{item.caption}</p>}
-                </div>
+                <span className="relative block min-h-[9rem] flex-1">
+                  <span className="absolute inset-0">
+                    <Media
+                      src={item.src}
+                      alt={item.caption || `${title}, frame ${pad(i)}`}
+                      sizes="(min-width:1024px) 60vw, 100vw"
+                      focal={focalPosition(item.focalPoint)}
+                      className="h-full w-full"
+                      imgClassName="transition-transform duration-[900ms] ease-[var(--ease-out)] group-hover:scale-[1.02]"
+                    />
+                  </span>
+                </span>
+                {item.caption && (
+                  <p className="meta shrink-0 pt-3 text-[var(--muted)]">{item.caption}</p>
+                )}
                 {i === 2 && (
-                  <span className="absolute right-7 top-7">
-                    <CircledNumber value={pad(i)} className="h-9 w-16 text-[#cfcabc]" />
+                  <span className="absolute right-7 top-7 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                    <CircledNumber value={pad(i)} className="h-9 w-16" />
                   </span>
                 )}
               </button>

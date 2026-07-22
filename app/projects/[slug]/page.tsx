@@ -103,11 +103,18 @@ export default async function ProjectDetail({
               </span>
             </Link>
           )}
+
+          <Link
+            href="/projects"
+            className="label mt-8 flex min-h-11 items-center justify-center gap-2 border border-[var(--line)] px-6 py-3 transition-colors duration-300 hover:bg-[var(--ink)] hover:text-[var(--paper)]"
+          >
+            All Work / Archive <span aria-hidden>↗</span>
+          </Link>
         </nav>
       </div>
 
       {/* Media sequence */}
-      <div>
+      <div className="min-w-0">
         <ProjectShowcase
           images={project.gallery ?? []}
           videos={project.videos ?? []}

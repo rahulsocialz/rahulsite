@@ -59,6 +59,10 @@ export interface Project {
   externalUrl?: string;
   seoTitle?: string;
   seoDescription?: string;
+  // Independent from `order` (which drives the /projects archive) so the
+  // homepage hero collage and featured strip can be arranged on their own.
+  heroOrder?: number;
+  featuredOrder?: number;
 }
 
 // Drop empty strings so "only render if present" checks stay simple.
@@ -77,8 +81,12 @@ export const projects: Project[] = (projectsData.projects as Record<string, unkn
 
 export const bySlug = (slug: string) => projects.find((p) => p.slug === slug);
 export const sorted = projects;
-export const featuredProjects = projects.filter((p) => p.featured);
-export const heroProjects = projects.filter((p) => p.hero);
+export const featuredProjects = projects
+  .filter((p) => p.featured)
+  .sort((a, b) => (a.featuredOrder ?? a.order) - (b.featuredOrder ?? b.order));
+export const heroProjects = projects
+  .filter((p) => p.hero)
+  .sort((a, b) => (a.heroOrder ?? a.order) - (b.heroOrder ?? b.order));
 
 export function galleryImages(p: Project): GalleryImage[] {
   return p.gallery && p.gallery.length > 0 ? p.gallery : [];
