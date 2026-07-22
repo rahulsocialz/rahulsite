@@ -116,8 +116,7 @@ export default async function ProjectDetail({
       {/* Media sequence */}
       <div className="min-w-0">
         <ProjectShowcase
-          images={project.gallery ?? []}
-          videos={project.videos ?? []}
+          media={project.media ?? []}
           title={project.title}
           subtitle={project.subtitle}
           year={project.year}

@@ -24,16 +24,13 @@ export function categoryLabel(key: string) {
   return categoryLabels[key as CategoryKey] ?? key;
 }
 
-export interface GalleryImage {
-  image: string;
-  caption?: string;
-  focalPoint?: string;
-}
-
-export interface ProjectVideo {
-  url: string;
-  caption?: string;
-}
+// A single entry in a project's media sequence — either a photo or a video,
+// in whatever order they were dragged into in the CMS. Replaces the old
+// separate gallery/videos lists (which always forced every video ahead of
+// every photo) so the two can be freely interleaved.
+export type MediaItem =
+  | { type: "image"; image: string; caption?: string; focalPoint?: string }
+  | { type: "video"; url: string; caption?: string };
 
 export interface Project {
   slug: string;
@@ -50,8 +47,7 @@ export interface Project {
   featuredImage?: string;
   heroImage?: string;
   featuredFocalPoint?: string;
-  gallery?: GalleryImage[];
-  videos?: ProjectVideo[];
+  media?: MediaItem[];
   // Optional — only rendered where present.
   client?: string;
   location?: string;
@@ -87,7 +83,3 @@ export const featuredProjects = projects
 export const heroProjects = projects
   .filter((p) => p.hero)
   .sort((a, b) => (a.heroOrder ?? a.order) - (b.heroOrder ?? b.order));
-
-export function galleryImages(p: Project): GalleryImage[] {
-  return p.gallery && p.gallery.length > 0 ? p.gallery : [];
-}

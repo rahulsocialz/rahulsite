@@ -5,7 +5,7 @@ import { Media } from "@/components/ui/Media";
 import { CircledNumber, Sprockets } from "@/components/analog/Analog";
 import { detectEmbed, type Embed } from "@/lib/embeds";
 import { focalPosition } from "@/lib/focal";
-import type { GalleryImage, ProjectVideo } from "@/data/projects";
+import type { MediaItem } from "@/data/projects";
 import { TikTokEmbed } from "./TikTokEmbed";
 import { InstagramEmbed } from "./InstagramEmbed";
 import { Lightbox, type ViewerItem } from "./Lightbox";
@@ -51,33 +51,25 @@ function VideoEmbed({ embed, title }: { embed: Embed; title: string }) {
 }
 
 export function ProjectShowcase({
-  images,
-  videos = [],
+  media,
   title,
   subtitle,
   year,
 }: {
-  images: GalleryImage[];
-  videos?: ProjectVideo[];
-  placeholderCount?: number;
-  accent?: string;
+  media: MediaItem[];
   title: string;
   subtitle?: string;
   year?: string;
 }) {
-  // Videos lead the sequence — award-winning trailers belong at the top.
-  const items: Item[] = [
-    ...videos.flatMap((v): Item[] => {
-      const embed = detectEmbed(v.url);
-      return embed ? [{ kind: "video", embed, caption: v.caption }] : [];
-    }),
-    ...images.map((g): Item => ({
-      kind: "image",
-      src: g.image,
-      caption: g.caption,
-      focalPoint: g.focalPoint,
-    })),
-  ];
+  // The sequence follows exactly the order authored in the CMS — photos and
+  // videos can be freely interleaved rather than videos always leading.
+  const items: Item[] = media.flatMap((m): Item[] => {
+    if (m.type === "video") {
+      const embed = detectEmbed(m.url);
+      return embed ? [{ kind: "video", embed, caption: m.caption }] : [];
+    }
+    return [{ kind: "image", src: m.image, caption: m.caption, focalPoint: m.focalPoint }];
+  });
 
   const viewerItems: ViewerItem[] = items.map((it) =>
     it.kind === "image"

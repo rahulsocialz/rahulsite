@@ -126,7 +126,10 @@ export function Hero() {
   const [a, b, c, d] = collage;
   // Contact-sheet strip below the collage — the next frames on the roll.
   const strip = featuredProjects
-    .flatMap((p) => (p.gallery ?? []).slice(0, 1).map((g) => ({ src: g.image, p })))
+    .flatMap((p) => {
+      const firstImage = (p.media ?? []).find((m) => m.type === "image");
+      return firstImage ? [{ src: firstImage.image, p }] : [];
+    })
     .slice(0, 5);
 
   return (

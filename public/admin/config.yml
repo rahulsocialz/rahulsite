@@ -64,45 +64,50 @@ collections:
                   - { label: "Bottom-right", value: "bottom-right" }
                 default: "center"
                 required: false
-              - name: gallery
-                label: "Gallery images"
+              - name: media
+                label: "Photos & Videos (drag to reorder — mix them however you like, they'll appear on the project page in this exact order)"
                 widget: list
                 required: false
                 collapsed: true
-                summary: "{{fields.image}}"
-                fields:
-                  - { name: image, label: "Image", widget: image }
-                  - name: caption
-                    label: "Caption (optional — shows in a small label when someone hovers the image, e.g. \"DSP photo\". Leave blank for nothing.)"
-                    widget: string
-                    required: false
-                  - name: focalPoint
-                    label: "Crop focus (if a head or subject gets cut off, nudge this)"
-                    widget: select
-                    options:
-                      - { label: "Top-left", value: "top-left" }
-                      - { label: "Top", value: "top" }
-                      - { label: "Top-right", value: "top-right" }
-                      - { label: "Left", value: "left" }
-                      - { label: "Center", value: "center" }
-                      - { label: "Right", value: "right" }
-                      - { label: "Bottom-left", value: "bottom-left" }
-                      - { label: "Bottom", value: "bottom" }
-                      - { label: "Bottom-right", value: "bottom-right" }
-                    default: "center"
-                    required: false
-              - name: videos
-                label: "Videos (paste a YouTube, Vimeo, TikTok or Instagram post link — YouTube playlist links work too)"
-                widget: list
-                required: false
-                collapsed: true
-                summary: "{{fields.url}}"
-                fields:
-                  - { name: url, label: "Video link", widget: string }
-                  - name: caption
-                    label: "Caption (optional — shows as a small label, e.g. \"Album Visualizers\". Leave blank for nothing.)"
-                    widget: string
-                    required: false
+                summary: "{{fields.image}}{{fields.url}}"
+                types:
+                  - label: "Photo"
+                    name: image
+                    widget: object
+                    summary: "{{fields.image}}"
+                    fields:
+                      - { name: image, label: "Image", widget: image }
+                      - name: caption
+                        label: "Caption (optional — shows in a small label when someone hovers the image, e.g. \"DSP photo\". Leave blank for nothing.)"
+                        widget: string
+                        required: false
+                      - name: focalPoint
+                        label: "Crop focus (if a head or subject gets cut off, nudge this)"
+                        widget: select
+                        options:
+                          - { label: "Top-left", value: "top-left" }
+                          - { label: "Top", value: "top" }
+                          - { label: "Top-right", value: "top-right" }
+                          - { label: "Left", value: "left" }
+                          - { label: "Center", value: "center" }
+                          - { label: "Right", value: "right" }
+                          - { label: "Bottom-left", value: "bottom-left" }
+                          - { label: "Bottom", value: "bottom" }
+                          - { label: "Bottom-right", value: "bottom-right" }
+                        default: "center"
+                        required: false
+                  - label: "Video"
+                    name: video
+                    widget: object
+                    summary: "{{fields.url}}"
+                    fields:
+                      - name: url
+                        label: "Video link (YouTube, Vimeo, TikTok or Instagram post — YouTube playlist links work too)"
+                        widget: string
+                      - name: caption
+                        label: "Caption (optional — shows as a small label, e.g. \"Album Visualizers\". Leave blank for nothing.)"
+                        widget: string
+                        required: false
               - { name: featured, label: "Feature on homepage (Instagram-row strip)", widget: boolean, default: false }
               - name: featuredOrder
                 label: "Position in that homepage strip (lower shows first, left to right) — only matters if Feature is ticked"
