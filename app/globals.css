@@ -1,84 +1,78 @@
 @import "tailwindcss" source("../");
 
-@custom-variant dark (&:where(.dark, .dark *));
-@custom-variant light (&:where(.light, .light *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
 
 /* ============================================================
-   DESIGN TOKENS
-   Photography leads; the interface stays calm. Accent colour is
-   set at runtime from the active image (see lib/accent).
+   DESIGN TOKENS — tactile music-photography archive
+   Warm cream paper in light, near-black paper in dark. Photography
+   is the only colour that matters; the interface stays ink on paper.
    ============================================================ */
 
-:root {
-  /* Light mode — Apple-Creative calm, warm paper base */
-  --bg: #faf8f4;
-  --surface: #f4f1ea;
-  --surface-2: #ece8df;
-  --text: #111111;
-  --text-secondary: #666666;
-  --border: rgba(0, 0, 0, 0.1);
-  --border-strong: rgba(0, 0, 0, 0.18);
+:root,
+[data-theme="light"] {
+  --paper: #eeeae0;
+  --paper-2: #e6e1d5;
+  --ink: #11110f;
+  --surface: #171715;
+  --surface-ink: #ebe6da;
+  --muted: #6f6a61;
+  --line: rgba(17, 17, 15, 0.55);
+  --line-soft: rgba(17, 17, 15, 0.18);
+  --tape: #c9b992;
 
-  /* Restrained default accent (coral). Overridden by image extraction. */
-  --accent: #c9553b;
-  --accent-ink: #ffffff;
-
-  /* Texture intensities */
-  --grain-opacity: 0.08;
-  --paper-opacity: 0.5;
-  --vignette-opacity: 0;
+  --grain-opacity: 0.055;
+  --fibre-opacity: 0.5;
 
   color-scheme: light;
 }
 
-.dark {
-  --bg: #090909;
-  --surface: #121212;
-  --surface-2: #1a1a1a;
-  --text: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.65);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
-
-  /* Dark stays essentially monochrome; accent is used only in tiny doses */
-  --accent: #e8e2d8;
-  --accent-ink: #090909;
+[data-theme="dark"] {
+  --paper: #0a0a09;
+  --paper-2: #161614;
+  --ink: #ebe6da;
+  --surface: #141412;
+  --surface-ink: #ebe6da;
+  --muted: #aaa397;
+  --line: rgba(235, 230, 218, 0.45);
+  --line-soft: rgba(235, 230, 218, 0.16);
+  --tape: #c9b992;
 
   --grain-opacity: 0.07;
-  --paper-opacity: 0;
-  --vignette-opacity: 0.4;
+  --fibre-opacity: 0.1;
 
   color-scheme: dark;
 }
 
 @theme inline {
-  --color-bg: var(--bg);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
   --color-surface: var(--surface);
-  --color-surface-2: var(--surface-2);
-  --color-fg: var(--text);
-  --color-muted: var(--text-secondary);
-  --color-line: var(--border);
-  --color-line-strong: var(--border-strong);
-  --color-accent: var(--accent);
+  --color-surface-ink: var(--surface-ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-tape: var(--tape);
 
-  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  /* Aliases kept so existing utility usage doesn't break mid-redesign. */
+  --color-bg: var(--paper);
+  --color-fg: var(--ink);
 
-  /* Fluid editorial type scale */
-  --text-eyebrow: 0.6875rem;
-  --text-caption: 0.8125rem;
-  --text-body: 1rem;
-  --text-lead: clamp(1.05rem, 1.4vw, 1.25rem);
-  --text-h3: clamp(1.2rem, 2vw, 1.6rem);
-  --text-h2: clamp(1.75rem, 3.4vw, 2.6rem);
-  --text-h1: clamp(2.4rem, 5vw, 4rem);
-  --text-display: clamp(3rem, 8.5vw, 7.5rem);
+  --font-display: var(--font-display), "Arial Narrow", sans-serif;
+  --font-mono: var(--font-mono-face), ui-monospace, "SF Mono", monospace;
+  --font-sans: var(--font-mono-face), ui-monospace, monospace;
 
-  --radius-pill: 999px;
+  /* Type scale — one oversized condensed display, everything else mono. */
+  --text-label: 0.6875rem;
+  --text-meta: 0.75rem;
+  --text-body: 0.8125rem;
+  --text-lead: 0.875rem;
+  --text-d3: clamp(1.6rem, 3vw, 2.5rem);
+  --text-d2: clamp(2.2rem, 5vw, 4rem);
+  --text-d1: clamp(2.6rem, 6.2vw, 5.6rem);
 
-  /* Premium motion — nothing overshoots */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 /* ============================================================
@@ -86,26 +80,29 @@
    ============================================================ */
 
 html {
-  background: var(--bg);
+  background: var(--paper);
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-sans);
-  font-feature-settings: "ss01", "cv01";
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--text-body);
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  transition: background-color 0.5s var(--ease-out), color 0.5s var(--ease-out);
 }
 
 ::selection {
-  background: var(--text);
-  color: var(--bg);
+  background: var(--ink);
+  color: var(--paper);
 }
 
-/* Respect users who prefer less motion */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -118,110 +115,40 @@ body {
 }
 
 /* ============================================================
-   LAYOUT PRIMITIVES
+   PAPER TEXTURE
+   Two lightweight SVG layers: a fine fibre wash and a grain speckle.
+   Fixed so the sheet reads as one continuous surface while scrolling.
    ============================================================ */
 
-.shell {
-  width: 100%;
-  max-width: 1600px;
-  margin-inline: auto;
-  padding-inline: 1.5rem;
-}
-@media (min-width: 640px) {
-  .shell { padding-inline: 2.5rem; }
-}
-@media (min-width: 1024px) {
-  .shell { padding-inline: 4rem; }
-}
-
-.hairline {
-  border-color: var(--border);
-}
-
-/* ============================================================
-   TYPOGRAPHY HELPERS
-   ============================================================ */
-
-.eyebrow {
-  font-size: var(--text-eyebrow);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-
-.display {
-  font-size: var(--text-display);
-  line-height: 0.96;
-  letter-spacing: -0.035em;
-  font-weight: 500;
-}
-
-.h1 { font-size: var(--text-h1); line-height: 1.02; letter-spacing: -0.03em; font-weight: 500; }
-.h2 { font-size: var(--text-h2); line-height: 1.05; letter-spacing: -0.02em; font-weight: 500; }
-.h3 { font-size: var(--text-h3); line-height: 1.15; letter-spacing: -0.015em; font-weight: 500; }
-.lead { font-size: var(--text-lead); line-height: 1.55; color: var(--text-secondary); }
-
-/* ============================================================
-   CRITICAL ENTRANCE (CSS-driven so content always ends visible,
-   even if JS animation is throttled or fails)
-   ============================================================ */
-
-@keyframes riseIn {
-  from { transform: translateY(115%); }
-  to { transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.line-rise { animation: riseIn 0.85s var(--ease-out) both; }
-.fade-in { animation: fadeIn 0.7s var(--ease-out) both; }
-
-/* ============================================================
-   LINKS — underline grows from the left
-   ============================================================ */
-
-.link {
-  background-image: linear-gradient(currentColor, currentColor);
-  background-size: 0% 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.4s var(--ease-out), color 0.3s var(--ease-out);
-  padding-bottom: 1px;
-}
-.link:hover {
-  background-size: 100% 1px;
-}
-.link-accent:hover {
-  color: var(--accent);
-}
-
-/* ============================================================
-   TEXTURE SYSTEM
-   Film grain (animated, barely there) + vignette (dark) + paper (light)
-   ============================================================ */
-
-.tex-layer {
+.paper-texture {
   position: fixed;
   inset: 0;
+  z-index: 0;
   pointer-events: none;
-  z-index: 90;
 }
-
-.tex-grain {
+.paper-texture::before,
+.paper-texture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.paper-texture::before {
+  opacity: var(--fibre-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.035' numOctaves='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.62  0 0 0 0 0.58  0 0 0 0 0.5  0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23f)'/%3E%3C/svg%3E");
+}
+.paper-texture::after {
   inset: -120%;
   width: 340%;
   height: 340%;
   opacity: var(--grain-opacity);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 260px 260px;
-  animation: grainDrift 0.9s steps(6) infinite;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+  animation: grain-drift 0.9s steps(6) infinite;
   will-change: transform;
 }
 
 /* Fast, jittery drift = the flicker of real film grain */
-@keyframes grainDrift {
+@keyframes grain-drift {
   0% { transform: translate(0, 0); }
   16% { transform: translate(-5%, 4%); }
   33% { transform: translate(4%, -5%); }
@@ -231,109 +158,285 @@ body {
   100% { transform: translate(0, 0); }
 }
 
-/* Vignette — dark mode only, almost imperceptible */
-.tex-vignette {
-  opacity: var(--vignette-opacity);
-  background: radial-gradient(
-    130% 100% at 50% 45%,
-    transparent 58%,
-    rgba(0, 0, 0, 0.55) 100%
-  );
-}
-
-/* Paper — light mode only, faint warm tooth */
-.tex-paper {
-  opacity: calc(var(--paper-opacity) * 0.01);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.55  0 0 0 0 0.45  0 0 0 0 0.3  0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23p)'/%3E%3C/svg%3E");
-  background-size: 300px 300px;
-  mix-blend-mode: multiply;
-}
-
 /* ============================================================
-   PUBLICATION WORDMARKS (type-only stand-ins, no trademarked art)
+   LAYOUT PRIMITIVES
    ============================================================ */
 
-.wm { white-space: nowrap; line-height: 1; }
-.wm-billboard { font-weight: 800; letter-spacing: -0.03em; text-transform: lowercase; }
-.wm-rollingstone { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; letter-spacing: -0.02em; }
-.wm-variety { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
-.wm-nme { font-weight: 900; letter-spacing: 0.08em; }
-.wm-clash { font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; }
-.wm-wonderland { font-family: Georgia, "Times New Roman", serif; font-weight: 600; letter-spacing: 0.01em; }
-.wm-vogue { font-family: Georgia, "Times New Roman", serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; }
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: 1720px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .shell { padding-inline: 2rem; }
+  }
+  @media (min-width: 1024px) {
+    .shell { padding-inline: 2.5rem; }
+  }
 
-/* Instagram's own resize handshake for the iframe it swaps in over our
-   blockquote is unreliable (see InstagramEmbed.tsx) — force that iframe,
-   wherever it lands, to fill the fixed-aspect box we give it instead. */
-.ig-embed-fixed iframe {
-  width: 100% !important;
-  height: 100% !important;
-  position: absolute !important;
-  inset: 0 !important;
-  min-width: 0 !important;
-  max-width: none !important;
-}
+  .hairline {
+    border-color: var(--line-soft);
+  }
+  .rule {
+    border-color: var(--line);
+  }
 
-/* ============================================================
-   LIGHT-MODE MULTI-COLOUR ("wow factor")
-   Dark mode stays monochrome; light mode brings colour through the
-   headline gradient, page titles and publication wordmarks.
-   ============================================================ */
-
-/* Hero headline: one continuous gradient (coral → pink → violet → indigo)
-   sliced across its three lines so it reads as a single smooth wash. */
-.light .headline-multi > span > span {
-  background-image: linear-gradient(
-    175deg,
-    #ea6a4d 0%,
-    #d94f86 34%,
-    #8a4fc4 68%,
-    #4f63cf 100%
-  );
-  background-size: 100% 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.light .headline-multi > span:nth-child(1) > span { background-position: 0 0%; }
-.light .headline-multi > span:nth-child(2) > span { background-position: 0 50%; }
-.light .headline-multi > span:nth-child(3) > span { background-position: 0 100%; }
-
-/* Reusable gradient text — light mode only; falls back to normal colour in
-   dark. Used for the About heading, page titles and publication wordmarks. */
-.light .gradient-text {
-  background-image: linear-gradient(96deg, #ea6a4d 0%, #d94f86 33%, #8a4fc4 66%, #4f63cf 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* ============================================================
-   CUSTOM CURSOR ("○ View" on project media)
-   ============================================================ */
-
-@media (hover: hover) and (pointer: fine) {
-  .cursor-dot {
+  /* Fixed editorial side rail — vertical set locality text on large screens. */
+  .side-rail {
     position: fixed;
-    top: 0;
     left: 0;
-    z-index: 100;
-    display: grid;
-    place-items: center;
-    width: 72px;
-    height: 72px;
-    margin: -36px 0 0 -36px;
-    border-radius: var(--radius-pill);
-    background: var(--text);
-    color: var(--bg);
-    font-size: 0.6875rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    top: 0;
+    bottom: 0;
+    width: 3rem;
+    z-index: 30;
+    display: none;
+    border-right: 1px solid var(--line-soft);
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.35s var(--ease-out);
   }
-  .cursor-dot[data-active="true"] {
-    opacity: 1;
+  @media (min-width: 1024px) {
+    .side-rail { display: block; }
+    .has-rail { padding-left: 3rem; }
   }
+  .side-rail__text {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    font-size: 0.5625rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ============================================================
+     TYPOGRAPHY HELPERS
+     ============================================================ */
+
+  .display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 0.86;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+  }
+  .d1 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-d1); line-height: 0.94; letter-spacing: -0.005em; text-transform: uppercase; }
+  .d2 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-d2); line-height: 0.95; letter-spacing: -0.005em; text-transform: uppercase; }
+  .d3 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-d3); line-height: 0.92; letter-spacing: -0.005em; text-transform: uppercase; }
+
+  /* Mono interface label — nav, metadata, captions, counts. */
+  .label {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .meta {
+    font-family: var(--font-mono);
+    font-size: var(--text-meta);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .caption {
+    font-family: var(--font-mono);
+    font-size: var(--text-meta);
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+
+  /* Underline that draws in from the left on hover. */
+  .ul-link {
+    position: relative;
+    display: inline-block;
+  }
+  .ul-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.35em;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.45s var(--ease-out);
+  }
+  .ul-link:hover::after,
+  .ul-link[data-active="true"]::after {
+    transform: scaleX(1);
+  }
+
+  /* ============================================================
+     FILM + ANALOG ARTIFACTS
+     Frame edges, sprocket ticks, tape, crop marks, grease-pencil circle.
+     Used sparingly — these should read as real working artifacts.
+     ============================================================ */
+
+  /* Black film carrier around a photograph, with room for edge markings. */
+  .film {
+    position: relative;
+    background: #0c0c0a;
+    color: #cfcabc;
+  }
+  .film__edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.4375rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(207, 202, 188, 0.75);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .film__edge--l { left: 0; }
+  .film__edge--r { right: 0; }
+  .film__edge span {
+    writing-mode: vertical-rl;
+  }
+  .film__edge--l span { transform: rotate(180deg); }
+
+  /* Horizontal sprocket rail for contact sheets / filmstrips. */
+  .sprockets {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 0.9rem;
+    padding-inline: 0.5rem;
+    background: #0c0c0a;
+    overflow: hidden;
+  }
+  .sprockets::before {
+    content: "";
+    flex: 1;
+    height: 0.3rem;
+    background-image: repeating-linear-gradient(
+      to right,
+      rgba(207, 202, 188, 0.55) 0 0.42rem,
+      transparent 0.42rem 0.95rem
+    );
+  }
+
+  /* Strip of masking tape. Beige in both themes — it's a real material. */
+  .tape {
+    position: absolute;
+    width: 6.5rem;
+    height: 2.1rem;
+    background: var(--tape);
+    opacity: 0.92;
+    pointer-events: none;
+    /* Torn ends */
+    clip-path: polygon(
+      2% 6%, 12% 0, 26% 8%, 41% 1%, 58% 9%, 74% 2%, 89% 10%, 100% 4%,
+      98% 94%, 86% 100%, 71% 92%, 55% 99%, 39% 91%, 24% 98%, 10% 90%, 0 96%
+    );
+  }
+  .tape::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.16) 0 1px,
+      transparent 1px 4px
+    );
+    mix-blend-mode: overlay;
+  }
+
+  /* Registration / crop marks at a module's corners. */
+  .crop-marks::before,
+  .crop-marks::after {
+    content: "";
+    position: absolute;
+    width: 0.85rem;
+    height: 0.85rem;
+    border-color: var(--line);
+    pointer-events: none;
+  }
+  .crop-marks::before {
+    top: 0.55rem;
+    left: 0.55rem;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+  .crop-marks::after {
+    bottom: 0.55rem;
+    right: 0.55rem;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+
+  /* ============================================================
+     PUBLICATION WORDMARKS
+     Type-only, set in the publication's own manner without using their
+     trademarked artwork. Always inherit the surrounding ink colour.
+     ============================================================ */
+
+  .wm { white-space: nowrap; line-height: 1; color: currentColor; }
+  .wm-billboard { font-weight: 800; letter-spacing: -0.03em; text-transform: lowercase; }
+  .wm-rollingstone { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; letter-spacing: -0.02em; }
+  .wm-variety { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
+  .wm-nme { font-weight: 900; letter-spacing: 0.08em; }
+  .wm-clash { font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; }
+  .wm-wonderland { font-family: Georgia, "Times New Roman", serif; font-weight: 600; letter-spacing: 0.01em; }
+  .wm-vogue { font-family: Georgia, "Times New Roman", serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; }
+  .wm-generic { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.01em; }
+
+  /* ============================================================
+     ENTRANCE
+     ============================================================ */
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+  .fade-up {
+    animation: fade-up 0.7s var(--ease-out) both;
+  }
+
+  /* ============================================================
+     FORM
+     ============================================================ */
+
+  .field-input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 0 0.6rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-body);
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.3s var(--ease-out);
+    border-radius: 0;
+  }
+  .field-input::placeholder { color: var(--muted); opacity: 0.7; }
+  .field-input:focus { border-bottom-color: var(--ink); }
+  .field-input:user-invalid { border-bottom-color: #b4472f; }
+  select.field-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%236f6a61' stroke-width='1.4'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.1rem center;
+    padding-right: 1.5rem;
+    cursor: pointer;
+  }
+  [data-theme="dark"] select.field-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23aaa397' stroke-width='1.4'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  }
+
+  /* Hide scrollbar on the horizontal filter rail while keeping it scrollable. */
+  .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+
 }
+

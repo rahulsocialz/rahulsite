@@ -2,27 +2,23 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/data/site";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { Media } from "@/components/ui/Media";
-import { Divider } from "@/components/ui/Divider";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Masonry } from "@/components/ui/Masonry";
+import { Sprockets } from "@/components/analog/Analog";
 
 interface BeholdPost {
   permalink: string;
-  sizes?: { medium?: { mediaUrl?: string; width?: number; height?: number } };
+  sizes?: { medium?: { mediaUrl?: string } };
 }
 
 const TILE_COUNT = 6;
-// Modern Instagram default for posts without real dimensions (manual CMS
-// images, placeholders) — most posts today are 4:5 rather than square.
-const FALLBACK_RATIO = 4 / 5;
 
-/* Six tiles in one row, sourced live from the Behold Instagram feed
-   (behold.so). Each tile keeps that post's real aspect ratio (Instagram
-   posts are rarely square anymore) instead of force-cropping to a square.
-   Falls back to images added in the CMS, then to neutral placeholders, so
-   the section never shows broken tiles. */
+/* Recent moments as a contact sheet rather than a social widget: a tight
+   grid of frames on black stock, sprocket rails top and bottom, frame
+   numbers along the base.
+
+   Sourced live from the Behold Instagram feed (behold.so). Falls back to
+   images added in the CMS, then to plain frames, so the sheet never shows
+   broken tiles. */
 export function Instagram() {
   const [posts, setPosts] = useState<BeholdPost[] | null>(null);
 
@@ -47,75 +43,70 @@ export function Instagram() {
   const tiles = Array.from({ length: TILE_COUNT }, (_, i) => i);
 
   return (
-    <section className="py-7 lg:py-10">
-      <Divider />
-      <div className="shell mt-6 flex items-end justify-between">
-        <Eyebrow as="h2">Latest on Instagram</Eyebrow>
+    <section id="instagram" className="shell scroll-mt-16 border-b border-[var(--line-soft)] py-10 lg:py-14">
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <h2 className="d3">
+          Instagram /<br />
+          Recent Moments
+        </h2>
         <a
           href={site.instagramUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="link text-[0.72rem] uppercase tracking-[0.14em] light:text-[var(--accent)]"
+          className="ul-link label inline-flex items-center gap-2"
         >
-          Follow {site.instagramHandle}
+          View Instagram <span aria-hidden>↗</span>
         </a>
       </div>
-      <div className="shell mt-6">
-        <Masonry
-          items={tiles}
-          gap="gap-2 sm:gap-3"
-          columns={{ base: 3, sm: 6, lg: 6 }}
-          render={(i) => {
+
+      <div className="mt-8 bg-[#0c0c0a] p-2">
+        <Sprockets />
+        <div className="grid grid-cols-3 gap-1 sm:grid-cols-6">
+          {tiles.map((i) => {
             const post = posts?.[i];
             const feedImage = post?.sizes?.medium?.mediaUrl;
-            const { width, height } = post?.sizes?.medium ?? {};
-            const ratio = width && height ? width / height : FALLBACK_RATIO;
             const cmsImage = site.instagram.images[i];
             const href = post?.permalink ?? site.instagramUrl;
 
             return (
               <a
+                key={i}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram post"
-                className="group block overflow-hidden"
+                className="group relative block"
               >
                 {feedImage ? (
-                  // Instagram's own CDN hostnames rotate constantly, so this
-                  // bypasses next/image optimisation (a plain <img>, same as
-                  // any Instagram embed) rather than allow-listing domains.
-                  <div
-                    className="relative w-full overflow-hidden bg-surface"
-                    style={{ aspectRatio: ratio }}
-                  >
+                  // Instagram's CDN hostnames rotate constantly, so this
+                  // bypasses next/image optimisation — same as any IG embed.
+                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#141412]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={feedImage}
                       alt="Instagram post"
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.02]"
+                      className="h-full w-full object-cover opacity-90 transition-opacity duration-500 group-hover:opacity-100"
                     />
                   </div>
                 ) : cmsImage ? (
                   <Media
                     src={cmsImage}
                     alt="Instagram post"
-                    sizes="(min-width:640px) 16vw, 33vw"
-                    className="w-full"
-                    style={{ aspectRatio: FALLBACK_RATIO }}
-                    imgClassName="transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.02]"
+                    sizes="(min-width:1024px) 16vw, 33vw"
+                    className="aspect-[4/5] w-full opacity-90 transition-opacity duration-500 group-hover:opacity-100"
                   />
                 ) : (
-                  <Placeholder
-                    className="w-full transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.02]"
-                    style={{ aspectRatio: FALLBACK_RATIO }}
-                  />
+                  <span className="block aspect-[4/5] w-full bg-[#141412]" />
                 )}
+                <span className="absolute bottom-1 left-1.5 font-mono text-[0.5rem] tracking-[0.1em] text-[#cfcabc]/70">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
               </a>
             );
-          }}
-        />
+          })}
+        </div>
+        <Sprockets />
       </div>
     </section>
   );

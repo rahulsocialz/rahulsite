@@ -4,78 +4,105 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { site } from "@/data/site";
 
+/* Work and Featured In are real pages; About, Contact and Instagram are
+   sections of the homepage, so they resolve to anchors from anywhere. */
 const links = [
-  { href: "/", label: "Home", exact: true },
+  { href: "/", label: "Home", match: "/", exact: true },
   { href: "/projects", label: "Work", match: "/projects" },
-  { href: "/#awards", label: "Awards" },
+  { href: "/#about", label: "About" },
   { href: "/featured-in", label: "Featured In", match: "/featured-in" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
+  // Close the panel on route change, and lock scroll while it's open.
+  useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // On the homepage, before scrolling, the header floats transparently over
-  // the full-bleed hero photo rather than the page background — force the
-  // logo/nav/toggle to a light colour there so they stay legible regardless
-  // of site theme or the photo underneath (same fix as the hero's own text).
-  const overPhoto = pathname === "/" && !scrolled;
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
-        scrolled
-          ? "border-b hairline bg-bg/70 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
-      }`}
-    >
-      <div
-        className="shell flex h-[68px] items-center justify-between"
-        style={
-          overPhoto
-            ? ({ "--text": "#f2f0ea", "--text-secondary": "rgba(242,240,234,0.75)", "--border": "rgba(255,255,255,0.28)" } as React.CSSProperties)
-            : undefined
-        }
-      >
-        <Link
-          href="/"
-          className="text-fg text-[0.72rem] font-semibold uppercase tracking-[0.22em]"
-        >
-          Rahul Bhatt
+    <header className="sticky top-0 z-40 border-b border-[var(--line-soft)] bg-[var(--paper)]/92 backdrop-blur-sm">
+      <div className="shell flex h-14 items-center justify-between gap-6">
+        <Link href="/" className="flex shrink-0 items-center gap-3">
+          <span aria-hidden className="block h-2.5 w-2.5 rounded-full bg-[var(--ink)]" />
+          <span className="label font-medium">{site.name}</span>
         </Link>
-        <nav aria-label="Primary" className="flex items-center gap-6 sm:gap-9">
-          {links.map((l) => {
-            const active = l.exact ? pathname === l.href : l.match ? pathname.startsWith(l.match) : false;
-            return (
-              <Link
-                key={l.label}
-                href={l.href}
-                className={`hidden text-[0.72rem] uppercase tracking-[0.14em] transition-colors duration-300 sm:block ${
-                  active
-                    ? "text-fg"
-                    : "text-muted hover:text-fg"
-                }`}
-              >
-                <span className={active ? "border-b border-[var(--accent)] pb-1" : ""}>
+
+        <div className="flex items-center gap-5 sm:gap-8">
+          <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
+            {links.map((l) => {
+              const active = l.match ? ("exact" in l && l.exact ? pathname === l.match : pathname.startsWith(l.match)) : false;
+              return (
+                <Link
+                  key={l.label}
+                  href={l.href}
+                  data-active={active}
+                  className="ul-link label text-[var(--muted)] transition-colors duration-300 hover:text-[var(--ink)] data-[active=true]:text-[var(--ink)]"
+                >
                   {l.label}
-                </span>
-              </Link>
-            );
-          })}
-          <Link href="/projects" className="text-[0.72rem] uppercase tracking-[0.14em] text-muted sm:hidden">
-            Work
-          </Link>
+                </Link>
+              );
+            })}
+          </nav>
+
           <ThemeToggle />
-        </nav>
+
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="menu-panel"
+            aria-label={open ? "Close menu" : "Open menu"}
+            className="flex h-11 w-11 items-center justify-center -mr-3 text-[var(--ink)]"
+          >
+            <span className="flex w-5 flex-col gap-[5px]">
+              <span
+                className={`block h-px w-full bg-current transition-transform duration-300 ${open ? "translate-y-[6px] rotate-45" : ""}`}
+              />
+              <span className={`block h-px w-full bg-current transition-opacity duration-200 ${open ? "opacity-0" : ""}`} />
+              <span
+                className={`block h-px w-full bg-current transition-transform duration-300 ${open ? "-translate-y-[6px] -rotate-45" : ""}`}
+              />
+            </span>
+          </button>
+        </div>
       </div>
+
+      {/* Full menu — the only place Instagram appears in navigation. */}
+      {open && (
+        <div id="menu-panel" className="border-t border-[var(--line-soft)] bg-[var(--paper)]">
+          <nav className="shell flex flex-col py-2" aria-label="Menu">
+            {[...links, { href: site.instagramUrl, label: "Instagram", external: true }].map((l) => {
+              const external = "external" in l && l.external;
+              const cls =
+                "d3 flex min-h-11 items-center border-b border-[var(--line-soft)] py-3 last:border-0 transition-opacity hover:opacity-60";
+              return external ? (
+                <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className={cls}>
+                  {l.label}
+                </a>
+              ) : (
+                <Link key={l.label} href={l.href} className={cls}>
+                  {l.label}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

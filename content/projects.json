@@ -78,7 +78,7 @@
       "slug": "katseye-beautiful-chaos-tour",
       "client": "",
       "featuredImage": "/images/uploads/01.-group-2.jpg",
-      "featured": true,
+      "featured": false,
       "order": 2,
       "gallery": [
         {
@@ -186,7 +186,8 @@
       "placeholderCount": 6,
       "description": "Content Coverage Included: Photos for Socials, Press and Local Affiliates and Nightly Recap Videos",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "heroOrder": 1
     },
     {
       "heroImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
@@ -195,7 +196,7 @@
       "slug": "camila-cabello-cxoxo-campaign",
       "client": "",
       "featuredImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 3,
       "gallery": [
         {
@@ -276,7 +277,7 @@
           "caption": "Album Visualizers"
         }
       ],
-      "hero": false,
+      "hero": true,
       "seoTitle": "",
       "categories": [
         "campaigns",
@@ -285,7 +286,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "heroOrder": 3
     },
     {
       "heroImage": "/images/uploads/jon-batiste-world-music-radio/01.jpg",
@@ -390,7 +392,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredFocalPoint": "50% 68%"
     },
     {
       "heroImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
@@ -399,7 +402,7 @@
       "slug": "summer-walker-album-spend-it",
       "client": "",
       "featuredImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 6,
       "gallery": [
         {
@@ -439,11 +442,11 @@
         }
       ],
       "location": "",
-      "subtitle": "Album Artwork & “Spend It”",
+      "subtitle": "Album Artwork & \u201cSpend It\u201d",
       "title": "Summer Walker",
       "videos": [],
       "featuredFocalPoint": "top",
-      "hero": false,
+      "hero": true,
       "seoTitle": "",
       "categories": [
         "art-direction",
@@ -452,7 +455,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "heroOrder": 2
     },
     {
       "heroImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
@@ -673,7 +677,7 @@
       "slug": "dream-academy",
       "client": "",
       "featuredImage": "/images/uploads/dream-academy/01.jpg",
-      "featured": false,
+      "featured": true,
       "order": 10,
       "gallery": [
         {
@@ -779,7 +783,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredOrder": 2
     },
     {
       "heroImage": "/images/uploads/coldplay/01.jpg",
@@ -816,7 +821,7 @@
       "subtitle": "",
       "title": "Coldplay",
       "videos": [],
-      "hero": true,
+      "hero": false,
       "seoTitle": "",
       "categories": [
         "photo"
@@ -848,7 +853,7 @@
         }
       ],
       "location": "",
-      "subtitle": "Hit Me Hard and Soft — 3D Film",
+      "subtitle": "Hit Me Hard and Soft \u2014 3D Film",
       "title": "Billie Eilish",
       "videos": [],
       "hero": false,
@@ -892,7 +897,7 @@
       "slug": "jungkook-3d-single",
       "client": "",
       "featuredImage": "/images/uploads/jungkook-3d-single/02.jpg",
-      "featured": false,
+      "featured": true,
       "order": 14,
       "gallery": [
         {
@@ -931,7 +936,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredOrder": 3
     },
     {
       "heroImage": "/images/uploads/katseye-gnarly-campaign/08.jpg",
@@ -1111,10 +1117,10 @@
         }
       ],
       "location": "",
-      "subtitle": "Havana — Music Video",
+      "subtitle": "Havana \u2014 Music Video",
       "title": "Camila Cabello",
       "videos": [],
-      "hero": true,
+      "hero": false,
       "seoTitle": "",
       "categories": [
         "video",
@@ -1187,7 +1193,7 @@
         }
       ],
       "location": "",
-      "subtitle": "Pinky Up — Music Video",
+      "subtitle": "Pinky Up \u2014 Music Video",
       "title": "KATSEYE",
       "videos": [],
       "hero": false,
@@ -1207,7 +1213,7 @@
       "slug": "olivia-rodrigo-lancome",
       "client": "",
       "featuredImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
-      "featured": true,
+      "featured": false,
       "order": 18,
       "gallery": [
         {
@@ -1262,7 +1268,7 @@
         }
       ],
       "location": "",
-      "subtitle": "Lancôme",
+      "subtitle": "Lanc\u00f4me",
       "title": "Olivia Rodrigo",
       "videos": [],
       "hero": true,
@@ -1274,7 +1280,8 @@
       "description": "",
       "year": "",
       "seoDescription": "",
-      "featuredFocalPoint": "left"
+      "featuredFocalPoint": "left",
+      "heroOrder": 4
     },
     {
       "heroImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
@@ -1397,12 +1404,12 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "/images/uploads/katseye-gabriela/01.jpg",
+      "heroImage": "/images/uploads/katseye-gabriela/02.jpg",
       "externalUrl": "",
       "accent": "#d24f9e",
       "slug": "katseye-gabriela",
       "client": "",
-      "featuredImage": "/images/uploads/katseye-gabriela/01.jpg",
+      "featuredImage": "/images/uploads/katseye-gabriela/02.jpg",
       "featured": false,
       "order": 20,
       "gallery": [
@@ -1473,7 +1480,7 @@
         }
       ],
       "location": "",
-      "subtitle": "Gabriela — Music Video",
+      "subtitle": "Gabriela \u2014 Music Video",
       "title": "KATSEYE",
       "videos": [],
       "hero": false,
@@ -1484,7 +1491,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredFocalPoint": "top"
     },
     {
       "heroImage": "/images/uploads/james-arthur-creative-direction/05.jpg",
@@ -1619,7 +1627,7 @@
       "slug": "little-mix-over-the-years",
       "client": "",
       "featuredImage": "/images/uploads/little-mix-over-the-years/01.jpg",
-      "featured": false,
+      "featured": true,
       "order": 23,
       "gallery": [
         {
@@ -1720,7 +1728,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredOrder": 5
     },
     {
       "heroImage": "/images/uploads/posters/01.jpg",
@@ -1966,7 +1975,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredOrder": 1
     },
     {
       "heroImage": "/images/uploads/katseye-on-the-road/01.jpg",
@@ -2115,7 +2125,7 @@
       "order": 29,
       "gallery": [],
       "location": "",
-      "subtitle": "Cherry On Top — Music Video",
+      "subtitle": "Cherry On Top \u2014 Music Video",
       "title": "Ben Platt",
       "videos": [],
       "hero": false,
@@ -2265,7 +2275,7 @@
         }
       ],
       "location": "",
-      "subtitle": "Debut — Music Video",
+      "subtitle": "Debut \u2014 Music Video",
       "title": "KATSEYE",
       "videos": [],
       "hero": false,
@@ -2401,7 +2411,7 @@
       "slug": "alicia-keys-santa-baby-rollout",
       "client": "",
       "featuredImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
-      "featured": false,
+      "featured": true,
       "order": 34,
       "gallery": [
         {
@@ -2429,7 +2439,8 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredOrder": 4
     }
   ]
 }

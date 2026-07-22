@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { bySlug, projects, sorted } from "@/data/projects";
+import { bySlug, categoryLabel, projects, sorted } from "@/data/projects";
 import { ProjectShowcase } from "@/components/project/ProjectShowcase";
-import { ProjectNav } from "@/components/project/ProjectNav";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -23,6 +22,18 @@ export async function generateMetadata({
   };
 }
 
+/* A metadata line in the editorial rail. Renders nothing when the CMS field
+   is empty, so optional fields never leave a gap. */
+function Spec({ label, value }: { label: string; value?: string }) {
+  if (!value) return null;
+  return (
+    <div>
+      <p className="label text-[var(--muted)]">{label}</p>
+      <p className="meta mt-1.5">{value}</p>
+    </div>
+  );
+}
+
 export default async function ProjectDetail({
   params,
 }: {
@@ -35,40 +46,83 @@ export default async function ProjectDetail({
   const index = sorted.findIndex((p) => p.slug === slug);
   const prev = index > 0 ? sorted[index - 1] : sorted[sorted.length - 1];
   const next = index < sorted.length - 1 ? sorted[index + 1] : sorted[0];
+  const services = project.categories.map(categoryLabel).join(", ");
 
   return (
-    <div className="shell pt-28 lg:pt-32">
-      <Link
-        href="/projects"
-        className="group inline-flex items-center gap-2 text-[0.72rem] uppercase tracking-[0.14em] text-muted transition-colors duration-300 hover:text-fg"
-      >
-        <span aria-hidden className="transition-transform duration-300 group-hover:-translate-x-1">←</span>
-        Back to Projects
-      </Link>
+    <div className="shell grid gap-8 py-10 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-12 lg:py-14">
+      {/* Editorial rail */}
+      <div className="lg:sticky lg:top-20 lg:self-start">
+        <h1 className="d1">{project.title}</h1>
+        {project.subtitle && <p className="meta mt-4">{project.subtitle}</p>}
+        {project.year && <p className="meta mt-1">{project.year}</p>}
 
-      <header className="mb-8 mt-7 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <div>
-          <h1 className="h1">{project.title}</h1>
-          <p className="lead mt-2">{project.subtitle}</p>
+        <span aria-hidden className="mt-6 block h-px w-12 bg-[var(--ink)]" />
+
+        <div className="mt-6 space-y-5">
+          <Spec label="Client" value={project.client} />
+          <Spec label="Role" value={services} />
+          <Spec label="Location" value={project.location} />
+          <Spec label="Year" value={project.year} />
         </div>
+
         {project.description && (
-          <p className="lead max-w-md text-[1rem] md:text-right">{project.description}</p>
+          <>
+            <span aria-hidden className="mt-6 block h-px w-20 bg-[var(--line-soft)]" />
+            <p className="mt-6 max-w-[32ch] leading-relaxed">{project.description}</p>
+          </>
         )}
-      </header>
 
-      <ProjectShowcase
-        images={project.gallery ?? []}
-        videos={project.videos ?? []}
-        placeholderCount={project.placeholderCount}
-        accent={project.accent}
-        title={project.title}
-      />
+        {project.externalUrl && (
+          <a
+            href={project.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ul-link label mt-8 inline-flex min-h-11 items-center gap-2"
+          >
+            Visit <span aria-hidden>↗</span>
+          </a>
+        )}
 
-      <ProjectNav
-        prev={prev ? { slug: prev.slug, title: prev.title } : undefined}
-        next={next ? { slug: next.slug, title: next.title } : undefined}
-      />
-      <div className="py-12" />
+        {/* Previous / next project */}
+        <nav className="mt-10 border-t border-[var(--line-soft)] pt-6" aria-label="Project navigation">
+          {prev && (
+            <Link href={`/projects/${prev.slug}`} className="group block">
+              <span className="label text-[var(--muted)]">Prev Project</span>
+              <span className="meta mt-1.5 block transition-opacity group-hover:opacity-60">{prev.title}</span>
+              <span aria-hidden className="mt-2 block transition-transform duration-300 group-hover:-translate-x-1">
+                ←
+              </span>
+            </Link>
+          )}
+          {next && (
+            <Link href={`/projects/${next.slug}`} className="group mt-6 block">
+              <span className="label text-[var(--muted)]">Next Project</span>
+              <span className="meta mt-1.5 block transition-opacity group-hover:opacity-60">{next.title}</span>
+              <span aria-hidden className="mt-2 block transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </Link>
+          )}
+
+          <Link
+            href="/projects"
+            className="label mt-8 flex min-h-11 items-center justify-center gap-2 border border-[var(--line)] px-6 py-3 transition-colors duration-300 hover:bg-[var(--ink)] hover:text-[var(--paper)]"
+          >
+            All Work / Archive <span aria-hidden>↗</span>
+          </Link>
+        </nav>
+      </div>
+
+      {/* Media sequence */}
+      <div className="min-w-0">
+        <ProjectShowcase
+          images={project.gallery ?? []}
+          videos={project.videos ?? []}
+          title={project.title}
+          subtitle={project.subtitle}
+          year={project.year}
+        />
+      </div>
     </div>
   );
 }

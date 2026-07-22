@@ -1,75 +1,43 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Placeholder } from "@/components/ui/Placeholder";
+import { useCallback, useState } from "react";
 import { Media } from "@/components/ui/Media";
-import { Masonry } from "@/components/ui/Masonry";
+import { CircledNumber, Sprockets } from "@/components/analog/Analog";
 import { detectEmbed, type Embed } from "@/lib/embeds";
 import { focalPosition } from "@/lib/focal";
 import type { GalleryImage, ProjectVideo } from "@/data/projects";
 import { TikTokEmbed } from "./TikTokEmbed";
 import { InstagramEmbed } from "./InstagramEmbed";
+import { Lightbox, type ViewerItem } from "./Lightbox";
 
-// Varied aspect ratios for the "uneven but perfect" masonry grid.
-const ASPECTS = [
-  "aspect-[4/5]",
-  "aspect-[4/3]",
-  "aspect-[3/4]",
-  "aspect-[1/1]",
-  "aspect-[4/5]",
-  "aspect-[3/4]",
-  "aspect-[4/3]",
-  "aspect-[1/1]",
-  "aspect-[4/5]",
-];
+const pad = (n: number) => String(n + 1).padStart(2, "0");
 
-function Chevron({ dir }: { dir: "left" | "right" }) {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
-      {dir === "left" ? <path d="M15 5l-7 7 7 7" /> : <path d="M9 5l7 7-7 7" />}
-    </svg>
-  );
-}
-
-function CloseIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
-      <path d="M6 6l12 12M18 6L6 18" />
-    </svg>
-  );
-}
-
-function PlayIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M8 5v14l11-7z" />
-    </svg>
-  );
-}
-
-// A single grid of photos and videos (Vimeo, YouTube, TikTok or Instagram
-// links, auto-detected). Clicking any tile opens a lightbox showing that
-// item full-size, with arrows to step through every item and an X to close —
-// nothing on the page scrolls or re-flows when you pick a different one.
-type GalleryItem =
-  | { kind: "image"; imgIndex: number; src: string; caption?: string; focalPoint?: string }
+/* One continuous editorial sequence of photographs and videos. Modules
+   alternate between full-width, paired and single frames so the page reads
+   as a laid-out spread rather than a uniform grid. Clicking any frame opens
+   the darkroom viewer at that item. */
+type Item =
+  | { kind: "image"; src: string; caption?: string; focalPoint?: string }
   | { kind: "video"; embed: Embed; caption?: string };
 
-// Vimeo/YouTube support ?autoplay=1 on their embed URL; TikTok/Instagram
-// embeds don't, so they just open ready to press play.
-function autoplaySrc(embed: Embed) {
-  if (!embed.embedUrl) return embed.embedUrl;
-  const sep = embed.embedUrl.includes("?") ? "&" : "?";
-  return `${embed.embedUrl}${sep}autoplay=1`;
-}
+/* The sequence sits on whole rows that add up to 12, alternating a
+   full-width plate, a pair, and a three-up. Every frame stretches to its
+   row height so the spread lines up edge to edge. */
+const LAYOUT: { span: string; tall: boolean }[] = [
+  { span: "sm:col-span-12", tall: true }, // full-width plate
+  { span: "sm:col-span-6", tall: true }, // pair
+  { span: "sm:col-span-6", tall: true },
+  { span: "sm:col-span-4", tall: false }, // three-up
+  { span: "sm:col-span-4", tall: false },
+  { span: "sm:col-span-4", tall: false },
+];
 
-function VideoEmbed({ embed, title, autoplay }: { embed: Embed; title: string; autoplay?: boolean }) {
+function VideoEmbed({ embed, title }: { embed: Embed; title: string }) {
   if (embed.platform === "youtube" || embed.platform === "vimeo") {
     return (
-      <div className="aspect-video w-full overflow-hidden bg-surface">
+      <div className="aspect-video w-full bg-[#0c0c0a]">
         <iframe
-          src={autoplay ? autoplaySrc(embed) : embed.embedUrl}
+          src={embed.embedUrl}
           title={`${title}, video`}
           className="h-full w-full"
           allow="autoplay; fullscreen; picture-in-picture"
@@ -85,210 +53,167 @@ function VideoEmbed({ embed, title, autoplay }: { embed: Embed; title: string; a
 export function ProjectShowcase({
   images,
   videos = [],
-  placeholderCount,
-  accent,
   title,
+  subtitle,
+  year,
 }: {
   images: GalleryImage[];
   videos?: ProjectVideo[];
-  placeholderCount: number;
-  accent: string;
+  placeholderCount?: number;
+  accent?: string;
   title: string;
+  subtitle?: string;
+  year?: string;
 }) {
-  const hasImages = images.length > 0;
-  const count = hasImages ? images.length : Math.max(placeholderCount, 1);
-  const pad = (n: number) => String(n + 1).padStart(2, "0");
-
-  // Videos lead the grid (e.g. award-winning trailers belong up top), photos
-  // follow.
-  const galleryItems: GalleryItem[] = [
-    ...videos.flatMap((v): GalleryItem[] => {
+  // Videos lead the sequence — award-winning trailers belong at the top.
+  const items: Item[] = [
+    ...videos.flatMap((v): Item[] => {
       const embed = detectEmbed(v.url);
-      return embed ? [{ kind: "video" as const, embed, caption: v.caption }] : [];
+      return embed ? [{ kind: "video", embed, caption: v.caption }] : [];
     }),
-    ...Array.from({ length: count }, (_, i) => ({
-      kind: "image" as const,
-      imgIndex: i,
-      src: hasImages ? images[i].image : "",
-      caption: hasImages ? images[i].caption : undefined,
-      focalPoint: hasImages ? images[i].focalPoint : undefined,
+    ...images.map((g): Item => ({
+      kind: "image",
+      src: g.image,
+      caption: g.caption,
+      focalPoint: g.focalPoint,
     })),
   ];
 
-  const [lightbox, setLightbox] = useState<number | null>(null);
-  const stepLightbox = useCallback(
-    (delta: number) => setLightbox((i) => (i === null ? i : (i + delta + galleryItems.length) % galleryItems.length)),
-    [galleryItems.length]
+  const viewerItems: ViewerItem[] = items.map((it) =>
+    it.kind === "image"
+      ? { kind: "image", src: it.src, caption: it.caption }
+      : { kind: "video", embed: it.embed, caption: it.caption }
   );
 
-  useEffect(() => {
-    if (lightbox === null) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightbox(null);
-      if (e.key === "ArrowLeft") stepLightbox(-1);
-      if (e.key === "ArrowRight") stepLightbox(1);
-    };
-    window.addEventListener("keydown", onKey);
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prevOverflow;
-    };
-  }, [lightbox, stepLightbox]);
+  const [open, setOpen] = useState<number | null>(null);
+  const step = useCallback(
+    (delta: number) => setOpen((i) => (i === null ? i : (i + delta + items.length) % items.length)),
+    [items.length]
+  );
 
-  const imageTile = (imgIndex: number, aspectClass: string) =>
-    hasImages ? (
-      <Media
-        src={images[imgIndex].image}
-        alt={`${title}, image ${pad(imgIndex)}`}
-        sizes="(min-width:1024px) 30vw, 50vw"
-        focal={focalPosition(images[imgIndex].focalPoint)}
-        className={aspectClass}
-        imgClassName="transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.03]"
-      />
-    ) : (
-      <Placeholder
-        accent={accent}
-        label={pad(imgIndex)}
-        className={`${aspectClass} transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.03]`}
-      />
-    );
-
-  const arrowBtn =
-    "pointer-events-auto flex h-11 w-11 items-center justify-center rounded-pill border border-white/20 bg-black/40 text-white backdrop-blur-md transition-[transform,background-color] duration-300 ease-[var(--ease-out)] hover:-translate-y-px hover:bg-black/60";
-
-  const current = lightbox !== null ? galleryItems[lightbox] : null;
+  if (items.length === 0) return null;
 
   return (
-    <div>
-      <Masonry
-        items={galleryItems}
-        render={(item, i) =>
-          item.kind === "video" ? (
-            <div className="group relative">
-              <VideoEmbed embed={item.embed} title={title} />
+    <>
+      {/* Media count + viewer affordance */}
+      <div className="mb-5 flex items-center justify-between gap-4">
+        <button
+          type="button"
+          onClick={() => setOpen(0)}
+          className="ul-link label inline-flex min-h-11 items-center gap-3"
+        >
+          View / Lightbox <span aria-hidden>↗</span>
+        </button>
+        <p className="meta tabular-nums text-[var(--muted)]">
+          {items.length} {items.length === 1 ? "frame" : "frames"}
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-12">
+        {items.map((item, i) => {
+          const slot = LAYOUT[i % LAYOUT.length];
+          const height = slot.tall
+            ? "min-h-[24rem] sm:min-h-[30rem]"
+            : "min-h-[18rem] sm:min-h-[22rem]";
+
+          // Videos keep their own 16:9 player rather than being stretched.
+          if (item.kind === "video") {
+            return (
+              <div key={i} className={slot.span}>
+                <VideoEmbed embed={item.embed} title={title} />
+                {item.caption && <p className="meta pt-3 text-[var(--muted)]">{item.caption}</p>}
+              </div>
+            );
+          }
+
+          return (
+            <div key={i} className={`${slot.span} ${height}`}>
               <button
-                onClick={() => setLightbox(i)}
-                aria-label={`Play ${title} video`}
-                className="absolute inset-0 z-10 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/10"
+                type="button"
+                onClick={() => setOpen(i)}
+                aria-label={`View frame ${pad(i)}`}
+                className="group relative flex h-full w-full flex-col text-left"
               >
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-fg shadow-lg transition-transform duration-300 group-hover:scale-105">
-                  <PlayIcon />
-                </span>
-              </button>
-              {item.caption && (
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/70 to-transparent px-3 pb-2 pt-8 text-left text-[0.7rem] text-white"
-                >
-                  {item.caption}
-                </span>
-              )}
-            </div>
-          ) : (
-            <button
-              onClick={() => setLightbox(i)}
-              aria-label={`Show image ${pad(item.imgIndex)}`}
-              className="group relative block w-full overflow-hidden"
-            >
-              {imageTile(item.imgIndex, ASPECTS[i % ASPECTS.length])}
-              {item.caption && (
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-1 bg-gradient-to-t from-black/70 to-transparent px-3 pb-2 pt-8 text-left text-[0.7rem] text-white opacity-0 transition-[opacity,transform] duration-300 ease-[var(--ease-out)] group-hover:translate-y-0 group-hover:opacity-100"
-                >
-                  {item.caption}
-                </span>
-              )}
-            </button>
-          )
-        }
-      />
-
-      <AnimatePresence>
-        {current && (
-          <motion.div
-            key="lightbox"
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/92 p-4 sm:p-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            onClick={() => setLightbox(null)}
-          >
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setLightbox(null);
-              }}
-              aria-label="Close"
-              className={`${arrowBtn} absolute right-4 top-4 sm:right-6 sm:top-6`}
-            >
-              <CloseIcon />
-            </button>
-
-            {galleryItems.length > 1 && (
-              <div className="pointer-events-none absolute inset-x-0 top-1/2 flex -translate-y-1/2 items-center justify-between px-3 sm:px-6">
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    stepLightbox(-1);
-                  }}
-                  aria-label="Previous"
-                  className={arrowBtn}
-                >
-                  <Chevron dir="left" />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    stepLightbox(1);
-                  }}
-                  aria-label="Next"
-                  className={arrowBtn}
-                >
-                  <Chevron dir="right" />
-                </button>
-              </div>
-            )}
-
-            <div
-              className="flex max-w-[92vw] flex-col items-center gap-3"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {current.kind === "image" ? (
-                <>
-                  <div className="relative h-[70vh] w-[92vw] max-w-5xl sm:h-[78vh]">
+                <span className="relative block min-h-[9rem] flex-1">
+                  <span className="absolute inset-0">
                     <Media
-                      src={current.src}
-                      alt={`${title}, image ${pad(current.imgIndex)}`}
-                      sizes="92vw"
-                      priority
-                      fit="contain"
+                      src={item.src}
+                      alt={item.caption || `${title}, frame ${pad(i)}`}
+                      sizes="(min-width:1024px) 60vw, 100vw"
+                      focal={focalPosition(item.focalPoint)}
                       className="h-full w-full"
+                      imgClassName="transition-transform duration-[900ms] ease-[var(--ease-out)] group-hover:scale-[1.02]"
                     />
-                  </div>
-                  {current.caption && <p className="text-center text-[0.8rem] text-white/80">{current.caption}</p>}
-                </>
-              ) : (
-                <>
-                  <div className="w-[92vw] max-w-3xl">
-                    <VideoEmbed embed={current.embed} title={title} autoplay />
-                  </div>
-                  {current.caption && <p className="text-center text-[0.8rem] text-white/80">{current.caption}</p>}
-                </>
-              )}
+                  </span>
+                </span>
+                {item.caption && (
+                  <p className="meta shrink-0 pt-3 text-[var(--muted)]">{item.caption}</p>
+                )}
+                {i === 2 && (
+                  <span className="absolute right-7 top-7 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                    <CircledNumber value={pad(i)} className="h-9 w-16" />
+                  </span>
+                )}
+              </button>
             </div>
+          );
+        })}
+      </div>
 
-            {galleryItems.length > 1 && (
-              <div className="mt-4 font-mono text-[0.7rem] text-white/60">
-                {pad(lightbox!)} / {pad(galleryItems.length - 1)}
-              </div>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+      {/* Contact strip of the whole roll */}
+      {items.length > 2 && (
+        <div className="mt-1.5 bg-[#0c0c0a]">
+          <Sprockets />
+          <div className="no-scrollbar overflow-x-auto">
+            <ul className="flex gap-px">
+              {items.map((it, i) => (
+                <li key={i} className="w-28 shrink-0 sm:w-32">
+                  <button
+                    type="button"
+                    onClick={() => setOpen(i)}
+                    aria-label={`View frame ${pad(i)}`}
+                    className="group block w-full"
+                  >
+                    {it.kind === "image" ? (
+                      <Media
+                        src={it.src}
+                        alt=""
+                        sizes="130px"
+                        className="aspect-[4/3] w-full opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+                      />
+                    ) : (
+                      <span className="flex aspect-[4/3] w-full items-center justify-center bg-[#1a1a18] text-[#cfcabc]">
+                        <span aria-hidden>▶</span>
+                      </span>
+                    )}
+                    <span className="flex items-center justify-between px-1.5 py-1">
+                      <span className="font-mono text-[0.5rem] tracking-[0.1em] text-[#cfcabc]/70">{pad(i)}</span>
+                      <span aria-hidden className="font-mono text-[0.5rem] text-[#cfcabc]/70">
+                        {it.kind === "video" ? "▶" : "◻"}
+                      </span>
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <Sprockets />
+        </div>
+      )}
+
+      {open !== null && (
+        <Lightbox
+          items={viewerItems}
+          index={open}
+          onClose={() => setOpen(null)}
+          onStep={step}
+          onSelect={(i) => setOpen(i)}
+          title={title}
+          subtitle={subtitle}
+          year={year}
+          credit={`Photo by ${"Rahul Bhatt"}`}
+        />
+      )}
+    </>
   );
 }
