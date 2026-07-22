@@ -167,6 +167,7 @@
           "focalPoint": "center"
         }
       ],
+      "heroOrder": 1,
       "location": "",
       "subtitle": "Beautiful Chaos Tour",
       "title": "KATSEYE",
@@ -186,8 +187,7 @@
       "placeholderCount": 6,
       "description": "Content Coverage Included: Photos for Socials, Press and Local Affiliates and Nightly Recap Videos",
       "year": "",
-      "seoDescription": "",
-      "heroOrder": 1
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
@@ -260,6 +260,7 @@
           "focalPoint": "center"
         }
       ],
+      "heroOrder": 3,
       "location": "",
       "subtitle": "C,XOXO Album Campaign",
       "title": "Camila Cabello",
@@ -286,8 +287,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "heroOrder": 3
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/jon-batiste-world-music-radio/01.jpg",
@@ -383,6 +383,7 @@
       "subtitle": "Gap x Complex",
       "title": "KATSEYE",
       "videos": [],
+      "featuredFocalPoint": "50% 68%",
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -392,8 +393,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "50% 68%"
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
@@ -441,8 +441,9 @@
           "focalPoint": "top"
         }
       ],
+      "heroOrder": 2,
       "location": "",
-      "subtitle": "Album Artwork & \u201cSpend It\u201d",
+      "subtitle": "Album Artwork & “Spend It”",
       "title": "Summer Walker",
       "videos": [],
       "featuredFocalPoint": "top",
@@ -455,8 +456,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "heroOrder": 2
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
@@ -593,6 +593,7 @@
       "subtitle": "Yours, C Tour",
       "title": "Camila Cabello",
       "videos": [],
+      "featuredFocalPoint": "top",
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -601,8 +602,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "top"
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/renee-rapp-bite-me/02.jpg",
@@ -671,6 +671,7 @@
       "seoDescription": ""
     },
     {
+      "featuredOrder": 2,
       "heroImage": "/images/uploads/dream-academy/01.jpg",
       "externalUrl": "",
       "accent": "#8a5fd6",
@@ -783,8 +784,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredOrder": 2
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/coldplay/01.jpg",
@@ -853,7 +853,7 @@
         }
       ],
       "location": "",
-      "subtitle": "Hit Me Hard and Soft \u2014 3D Film",
+      "subtitle": "Hit Me Hard and Soft — 3D Film",
       "title": "Billie Eilish",
       "videos": [],
       "hero": false,
@@ -879,7 +879,14 @@
       "location": "",
       "subtitle": "Director, Music Videos",
       "title": "KATSEYE",
-      "videos": [],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=xQl4jd77bGY"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=6oqywcXsQik"
+        }
+      ],
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -891,6 +898,7 @@
       "seoDescription": ""
     },
     {
+      "featuredOrder": 3,
       "heroImage": "/images/uploads/jungkook-3d-single/02.jpg",
       "externalUrl": "",
       "accent": "#6e4fc0",
@@ -936,8 +944,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredOrder": 3
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/katseye-gnarly-campaign/08.jpg",
@@ -1117,7 +1124,7 @@
         }
       ],
       "location": "",
-      "subtitle": "Havana \u2014 Music Video",
+      "subtitle": "Havana — Music Video",
       "title": "Camila Cabello",
       "videos": [],
       "hero": false,
@@ -1193,7 +1200,7 @@
         }
       ],
       "location": "",
-      "subtitle": "Pinky Up \u2014 Music Video",
+      "subtitle": "Pinky Up — Music Video",
       "title": "KATSEYE",
       "videos": [],
       "hero": false,
@@ -1267,10 +1274,12 @@
           "focalPoint": "center"
         }
       ],
+      "heroOrder": 4,
       "location": "",
-      "subtitle": "Lanc\u00f4me",
+      "subtitle": "Lancôme",
       "title": "Olivia Rodrigo",
       "videos": [],
+      "featuredFocalPoint": "left",
       "hero": true,
       "seoTitle": "",
       "categories": [
@@ -1279,9 +1288,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "left",
-      "heroOrder": 4
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
@@ -1480,9 +1487,10 @@
         }
       ],
       "location": "",
-      "subtitle": "Gabriela \u2014 Music Video",
+      "subtitle": "Gabriela — Music Video",
       "title": "KATSEYE",
       "videos": [],
+      "featuredFocalPoint": "top",
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -1491,8 +1499,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "top"
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/james-arthur-creative-direction/05.jpg",
@@ -1621,6 +1628,7 @@
       "seoDescription": ""
     },
     {
+      "featuredOrder": 5,
       "heroImage": "/images/uploads/little-mix-over-the-years/01.jpg",
       "externalUrl": "",
       "accent": "#2f9bd6",
@@ -1728,8 +1736,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredOrder": 5
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/posters/01.jpg",
@@ -1935,6 +1942,7 @@
       "subtitle": "Familia Campaign",
       "title": "Camila Cabello",
       "videos": [],
+      "featuredFocalPoint": "top",
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -1944,10 +1952,10 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "top"
+      "seoDescription": ""
     },
     {
+      "featuredOrder": 1,
       "heroImage": "/images/uploads/one-direction-over-the-years/01.jpg",
       "externalUrl": "",
       "accent": "#c6982f",
@@ -1975,8 +1983,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredOrder": 1
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/katseye-on-the-road/01.jpg",
@@ -2125,7 +2132,7 @@
       "order": 29,
       "gallery": [],
       "location": "",
-      "subtitle": "Cherry On Top \u2014 Music Video",
+      "subtitle": "Cherry On Top — Music Video",
       "title": "Ben Platt",
       "videos": [],
       "hero": false,
@@ -2275,7 +2282,7 @@
         }
       ],
       "location": "",
-      "subtitle": "Debut \u2014 Music Video",
+      "subtitle": "Debut — Music Video",
       "title": "KATSEYE",
       "videos": [],
       "hero": false,
@@ -2393,6 +2400,7 @@
       "subtitle": "",
       "title": "Syco",
       "videos": [],
+      "featuredFocalPoint": "top",
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -2401,10 +2409,10 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "top"
+      "seoDescription": ""
     },
     {
+      "featuredOrder": 4,
       "heroImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
       "externalUrl": "",
       "accent": "#c6982f",
@@ -2439,8 +2447,7 @@
       "placeholderCount": 6,
       "description": "",
       "year": "",
-      "seoDescription": "",
-      "featuredOrder": 4
+      "seoDescription": ""
     }
   ]
 }
