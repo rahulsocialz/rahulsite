@@ -40,7 +40,7 @@ collections:
                   - { label: "Photo", value: "photo" }
                   - { label: "Video", value: "video" }
                   - { label: "Art Direction", value: "art-direction" }
-              - { name: description, label: "Description", widget: text }
+              - { name: description, label: "Description", widget: text, required: false }
               - name: featuredImage
                 label: "Cover image (grid + card)"
                 widget: image
