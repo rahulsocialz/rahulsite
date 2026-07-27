@@ -11,27 +11,31 @@ export interface Embed {
   embedUrl?: string;
   // TikTok only — the numeric video ID the official embed blockquote needs.
   tiktokVideoId?: string;
+  // YouTube only — a static frame for the contact-sheet strip, so a video
+  // reads as a real thumbnail rather than a blank tile with a play icon.
+  // Not available for a bare playlist link (no single video to preview).
+  thumbnailUrl?: string;
 }
 
 // Covers watch?v= (with an optional playlist via &list=), youtu.be/, /embed/
 // and /shorts/ shapes, and a bare playlist link (list= with no v=), any
 // param order.
-function youtubeEmbedUrl(url: string): string | null {
+function youtubeEmbedUrl(url: string): { embedUrl: string; videoId: string | null } | null {
   try {
     const u = new URL(url);
     const list = u.searchParams.get("list");
 
     if (/(^|\.)youtube\.com$/i.test(u.hostname)) {
       const v = u.searchParams.get("v");
-      if (v) return `https://www.youtube-nocookie.com/embed/${v}${list ? `?list=${list}` : ""}`;
+      if (v) return { embedUrl: `https://www.youtube-nocookie.com/embed/${v}${list ? `?list=${list}` : ""}`, videoId: v };
       const path = u.pathname.match(/\/(embed|shorts)\/([\w-]{11})/);
-      if (path) return `https://www.youtube-nocookie.com/embed/${path[2]}`;
-      if (list) return `https://www.youtube-nocookie.com/embed/videoseries?list=${list}`;
+      if (path) return { embedUrl: `https://www.youtube-nocookie.com/embed/${path[2]}`, videoId: path[2] };
+      if (list) return { embedUrl: `https://www.youtube-nocookie.com/embed/videoseries?list=${list}`, videoId: null };
       return null;
     }
     if (/(^|\.)youtu\.be$/i.test(u.hostname)) {
       const id = u.pathname.slice(1).split("/")[0];
-      return id ? `https://www.youtube-nocookie.com/embed/${id}${list ? `?list=${list}` : ""}` : null;
+      return id ? { embedUrl: `https://www.youtube-nocookie.com/embed/${id}${list ? `?list=${list}` : ""}`, videoId: id } : null;
     }
   } catch {
     return null;
@@ -40,8 +44,15 @@ function youtubeEmbedUrl(url: string): string | null {
 }
 
 export function detectEmbed(url: string): Embed | null {
-  const ytEmbed = youtubeEmbedUrl(url);
-  if (ytEmbed) return { platform: "youtube", url, embedUrl: ytEmbed };
+  const yt = youtubeEmbedUrl(url);
+  if (yt) {
+    return {
+      platform: "youtube",
+      url,
+      embedUrl: yt.embedUrl,
+      thumbnailUrl: yt.videoId ? `https://img.youtube.com/vi/${yt.videoId}/hqdefault.jpg` : undefined,
+    };
+  }
 
   if (/vimeo\.com/i.test(url)) {
     const id = url.match(/vimeo\.com\/(?:.*\/)?(\d+)/)?.[1];

@@ -264,6 +264,18 @@ export function Lightbox({
                 >
                   {it.kind === "image" ? (
                     <Media src={it.src} alt="" sizes="120px" className="aspect-[4/3] w-full" />
+                  ) : it.embed.thumbnailUrl ? (
+                    <span className="relative flex aspect-[4/3] w-full items-center justify-center bg-[#1a1a18]">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={it.embed.thumbnailUrl}
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                      <span aria-hidden className="relative text-lg text-[#cfcabc] drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                        ▶
+                      </span>
+                    </span>
                   ) : (
                     <span className="flex aspect-[4/3] w-full items-center justify-center bg-[#1a1a18] text-[#cfcabc]">
                       <span aria-hidden className="text-lg">
