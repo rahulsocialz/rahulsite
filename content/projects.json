@@ -3,25 +3,6 @@
     {
       "heroImage": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
       "externalUrl": "",
-      "accent": "#3f6fe0",
-      "slug": "olivia-rodrigo-linkbuds",
-      "client": "",
-      "featuredImage": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
-      "featured": false,
-      "order": 1,
-      "location": "",
-      "subtitle": "LinkBuds Campaign",
-      "title": "Olivia Rodrigo",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "campaigns",
-        "photo"
-      ],
-      "placeholderCount": 6,
-      "description": "Hero Campaign Imagery to launch Olivia Rodrigo's partnership with Sony's new Link Bud product. Photos of Olivia and Product flat-lay by me.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -68,32 +49,29 @@
           "image": "/images/uploads/olivia-rodrigo-linkbuds/09.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#3f6fe0",
+      "slug": "olivia-rodrigo-linkbuds",
+      "client": "",
+      "featuredImage": "/images/uploads/olivia-rodrigo-linkbuds/01.jpg",
+      "featured": false,
+      "order": 1,
+      "location": "",
+      "subtitle": "LinkBuds Campaign",
+      "title": "Olivia Rodrigo",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "Hero Campaign Imagery to launch Olivia Rodrigo's partnership with Sony's new Link Bud product. Photos of Olivia and Product flat-lay by me.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/01.-group-2.jpg",
       "externalUrl": "",
-      "accent": "#6e4fc0",
-      "slug": "katseye-beautiful-chaos-tour",
-      "client": "",
-      "featuredImage": "/images/uploads/01.-group-2.jpg",
-      "featured": false,
-      "order": 2,
-      "location": "",
-      "subtitle": "Beautiful Chaos Tour",
-      "title": "KATSEYE",
-      "featuredFocalPoint": "top",
-      "hero": true,
-      "seoTitle": "",
-      "categories": [
-        "photo",
-        "video"
-      ],
-      "placeholderCount": 6,
-      "description": "Content Coverage Included: Photos for Socials, Press and Local Affiliates and Nightly Recap Videos. iHeart Award Favorite Tour Photographer winner.",
-      "year": "",
-      "seoDescription": "",
-      "heroOrder": 1,
       "media": [
         {
           "type": "video",
@@ -184,31 +162,32 @@
           "image": "/images/uploads/katseye-beautiful-chaos-tour/17.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#6e4fc0",
+      "slug": "katseye-beautiful-chaos-tour",
+      "client": "",
+      "featuredImage": "/images/uploads/01.-group-2.jpg",
+      "featured": false,
+      "order": 2,
+      "heroOrder": 1,
+      "location": "",
+      "subtitle": "Beautiful Chaos Tour",
+      "title": "KATSEYE",
+      "featuredFocalPoint": "top",
+      "hero": true,
+      "seoTitle": "",
+      "categories": [
+        "photo",
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "Content Coverage Included: Photos for Socials, Press and Local Affiliates and Nightly Recap Videos. iHeart Award Favorite Tour Photographer winner.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
       "externalUrl": "",
-      "accent": "#c6982f",
-      "slug": "camila-cabello-cxoxo-campaign",
-      "client": "",
-      "featuredImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
-      "featured": false,
-      "order": 3,
-      "location": "",
-      "subtitle": "C,XOXO Album Campaign",
-      "title": "Camila Cabello",
-      "hero": true,
-      "seoTitle": "",
-      "categories": [
-        "campaigns",
-        "photo"
-      ],
-      "placeholderCount": 6,
-      "description": "Shot stills, video and short-form content for Camila's album roll out for C,XOXO. Content included still images, album trailers, teasers, TikTok/Reels content and more. The trailers directed by me have won a Clio Award and Hollywood Music Video Award.",
-      "year": "",
-      "seoDescription": "",
-      "heroOrder": 3,
       "media": [
         {
           "type": "video",
@@ -283,29 +262,32 @@
           "image": "/images/uploads/camila-cabello-cxoxo-campaign/12.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#c6982f",
+      "slug": "camila-cabello-cxoxo-campaign",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-cxoxo-campaign/01.jpg",
+      "featured": false,
+      "order": 3,
+      "heroOrder": 3,
+      "location": "",
+      "subtitle": "C,XOXO Album Campaign",
+      "title": "Camila Cabello",
+      "hero": true,
+      "seoTitle": "",
+      "categories": [
+        "campaigns",
+        "photo",
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "Shot stills, video and short-form content for Camila's album roll out for C,XOXO. Content included still images, album trailers, teasers, TikTok/Reels content and more. The trailers directed by me have won a Clio Award and Hollywood Music Video Award.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/jon-batiste-world-music-radio/01.jpg",
       "externalUrl": "",
-      "accent": "#d98a3d",
-      "slug": "jon-batiste-world-music-radio",
-      "client": "",
-      "featuredImage": "/images/uploads/jon-batiste-world-music-radio/01.jpg",
-      "featured": false,
-      "order": 4,
-      "location": "",
-      "subtitle": "World Music Radio Campaign",
-      "title": "Jon Batiste",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "campaigns"
-      ],
-      "placeholderCount": 6,
-      "description": "Led social media strategy for Jon Batiste's Grammy nominated album World Music Radio. Jon's social platform grew over 500k across TikTok and Instagram during roll out and garnered millions of views. The trailer earned a Clio Award.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "video",
@@ -320,31 +302,32 @@
           "image": "/images/uploads/jon-batiste-world-music-radio/01.jpg",
           "focalPoint": "center"
         }
-      ]
-    },
-    {
-      "heroImage": "/images/uploads/katseye-gap-x-complex/02.jpg",
-      "externalUrl": "",
-      "accent": "#4b4fb0",
-      "slug": "katseye-gap-x-complex",
+      ],
+      "accent": "#d98a3d",
+      "slug": "jon-batiste-world-music-radio",
       "client": "",
-      "featuredImage": "/images/uploads/katseye-gap-x-complex/02.jpg",
+      "featuredImage": "/images/uploads/jon-batiste-world-music-radio/01.jpg",
       "featured": false,
-      "order": 5,
+      "order": 4,
       "location": "",
-      "subtitle": "Gap x Complex",
-      "title": "KATSEYE",
+      "subtitle": "World Music Radio Campaign",
+      "title": "Jon Batiste",
       "hero": false,
       "seoTitle": "",
       "categories": [
         "campaigns",
-        "photo"
+        "photo",
+        "social",
+        "video"
       ],
       "placeholderCount": 6,
-      "description": "Campaign photography for KATSEYE's collaboration with Gap and Complex, shot by me.",
+      "description": "Led social media strategy for Jon Batiste's Grammy nominated album World Music Radio. Jon's social platform grew over 500k across TikTok and Instagram during roll out and garnered millions of views. The trailer earned a Clio Award.",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "50% 68%",
+      "seoDescription": ""
+    },
+    {
+      "heroImage": "/images/uploads/katseye-gap-x-complex/02.jpg",
+      "externalUrl": "",
       "media": [
         {
           "type": "image",
@@ -386,32 +369,30 @@
           "image": "/images/uploads/katseye-gap-x-complex/08.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#4b4fb0",
+      "slug": "katseye-gap-x-complex",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-gap-x-complex/02.jpg",
+      "featured": false,
+      "order": 5,
+      "location": "",
+      "subtitle": "Gap x Complex",
+      "title": "KATSEYE",
+      "featuredFocalPoint": "50% 68%",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "Campaign photography for KATSEYE's collaboration with Gap and Complex, shot by me.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
       "externalUrl": "",
-      "accent": "#e06a50",
-      "slug": "summer-walker-album-spend-it",
-      "client": "",
-      "featuredImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
-      "featured": false,
-      "order": 6,
-      "location": "",
-      "subtitle": "Album Artwork & \u201cSpend It\u201d",
-      "title": "Summer Walker",
-      "featuredFocalPoint": "top",
-      "hero": true,
-      "seoTitle": "",
-      "categories": [
-        "art-direction",
-        "photo"
-      ],
-      "placeholderCount": 6,
-      "description": "Imagery used across DSPs, playlists, the album cover and socials.",
-      "year": "",
-      "seoDescription": "",
-      "heroOrder": 2,
       "media": [
         {
           "type": "image",
@@ -448,29 +429,31 @@
           "image": "/images/uploads/summer-walker-album-spend-it/07.jpg",
           "focalPoint": "top"
         }
-      ]
-    },
-    {
-      "heroImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
-      "externalUrl": "",
-      "accent": "#3f9e6e",
-      "slug": "olivia-rodrigo-guts-tour-photo-book",
+      ],
+      "accent": "#e06a50",
+      "slug": "summer-walker-album-spend-it",
       "client": "",
-      "featuredImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
+      "featuredImage": "/images/uploads/summer-walker-album-spend-it/01.jpg",
       "featured": false,
-      "order": 7,
+      "order": 6,
+      "heroOrder": 2,
       "location": "",
-      "subtitle": "GUTS Tour Photo Book",
-      "title": "Olivia Rodrigo",
-      "hero": false,
+      "subtitle": "Album Artwork & “Spend It” Single",
+      "title": "Summer Walker",
+      "featuredFocalPoint": "top",
+      "hero": true,
       "seoTitle": "",
       "categories": [
         "photo"
       ],
       "placeholderCount": 6,
-      "description": "Shot Olivia on her GUTS World Tour, with the photos featured in her official tour photo book.",
+      "description": "Imagery used across DSPs, playlists, the album cover and socials.",
       "year": "",
-      "seoDescription": "",
+      "seoDescription": ""
+    },
+    {
+      "heroImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
+      "externalUrl": "",
       "media": [
         {
           "type": "image",
@@ -512,30 +495,29 @@
           "image": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/08.jpg",
           "focalPoint": "center"
         }
-      ]
-    },
-    {
-      "heroImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
-      "externalUrl": "",
-      "accent": "#d24f9e",
-      "slug": "camila-cabello-yours-c-tour",
+      ],
+      "accent": "#3f9e6e",
+      "slug": "olivia-rodrigo-guts-tour-photo-book",
       "client": "",
-      "featuredImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
+      "featuredImage": "/images/uploads/olivia-rodrigo-guts-tour-photo-book/06.jpg",
       "featured": false,
-      "order": 8,
+      "order": 7,
       "location": "",
-      "subtitle": "Yours, C Tour",
-      "title": "Camila Cabello",
+      "subtitle": "GUTS Tour Photo Book",
+      "title": "Olivia Rodrigo",
       "hero": false,
       "seoTitle": "",
       "categories": [
         "photo"
       ],
       "placeholderCount": 6,
-      "description": "Directed the tour's screen interstitials, ideating and conceptualizing the story of the show. Also shot tour photography and short-form content, plus fan content for her fan sites.",
+      "description": "Shot Olivia on her GUTS World Tour, with the photos featured in her official tour photo book.",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "top",
+      "seoDescription": ""
+    },
+    {
+      "heroImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
+      "externalUrl": "",
       "media": [
         {
           "type": "image",
@@ -592,30 +574,32 @@
           "image": "/images/uploads/camila-cabello-yours-c-tour/11.jpg",
           "focalPoint": "center"
         }
-      ]
-    },
-    {
-      "heroImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
-      "externalUrl": "",
-      "accent": "#4b57b0",
-      "slug": "renee-rapp-bite-me",
+      ],
+      "accent": "#d24f9e",
+      "slug": "camila-cabello-yours-c-tour",
       "client": "",
-      "featuredImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
+      "featuredImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
       "featured": false,
-      "order": 9,
+      "order": 8,
       "location": "",
-      "subtitle": "Bite Me",
-      "title": "Renee Rapp",
+      "subtitle": "Yours, C Tour",
+      "title": "Camila Cabello",
+      "featuredFocalPoint": "top",
       "hero": false,
       "seoTitle": "",
       "categories": [
         "photo",
-        "video"
+        "video",
+        "social"
       ],
       "placeholderCount": 6,
-      "description": "Shot the intro to the \"Leave Me Alone\" music video, plus images including tour admat.",
+      "description": "Directed the tour's screen interstitials, ideating and conceptualizing the story of the show. Also shot tour photography and short-form content, plus fan content for her fan sites.",
       "year": "",
-      "seoDescription": "",
+      "seoDescription": ""
+    },
+    {
+      "heroImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
+      "externalUrl": "",
       "media": [
         {
           "type": "video",
@@ -656,30 +640,31 @@
           "image": "/images/uploads/renee-rapp-bite-me/07.jpg",
           "focalPoint": "center"
         }
-      ]
-    },
-    {
-      "heroImage": "/images/uploads/dream-academy/01.jpg",
-      "externalUrl": "",
-      "accent": "#8a5fd6",
-      "slug": "dream-academy",
+      ],
+      "accent": "#4b57b0",
+      "slug": "renee-rapp-bite-me",
       "client": "",
-      "featuredImage": "/images/uploads/dream-academy/01.jpg",
-      "featured": true,
-      "order": 10,
+      "featuredImage": "/images/uploads/renee-rapp-bite-me/01.jpg",
+      "featured": false,
+      "order": 9,
       "location": "",
-      "subtitle": "",
-      "title": "Dream Academy",
+      "subtitle": "Bite Me",
+      "title": "Renee Rapp",
       "hero": false,
       "seoTitle": "",
       "categories": [
-        "photo"
+        "photo",
+        "video"
       ],
       "placeholderCount": 6,
-      "description": "Social strategy and key imagery for the competition that put together KATSEYE.",
+      "description": "Shot the intro to the \"Leave Me Alone\" music video, plus images including tour admat.",
       "year": "",
-      "seoDescription": "",
+      "seoDescription": ""
+    },
+    {
       "featuredOrder": 2,
+      "heroImage": "/images/uploads/dream-academy/01.jpg",
+      "externalUrl": "",
       "media": [
         {
           "type": "image",
@@ -771,29 +756,30 @@
           "image": "/images/uploads/dream-academy/18.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#8a5fd6",
+      "slug": "dream-academy",
+      "client": "",
+      "featuredImage": "/images/uploads/dream-academy/01.jpg",
+      "featured": true,
+      "order": 10,
+      "location": "",
+      "subtitle": "",
+      "title": "Dream Academy",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo",
+        "social"
+      ],
+      "placeholderCount": 6,
+      "description": "Social strategy and key imagery for the competition that put together KATSEYE.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/coldplay/02.jpg",
       "externalUrl": "",
-      "accent": "#2f9bd6",
-      "slug": "coldplay",
-      "client": "",
-      "featuredImage": "/images/uploads/coldplay/02.jpg",
-      "featured": false,
-      "order": 11,
-      "location": "",
-      "subtitle": "",
-      "title": "Coldplay",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "photo"
-      ],
-      "placeholderCount": 6,
-      "description": "Photography and poster art direction for the Music of the Spheres World Tour, and more.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -815,29 +801,30 @@
           "image": "/images/uploads/coldplay/04.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#2f9bd6",
+      "slug": "coldplay",
+      "client": "",
+      "featuredImage": "/images/uploads/coldplay/02.jpg",
+      "featured": false,
+      "order": 11,
+      "location": "",
+      "subtitle": "",
+      "title": "Coldplay",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo",
+        "art-direction"
+      ],
+      "placeholderCount": 6,
+      "description": "Photography and poster art direction for the Music of the Spheres World Tour, and more.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
       "externalUrl": "",
-      "accent": "#c65f3f",
-      "slug": "billie-eilish-hit-me-hard-and-soft-3d-film",
-      "client": "",
-      "featuredImage": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
-      "featured": false,
-      "order": 12,
-      "location": "",
-      "subtitle": "Hit Me Hard and Soft \u2014 3D Film",
-      "title": "Billie Eilish",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "art-direction"
-      ],
-      "placeholderCount": 6,
-      "description": "Additional content provided for the 3D film.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -849,11 +836,76 @@
           "image": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/02.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#c65f3f",
+      "slug": "billie-eilish-hit-me-hard-and-soft-3d-film",
+      "client": "",
+      "featuredImage": "/images/uploads/billie-eilish-hit-me-hard-and-soft-3d-film/01.jpg",
+      "featured": false,
+      "order": 12,
+      "location": "",
+      "subtitle": "Hit Me Hard and Soft — 3D Film",
+      "title": "Billie Eilish",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "Additional content provided for the 3D film.",
+      "year": "",
+      "seoDescription": ""
+    },
+    {
+      "featuredOrder": 4,
+      "heroImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
+      "externalUrl": "",
+      "media": [
+        {
+          "type": "image",
+          "image": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
+          "focalPoint": "center"
+        },
+        {
+          "type": "image",
+          "image": "/images/uploads/alicia-keys-santa-baby-rollout/02.jpg",
+          "focalPoint": "center"
+        }
+      ],
+      "accent": "#c6982f",
+      "slug": "alicia-keys-santa-baby-rollout",
+      "client": "",
+      "featuredImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
+      "featured": true,
+      "order": 34,
+      "location": "",
+      "subtitle": "Santa Baby Album Roll Out",
+      "title": "Alicia Keys",
+      "featuredFocalPoint": "center",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "campaigns",
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "Creative director for social on Alicia Keys' holiday album rollout, building the social strategy and shooting short-form, long-form and photo content. \nDevised roll out and growth plan from teasers to release. ",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "",
       "externalUrl": "",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=xQl4jd77bGY"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=6oqywcXsQik"
+        }
+      ],
       "accent": "#3f6fe0",
       "slug": "katseye-director-music-videos",
       "client": "",
@@ -871,40 +923,12 @@
       "placeholderCount": 6,
       "description": "Directed two lyric videos for KATSEYE.",
       "year": "",
-      "seoDescription": "",
-      "media": [
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/watch?v=xQl4jd77bGY"
-        },
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/watch?v=6oqywcXsQik"
-        }
-      ]
+      "seoDescription": ""
     },
     {
+      "featuredOrder": 3,
       "heroImage": "/images/uploads/jungkook-3d-single/02.jpg",
       "externalUrl": "",
-      "accent": "#6e4fc0",
-      "slug": "jungkook-3d-single",
-      "client": "",
-      "featuredImage": "/images/uploads/jungkook-3d-single/02.jpg",
-      "featured": true,
-      "order": 14,
-      "location": "",
-      "subtitle": "3D Single",
-      "title": "Jungkook",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "video"
-      ],
-      "placeholderCount": 6,
-      "description": "Short-form content, single visualizers and stills.",
-      "year": "",
-      "seoDescription": "",
-      "featuredOrder": 3,
       "media": [
         {
           "type": "video",
@@ -929,30 +953,30 @@
           "focalPoint": "center"
         }
       ],
-      "featuredFocalPoint": "center"
+      "accent": "#6e4fc0",
+      "slug": "jungkook-3d-single",
+      "client": "",
+      "featuredImage": "/images/uploads/jungkook-3d-single/02.jpg",
+      "featured": true,
+      "order": 14,
+      "location": "",
+      "subtitle": "3D Single",
+      "title": "Jungkook",
+      "featuredFocalPoint": "center",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "video",
+        "social"
+      ],
+      "placeholderCount": 6,
+      "description": "Short-form content, single visualizers and stills.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/katseye-gnarly-campaign/08.jpg",
       "externalUrl": "",
-      "accent": "#c6982f",
-      "slug": "katseye-gnarly-campaign",
-      "client": "",
-      "featuredImage": "/images/uploads/katseye-gnarly-campaign/01.jpg",
-      "featured": false,
-      "order": 15,
-      "location": "",
-      "subtitle": "Gnarly Campaign",
-      "title": "KATSEYE",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "campaigns",
-        "art-direction"
-      ],
-      "placeholderCount": 6,
-      "description": "Hero imagery for Gnarly's campaign, used across PR, marketing and DSPs. Also shot short-form content to support the rollout.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -1069,30 +1093,31 @@
           "image": "/images/uploads/katseye-gnarly-campaign/23.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#c6982f",
+      "slug": "katseye-gnarly-campaign",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-gnarly-campaign/01.jpg",
+      "featured": false,
+      "order": 15,
+      "location": "",
+      "subtitle": "Gnarly Campaign",
+      "title": "KATSEYE",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "campaigns",
+        "photo",
+        "social"
+      ],
+      "placeholderCount": 6,
+      "description": "Hero imagery for Gnarly's campaign, used across PR, marketing and DSPs. Also shot short-form content to support the rollout.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/camila-cabello-havana/02.jpg",
       "externalUrl": "",
-      "accent": "#d98a3d",
-      "slug": "camila-cabello-havana",
-      "client": "",
-      "featuredImage": "/images/uploads/camila-cabello-havana/01.jpg",
-      "featured": false,
-      "order": 16,
-      "location": "",
-      "subtitle": "Havana \u2014 Music Video",
-      "title": "Camila Cabello",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "video",
-        "photo"
-      ],
-      "placeholderCount": 6,
-      "description": "Shot stills on set for the original music video and art directed the poster.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -1119,29 +1144,29 @@
           "image": "/images/uploads/camila-cabello-havana/05.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#d98a3d",
+      "slug": "camila-cabello-havana",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-havana/01.jpg",
+      "featured": false,
+      "order": 16,
+      "location": "",
+      "subtitle": "Havana — Music Video",
+      "title": "Camila Cabello",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "Shot stills on set for the original music video and art directed the poster.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/katseye-pinky-up/01.jpg",
       "externalUrl": "",
-      "accent": "#4b4fb0",
-      "slug": "katseye-pinky-up",
-      "client": "",
-      "featuredImage": "/images/uploads/katseye-pinky-up/01.jpg",
-      "featured": false,
-      "order": 17,
-      "location": "",
-      "subtitle": "Pinky Up \u2014 Music Video",
-      "title": "KATSEYE",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "video"
-      ],
-      "placeholderCount": 6,
-      "description": "Campaign hero imagery for Pinky Up, running across PR, marketing and DSPs, with short-form content for the rollout.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -1193,31 +1218,31 @@
           "image": "/images/uploads/katseye-pinky-up/10.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#4b4fb0",
+      "slug": "katseye-pinky-up",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-pinky-up/01.jpg",
+      "featured": false,
+      "order": 17,
+      "location": "",
+      "subtitle": "Pinky Up — Music Video",
+      "title": "KATSEYE",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "video",
+        "photo",
+        "social"
+      ],
+      "placeholderCount": 6,
+      "description": "Campaign hero imagery for Pinky Up, running across PR, marketing and DSPs, with short-form content for the rollout.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
       "externalUrl": "",
-      "accent": "#e06a50",
-      "slug": "olivia-rodrigo-lancome",
-      "client": "",
-      "featuredImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
-      "featured": false,
-      "order": 18,
-      "location": "",
-      "subtitle": "Lanc\u00f4me",
-      "title": "Olivia Rodrigo",
-      "hero": true,
-      "seoTitle": "",
-      "categories": [
-        "campaigns"
-      ],
-      "placeholderCount": 6,
-      "description": "Behind-the-scenes imagery on set for the Lanc\u00f4me commercial.",
-      "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "left",
-      "heroOrder": 4,
       "media": [
         {
           "type": "image",
@@ -1269,29 +1294,31 @@
           "image": "/images/uploads/olivia-rodrigo-lancome/10.jpg",
           "focalPoint": "center"
         }
-      ]
-    },
-    {
-      "heroImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
-      "externalUrl": "",
-      "accent": "#3f9e6e",
-      "slug": "camila-cabello-over-the-years",
+      ],
+      "accent": "#e06a50",
+      "slug": "olivia-rodrigo-lancome",
       "client": "",
-      "featuredImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
+      "featuredImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
       "featured": false,
-      "order": 19,
+      "order": 18,
+      "heroOrder": 4,
       "location": "",
-      "subtitle": "Over the Years",
-      "title": "Camila Cabello",
-      "hero": false,
+      "subtitle": "Lancôme",
+      "title": "Olivia Rodrigo",
+      "featuredFocalPoint": "left",
+      "hero": true,
       "seoTitle": "",
       "categories": [
         "photo"
       ],
       "placeholderCount": 6,
-      "description": "Photography of Camila from early in her career, alongside video and TikTok content that has gone on to gain billions of views.",
+      "description": "Behind-the-scenes imagery on set for the Lancôme commercial.",
       "year": "",
-      "seoDescription": "",
+      "seoDescription": ""
+    },
+    {
+      "heroImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
+      "externalUrl": "",
       "media": [
         {
           "type": "image",
@@ -1388,30 +1415,31 @@
           "image": "/images/uploads/camila-cabello-over-the-years/19.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#3f9e6e",
+      "slug": "camila-cabello-over-the-years",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-over-the-years/01.jpg",
+      "featured": false,
+      "order": 19,
+      "location": "",
+      "subtitle": "Over the Years",
+      "title": "Camila Cabello",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo",
+        "social",
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "Photography of Camila from early in her career, alongside video and TikTok content that has gone on to gain billions of views.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/katseye-gabriela/02.jpg",
       "externalUrl": "",
-      "accent": "#d24f9e",
-      "slug": "katseye-gabriela",
-      "client": "",
-      "featuredImage": "/images/uploads/katseye-gabriela/02.jpg",
-      "featured": false,
-      "order": 20,
-      "location": "",
-      "subtitle": "Gabriela \u2014 Music Video",
-      "title": "KATSEYE",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "video"
-      ],
-      "placeholderCount": 6,
-      "description": "Shot the hero campaign imagery for Gabriela, used across PR, marketing and DSPs, plus short-form content for the rollout.",
-      "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "top",
       "media": [
         {
           "type": "image",
@@ -1478,30 +1506,30 @@
           "image": "/images/uploads/katseye-gabriela/13.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#d24f9e",
+      "slug": "katseye-gabriela",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-gabriela/02.jpg",
+      "featured": false,
+      "order": 20,
+      "location": "",
+      "subtitle": "Gabriela — Music Video",
+      "title": "KATSEYE",
+      "featuredFocalPoint": "top",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "Shot the hero campaign imagery for Gabriela, used across PR, marketing and DSPs, plus short-form content for the rollout.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/james-arthur-creative-direction/05.jpg",
       "externalUrl": "",
-      "accent": "#4b57b0",
-      "slug": "james-arthur-creative-direction",
-      "client": "",
-      "featuredImage": "/images/uploads/james-arthur-creative-direction/05.jpg",
-      "featured": false,
-      "order": 21,
-      "location": "",
-      "subtitle": "Creative Direction",
-      "title": "James Arthur",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "art-direction",
-        "photo"
-      ],
-      "placeholderCount": 6,
-      "description": "Creative director for the rollout of James Arthur's album \"You,\" building the social plan from the ground up \u2014 hiring the photographer, soliciting music video treatments, and shaping the content and world of the campaign.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -1543,29 +1571,32 @@
           "image": "/images/uploads/james-arthur-creative-direction/08.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#4b57b0",
+      "slug": "james-arthur-creative-direction",
+      "client": "",
+      "featuredImage": "/images/uploads/james-arthur-creative-direction/05.jpg",
+      "featured": false,
+      "order": 21,
+      "location": "",
+      "subtitle": "Creative Direction",
+      "title": "James Arthur",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo",
+        "social",
+        "video",
+        "campaigns"
+      ],
+      "placeholderCount": 6,
+      "description": "Creative director for the rollout of James Arthur's album \"You,\" building the social plan from the ground up — hiring the photographer, soliciting music video treatments, and shaping the content and world of the campaign.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
       "externalUrl": "",
-      "accent": "#8a5fd6",
-      "slug": "fifth-harmony-over-the-years",
-      "client": "",
-      "featuredImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
-      "featured": false,
-      "order": 22,
-      "location": "",
-      "subtitle": "Over the Years",
-      "title": "Fifth Harmony",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "photo"
-      ],
-      "placeholderCount": 6,
-      "description": "PR, social and photography across Fifth Harmony's run.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -1602,30 +1633,30 @@
           "image": "/images/uploads/fifth-harmony-over-the-years/07.jpg",
           "focalPoint": "center"
         }
-      ]
-    },
-    {
-      "heroImage": "/images/uploads/little-mix-over-the-years/01.jpg",
-      "externalUrl": "",
-      "accent": "#2f9bd6",
-      "slug": "little-mix-over-the-years",
+      ],
+      "accent": "#8a5fd6",
+      "slug": "fifth-harmony-over-the-years",
       "client": "",
-      "featuredImage": "/images/uploads/little-mix-over-the-years/01.jpg",
-      "featured": true,
-      "order": 23,
+      "featuredImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
+      "featured": false,
+      "order": 22,
       "location": "",
       "subtitle": "Over the Years",
-      "title": "Little Mix",
+      "title": "Fifth Harmony",
       "hero": false,
       "seoTitle": "",
       "categories": [
         "photo"
       ],
       "placeholderCount": 6,
-      "description": "PR, social and photography across Little Mix's run.",
+      "description": "PR, social and photography across Fifth Harmony's run.",
       "year": "",
-      "seoDescription": "",
+      "seoDescription": ""
+    },
+    {
       "featuredOrder": 5,
+      "heroImage": "/images/uploads/little-mix-over-the-years/01.jpg",
+      "externalUrl": "",
       "media": [
         {
           "type": "image",
@@ -1712,29 +1743,31 @@
           "image": "/images/uploads/little-mix-over-the-years/17.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#2f9bd6",
+      "slug": "little-mix-over-the-years",
+      "client": "",
+      "featuredImage": "/images/uploads/little-mix-over-the-years/01.jpg",
+      "featured": true,
+      "order": 23,
+      "location": "",
+      "subtitle": "Over the Years",
+      "title": "Little Mix",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo",
+        "video",
+        "social"
+      ],
+      "placeholderCount": 6,
+      "description": "PR, social and photography across Little Mix's run.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/posters/01.jpg",
       "externalUrl": "",
-      "accent": "#c65f3f",
-      "slug": "posters",
-      "client": "",
-      "featuredImage": "/images/uploads/posters/01.jpg",
-      "featured": false,
-      "order": 24,
-      "location": "",
-      "subtitle": "Campaign Artwork",
-      "title": "Posters",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "art-direction"
-      ],
-      "placeholderCount": 6,
-      "description": "Art directed posters for music videos and tours.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -1771,11 +1804,35 @@
           "image": "/images/uploads/posters/07.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#c65f3f",
+      "slug": "posters",
+      "client": "",
+      "featuredImage": "/images/uploads/posters/01.jpg",
+      "featured": false,
+      "order": 24,
+      "location": "",
+      "subtitle": "Campaign Artwork",
+      "title": "Posters",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "art-direction"
+      ],
+      "placeholderCount": 6,
+      "description": "Art directed posters for music videos and tours.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "",
       "externalUrl": "",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=XbOQMaJ1r-0&t=427s"
+        }
+      ],
       "accent": "#3f6fe0",
       "slug": "boygenius-the-film",
       "client": "",
@@ -1798,26 +1855,6 @@
     {
       "heroImage": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
       "externalUrl": "",
-      "accent": "#6e4fc0",
-      "slug": "camila-cabello-familia-campaign",
-      "client": "",
-      "featuredImage": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
-      "featured": false,
-      "order": 26,
-      "location": "",
-      "subtitle": "Familia Campaign",
-      "title": "Camila Cabello",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "campaigns",
-        "photo"
-      ],
-      "placeholderCount": 6,
-      "description": "Led the rollout for the Familia album campaign, including the visualizers for the EP.",
-      "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "top",
       "media": [
         {
           "type": "image",
@@ -1924,11 +1961,41 @@
           "image": "/images/uploads/camila-cabello-familia-campaign/21.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#6e4fc0",
+      "slug": "camila-cabello-familia-campaign",
+      "client": "",
+      "featuredImage": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
+      "featured": false,
+      "order": 26,
+      "location": "",
+      "subtitle": "Familia Campaign",
+      "title": "Camila Cabello",
+      "featuredFocalPoint": "top",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "campaigns",
+        "photo",
+        "video",
+        "social"
+      ],
+      "placeholderCount": 6,
+      "description": "Led the rollout for the Familia album campaign, including the visualizers for the EP.",
+      "year": "",
+      "seoDescription": ""
     },
     {
+      "featuredOrder": 1,
       "heroImage": "/images/uploads/one-direction-over-the-years/01.jpg",
       "externalUrl": "",
+      "media": [
+        {
+          "type": "image",
+          "image": "/images/uploads/one-direction-over-the-years/01.jpg",
+          "focalPoint": "center"
+        }
+      ],
       "accent": "#c6982f",
       "slug": "one-direction-over-the-years",
       "client": "",
@@ -1946,38 +2013,11 @@
       "placeholderCount": 6,
       "description": "PR, social and photography across One Direction's run, working within their social and digital team.",
       "year": "",
-      "seoDescription": "",
-      "featuredOrder": 1,
-      "media": [
-        {
-          "type": "image",
-          "image": "/images/uploads/one-direction-over-the-years/01.jpg",
-          "focalPoint": "center"
-        }
-      ]
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/katseye-on-the-road/01.jpg",
       "externalUrl": "",
-      "accent": "#d98a3d",
-      "slug": "katseye-on-the-road",
-      "client": "",
-      "featuredImage": "/images/uploads/katseye-on-the-road/01.jpg",
-      "featured": false,
-      "order": 28,
-      "location": "",
-      "subtitle": "On the Road",
-      "title": "KATSEYE",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "photo",
-        "social"
-      ],
-      "placeholderCount": 6,
-      "description": "A collection of photography and short-form content capturing KATSEYE across various moments of their career.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -2089,11 +2129,36 @@
           "image": "/images/uploads/katseye-on-the-road/22.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#d98a3d",
+      "slug": "katseye-on-the-road",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-on-the-road/01.jpg",
+      "featured": false,
+      "order": 28,
+      "location": "",
+      "subtitle": "On the Road",
+      "title": "KATSEYE",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo",
+        "social"
+      ],
+      "placeholderCount": 6,
+      "description": "A collection of photography and short-form content capturing KATSEYE across various moments of their career.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "",
       "externalUrl": "",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=jzrQRR5Kntk"
+        }
+      ],
       "accent": "#4b4fb0",
       "slug": "ben-platt-cherry-on-top",
       "client": "",
@@ -2101,7 +2166,7 @@
       "featured": false,
       "order": 29,
       "location": "",
-      "subtitle": "Cherry On Top \u2014 Music Video",
+      "subtitle": "Cherry On Top — Music Video",
       "title": "Ben Platt",
       "hero": false,
       "seoTitle": "",
@@ -2111,17 +2176,37 @@
       "placeholderCount": 6,
       "description": "Co-directed \"Cherry On Top\" with Mikayla LaBasso.",
       "year": "",
-      "seoDescription": "",
-      "media": [
-        {
-          "type": "video",
-          "url": "https://www.youtube.com/watch?v=jzrQRR5Kntk"
-        }
-      ]
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/camila-cabello-uefa/01.jpg",
       "externalUrl": "",
+      "media": [
+        {
+          "type": "image",
+          "image": "/images/uploads/camila-cabello-uefa/04.jpg",
+          "focalPoint": "center"
+        },
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=iWawjTj8j3s"
+        },
+        {
+          "type": "image",
+          "image": "/images/uploads/camila-cabello-uefa/01.jpg",
+          "focalPoint": "center"
+        },
+        {
+          "type": "image",
+          "image": "/images/uploads/camila-cabello-uefa/02.jpg",
+          "focalPoint": "center"
+        },
+        {
+          "type": "image",
+          "image": "/images/uploads/camila-cabello-uefa/03.jpg",
+          "focalPoint": "center"
+        }
+      ],
       "accent": "#e06a50",
       "slug": "camila-cabello-uefa",
       "client": "",
@@ -2139,51 +2224,11 @@
       "placeholderCount": 6,
       "description": "Campaign imagery and the short documentary for Camila's partnership with UEFA.",
       "year": "",
-      "seoDescription": "",
-      "media": [
-        {
-          "type": "image",
-          "image": "/images/uploads/camila-cabello-uefa/01.jpg",
-          "focalPoint": "center"
-        },
-        {
-          "type": "image",
-          "image": "/images/uploads/camila-cabello-uefa/02.jpg",
-          "focalPoint": "center"
-        },
-        {
-          "type": "image",
-          "image": "/images/uploads/camila-cabello-uefa/03.jpg",
-          "focalPoint": "center"
-        },
-        {
-          "type": "image",
-          "image": "/images/uploads/camila-cabello-uefa/04.jpg",
-          "focalPoint": "center"
-        }
-      ]
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/katseye-debut-music-video/01.jpg",
       "externalUrl": "",
-      "accent": "#3f9e6e",
-      "slug": "katseye-debut-music-video",
-      "client": "",
-      "featuredImage": "/images/uploads/katseye-debut-music-video/01.jpg",
-      "featured": false,
-      "order": 31,
-      "location": "",
-      "subtitle": "Debut \u2014 Music Video",
-      "title": "KATSEYE",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "video"
-      ],
-      "placeholderCount": 6,
-      "description": "Hero imagery for KATSEYE's debut single, used across PR, marketing and DSPs, along with short-form content for the rollout.",
-      "year": "",
-      "seoDescription": "",
       "media": [
         {
           "type": "image",
@@ -2265,11 +2310,36 @@
           "image": "/images/uploads/katseye-debut-music-video/16.jpg",
           "focalPoint": "center"
         }
-      ]
+      ],
+      "accent": "#3f9e6e",
+      "slug": "katseye-debut-music-video",
+      "client": "",
+      "featuredImage": "/images/uploads/katseye-debut-music-video/01.jpg",
+      "featured": false,
+      "order": 31,
+      "location": "",
+      "subtitle": "Debut — Music Video",
+      "title": "KATSEYE",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "photo"
+      ],
+      "placeholderCount": 6,
+      "description": "Hero imagery for KATSEYE's debut single, used across PR, marketing and DSPs, along with short-form content for the rollout.",
+      "year": "",
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
       "externalUrl": "",
+      "media": [
+        {
+          "type": "image",
+          "image": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
+          "focalPoint": "center"
+        }
+      ],
       "accent": "#d24f9e",
       "slug": "camila-cabello-never-be-the-same-tour",
       "client": "",
@@ -2282,42 +2352,17 @@
       "hero": false,
       "seoTitle": "",
       "categories": [
-        "photo"
+        "photo",
+        "video"
       ],
       "placeholderCount": 6,
       "description": "Tour photography and video. iHeartRadio nominee, 2019.",
       "year": "",
-      "seoDescription": "",
-      "media": [
-        {
-          "type": "image",
-          "image": "/images/uploads/camila-cabello-never-be-the-same-tour/01.jpg",
-          "focalPoint": "center"
-        }
-      ]
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/syco/02.jpg",
       "externalUrl": "",
-      "accent": "#4b57b0",
-      "slug": "syco",
-      "client": "",
-      "featuredImage": "/images/uploads/syco/02.jpg",
-      "featured": false,
-      "order": 33,
-      "location": "",
-      "subtitle": "",
-      "title": "Syco",
-      "hero": false,
-      "seoTitle": "",
-      "categories": [
-        "photo"
-      ],
-      "placeholderCount": 6,
-      "description": "PR and digital strategy, plus content across the label's roster, including One Direction, Little Mix, James Arthur, Camila Cabello, Fifth Harmony and Labrinth. Also led social strategy for shows like The X Factor and Got Talent, and art directed shoots across the roster.",
-      "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "top",
       "media": [
         {
           "type": "image",
@@ -2379,44 +2424,26 @@
           "image": "/images/uploads/syco/12.jpg",
           "focalPoint": "center"
         }
-      ]
-    },
-    {
-      "heroImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
-      "externalUrl": "",
-      "accent": "#c6982f",
-      "slug": "alicia-keys-santa-baby-rollout",
+      ],
+      "accent": "#4b57b0",
+      "slug": "syco",
       "client": "",
-      "featuredImage": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
-      "featured": true,
-      "order": 34,
+      "featuredImage": "/images/uploads/syco/02.jpg",
+      "featured": false,
+      "order": 33,
       "location": "",
-      "subtitle": "Santa Baby Album Roll Out",
-      "title": "Alicia Keys",
-      "featuredFocalPoint": "center",
+      "subtitle": "",
+      "title": "Syco",
+      "featuredFocalPoint": "top",
       "hero": false,
       "seoTitle": "",
       "categories": [
-        "campaigns",
         "photo"
       ],
       "placeholderCount": 6,
-      "description": "Creative director for social on Alicia Keys' holiday album rollout, building the social strategy and shooting short-form, long-form and photo content.",
+      "description": "PR and digital strategy, plus content across the label's roster, including One Direction, Little Mix, James Arthur, Camila Cabello, Fifth Harmony and Labrinth. Also led social strategy for shows like The X Factor and Got Talent, and art directed shoots across the roster and tv shows",
       "year": "",
-      "seoDescription": "",
-      "featuredOrder": 4,
-      "media": [
-        {
-          "type": "image",
-          "image": "/images/uploads/alicia-keys-santa-baby-rollout/01.jpg",
-          "focalPoint": "center"
-        },
-        {
-          "type": "image",
-          "image": "/images/uploads/alicia-keys-santa-baby-rollout/02.jpg",
-          "focalPoint": "center"
-        }
-      ]
+      "seoDescription": ""
     }
   ]
 }
