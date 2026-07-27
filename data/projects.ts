@@ -37,7 +37,7 @@ export interface Project {
   title: string;
   subtitle: string;
   description?: string;
-  categories: CategoryKey[];
+  categories?: CategoryKey[];
   accent: string;
   featured: boolean;
   hero: boolean;

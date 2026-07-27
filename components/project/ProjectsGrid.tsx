@@ -25,7 +25,7 @@ export function ProjectsGrid() {
     router.replace(key === "all" ? "/projects" : `/projects?category=${key}`, { scroll: false });
   };
 
-  const filtered = filter === "all" ? sorted : sorted.filter((p) => p.categories.includes(filter));
+  const filtered = filter === "all" ? sorted : sorted.filter((p) => p.categories?.includes(filter));
   const shown = filtered.slice(0, visible);
   const hasMore = shown.length < filtered.length;
 
@@ -46,7 +46,7 @@ export function ProjectsGrid() {
   const counts = categories.map((c) => ({
     key: c.key,
     label: c.key === "all" ? "All Projects" : categoryLabel(c.key),
-    count: c.key === "all" ? sorted.length : sorted.filter((p) => p.categories.includes(c.key as CategoryKey)).length,
+    count: c.key === "all" ? sorted.length : sorted.filter((p) => p.categories?.includes(c.key as CategoryKey)).length,
   }));
 
   return (

@@ -24,7 +24,7 @@ export const CYCLE: { span: string; tall: boolean; variant: ModuleVariant }[] = 
   { span: "sm:col-span-7", tall: true, variant: "film" },
 ];
 
-const roleLine = (p: Project) => p.categories.map(categoryLabel).join(", ");
+const roleLine = (p: Project) => (p.categories ?? []).map(categoryLabel).join(", ");
 
 function Meta({ p, className = "" }: { p: Project; className?: string }) {
   return (

@@ -26,11 +26,13 @@ const POSITIONS: Record<FocalPoint, string> = {
 // preset name, and it passes straight through.
 const RAW_POSITION = /^\d{1,3}%\s+\d{1,3}%$/;
 
-// Default bias is "top" rather than dead-center: most of these frames are
-// people, and a center crop through a short/wide box clips heads far more
-// often than it clips feet.
+// Only a genuinely unset field defaults to "top" instead of dead-center —
+// most of these frames are people, and a center crop through a short/wide
+// box clips heads far more often than it clips feet. Once someone has
+// deliberately picked a position (including Center) in the CMS, that choice
+// is respected as-is.
 export function focalPosition(fp?: string): string {
-  if (fp && RAW_POSITION.test(fp)) return fp;
-  if (!fp || fp === "center") return POSITIONS.top;
+  if (!fp) return POSITIONS.top;
+  if (RAW_POSITION.test(fp)) return fp;
   return POSITIONS[fp as FocalPoint] ?? POSITIONS.top;
 }

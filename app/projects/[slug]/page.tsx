@@ -46,7 +46,7 @@ export default async function ProjectDetail({
   const index = sorted.findIndex((p) => p.slug === slug);
   const prev = index > 0 ? sorted[index - 1] : sorted[sorted.length - 1];
   const next = index < sorted.length - 1 ? sorted[index + 1] : sorted[0];
-  const services = project.categories.map(categoryLabel).join(", ");
+  const services = (project.categories ?? []).map(categoryLabel).join(", ");
 
   return (
     <div className="shell grid gap-8 py-10 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:gap-12 lg:py-14">
