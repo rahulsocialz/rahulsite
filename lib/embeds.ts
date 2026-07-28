@@ -56,7 +56,12 @@ export function detectEmbed(url: string): Embed | null {
 
   if (/vimeo\.com/i.test(url)) {
     const id = url.match(/vimeo\.com\/(?:.*\/)?(\d+)/)?.[1];
-    return id ? { platform: "vimeo", url, embedUrl: `https://player.vimeo.com/video/${id}` } : null;
+    // Unlisted/private Vimeo videos need their share hash (?h=...) passed
+    // through to the player, or the embed 403s.
+    const h = url.match(/[?&]h=([a-zA-Z0-9]+)/)?.[1];
+    return id
+      ? { platform: "vimeo", url, embedUrl: `https://player.vimeo.com/video/${id}${h ? `?h=${h}` : ""}` }
+      : null;
   }
   if (/tiktok\.com/i.test(url)) {
     const id = url.match(/\/video\/(\d+)/)?.[1];
