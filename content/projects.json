@@ -1637,7 +1637,7 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
+      "heroImage": "/images/uploads/fifth-harmony-over-the-years/00.jpg",
       "externalUrl": "",
       "media": [
         {
@@ -1679,7 +1679,7 @@
       "accent": "#8a5fd6",
       "slug": "fifth-harmony-over-the-years",
       "client": "",
-      "featuredImage": "/images/uploads/fifth-harmony-over-the-years/01.jpg",
+      "featuredImage": "/images/uploads/fifth-harmony-over-the-years/00.jpg",
       "featured": false,
       "order": 22,
       "location": "",
@@ -1693,7 +1693,8 @@
       "placeholderCount": 6,
       "description": "PR, social and photography across Fifth Harmony's run.",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredFocalPoint": "top"
     },
     {
       "featuredOrder": 5,
@@ -2059,7 +2060,7 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "/images/uploads/katseye-on-the-road/01.jpg",
+      "heroImage": "/images/uploads/katseye-on-the-road/00.jpg",
       "externalUrl": "",
       "media": [
         {
@@ -2180,7 +2181,7 @@
       "accent": "#d98a3d",
       "slug": "katseye-on-the-road",
       "client": "",
-      "featuredImage": "/images/uploads/katseye-on-the-road/01.jpg",
+      "featuredImage": "/images/uploads/katseye-on-the-road/00.jpg",
       "featured": false,
       "order": 28,
       "location": "",
@@ -2195,7 +2196,8 @@
       "placeholderCount": 6,
       "description": "A collection of photography and short-form content capturing KATSEYE across various moments of their career.",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredFocalPoint": "top"
     },
     {
       "heroImage": "/images/uploads/ben-platt-cherry-on-top/01.jpg",
