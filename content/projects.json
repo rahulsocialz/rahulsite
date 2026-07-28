@@ -379,7 +379,7 @@
       "location": "",
       "subtitle": "Gap x Complex",
       "title": "KATSEYE",
-      "featuredFocalPoint": "50% 68%",
+      "featuredFocalPoint": "50% 37%",
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -1252,7 +1252,8 @@
       "placeholderCount": 6,
       "description": "Campaign hero imagery for Pinky Up, running across PR, marketing and DSPs, with short-form content for the rollout.",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "featuredFocalPoint": "50% 27%"
     },
     {
       "heroImage": "/images/uploads/olivia-rodrigo-lancome/01.jpg",
@@ -1319,7 +1320,7 @@
       "location": "",
       "subtitle": "Lanc\u00f4me",
       "title": "Olivia Rodrigo",
-      "featuredFocalPoint": "left",
+      "featuredFocalPoint": "50% 23%",
       "hero": true,
       "seoTitle": "",
       "categories": [

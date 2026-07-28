@@ -26,13 +26,16 @@ const POSITIONS: Record<FocalPoint, string> = {
 // preset name, and it passes straight through.
 const RAW_POSITION = /^\d{1,3}%\s+\d{1,3}%$/;
 
-// Only a genuinely unset field defaults to "top" instead of dead-center —
-// most of these frames are people, and a center crop through a short/wide
-// box clips heads far more often than it clips feet. Once someone has
-// deliberately picked a position (including Center) in the CMS, that choice
-// is respected as-is.
+// Center is the CMS's default, unedited value on the vast majority of
+// photos — not a deliberate "I want dead-center" choice — so it gets the
+// same top bias as an unset field. Most of these frames are people, and a
+// center crop through the short archive rows (where the visible photo band
+// is much shorter than the row itself, once the caption text is subtracted)
+// clips heads far more often than it clips feet. A photo that genuinely
+// needs a different crop should use one of the other presets, or a raw
+// "X% Y%" position for a precise one-off fix.
 export function focalPosition(fp?: string): string {
-  if (!fp) return POSITIONS.top;
+  if (!fp || fp === "center") return POSITIONS.top;
   if (RAW_POSITION.test(fp)) return fp;
   return POSITIONS[fp as FocalPoint] ?? POSITIONS.top;
 }

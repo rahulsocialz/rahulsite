@@ -207,12 +207,12 @@ export function Hero() {
               />
             )}
 
-            {/* Cream metadata block — Camila's own caption, paired with her
-                photo above so the two tiles read as one connected pair. */}
+            {/* Cream metadata block — Camila's own caption, filling the
+                other half of her row so the pair reads as one 50/50 split. */}
             {c && (
               <Link
                 href={`/projects/${c.slug}`}
-                className="group hidden flex-col justify-center border border-[var(--line-soft)] bg-[var(--paper-2)] p-4 sm:col-span-3 sm:flex"
+                className="group hidden flex-col justify-center border border-[var(--line-soft)] bg-[var(--paper-2)] p-4 sm:col-span-6 sm:flex"
               >
                 <Caption p={c} tone="dark" />
               </Link>
@@ -221,8 +221,8 @@ export function Hero() {
             {d && (
               <OverlayModule
                 p={d}
-                sizes="(min-width:1024px) 30vw, 100vw"
-                className="aspect-[4/3] sm:col-span-3 sm:aspect-auto"
+                sizes="100vw"
+                className="aspect-[4/3] sm:col-span-12 sm:aspect-[21/9]"
               />
             )}
           </div>
