@@ -852,12 +852,12 @@
       ]
     },
     {
-      "heroImage": "",
+      "heroImage": "/images/uploads/katseye-director-music-videos/01.jpg",
       "externalUrl": "",
       "accent": "#3f6fe0",
       "slug": "katseye-director-music-videos",
       "client": "",
-      "featuredImage": "",
+      "featuredImage": "/images/uploads/katseye-director-music-videos/01.jpg",
       "featured": false,
       "order": 13,
       "location": "",
@@ -880,8 +880,14 @@
         {
           "type": "video",
           "url": "https://www.youtube.com/watch?v=6oqywcXsQik"
+        },
+        {
+          "type": "image",
+          "image": "/images/uploads/katseye-director-music-videos/01.jpg",
+          "focalPoint": "50% 65%"
         }
-      ]
+      ],
+      "featuredFocalPoint": "50% 65%"
     },
     {
       "heroImage": "/images/uploads/jungkook-3d-single/02.jpg",
@@ -1774,12 +1780,12 @@
       ]
     },
     {
-      "heroImage": "",
+      "heroImage": "/images/uploads/boygenius-the-film/01.jpg",
       "externalUrl": "",
       "accent": "#3f6fe0",
       "slug": "boygenius-the-film",
       "client": "",
-      "featuredImage": "",
+      "featuredImage": "/images/uploads/boygenius-the-film/01.jpg",
       "featured": false,
       "order": 25,
       "location": "",
@@ -1793,7 +1799,14 @@
       "placeholderCount": 6,
       "description": "Credited contributor on the film, directed by Kristen Stewart.",
       "year": "",
-      "seoDescription": ""
+      "seoDescription": "",
+      "media": [
+        {
+          "type": "image",
+          "image": "/images/uploads/boygenius-the-film/01.jpg",
+          "focalPoint": "center"
+        }
+      ]
     },
     {
       "heroImage": "/images/uploads/camila-cabello-familia-campaign/01.jpg",
@@ -2092,12 +2105,12 @@
       ]
     },
     {
-      "heroImage": "",
+      "heroImage": "/images/uploads/ben-platt-cherry-on-top/01.jpg",
       "externalUrl": "",
       "accent": "#4b4fb0",
       "slug": "ben-platt-cherry-on-top",
       "client": "",
-      "featuredImage": "",
+      "featuredImage": "/images/uploads/ben-platt-cherry-on-top/01.jpg",
       "featured": false,
       "order": 29,
       "location": "",
@@ -2116,6 +2129,11 @@
         {
           "type": "video",
           "url": "https://www.youtube.com/watch?v=jzrQRR5Kntk"
+        },
+        {
+          "type": "image",
+          "image": "/images/uploads/ben-platt-cherry-on-top/01.jpg",
+          "focalPoint": "center"
         }
       ]
     },
@@ -2415,6 +2433,36 @@
           "type": "image",
           "image": "/images/uploads/alicia-keys-santa-baby-rollout/02.jpg",
           "focalPoint": "center"
+        }
+      ]
+    },
+    {
+      "slug": "numero-fashion-film",
+      "title": "Numero",
+      "subtitle": "Fashion Film",
+      "description": "",
+      "categories": [
+        "video"
+      ],
+      "accent": "#c65f3f",
+      "featured": false,
+      "hero": false,
+      "order": 35,
+      "placeholderCount": 6,
+      "client": "",
+      "location": "",
+      "year": "",
+      "externalUrl": "",
+      "seoTitle": "",
+      "seoDescription": "",
+      "featuredImage": "/images/uploads/numero-fashion-film/01.jpg",
+      "heroImage": "/images/uploads/numero-fashion-film/01.jpg",
+      "featuredFocalPoint": "top",
+      "media": [
+        {
+          "type": "image",
+          "image": "/images/uploads/numero-fashion-film/01.jpg",
+          "focalPoint": "top"
         }
       ]
     }
