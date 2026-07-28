@@ -446,7 +446,7 @@
       "order": 6,
       "heroOrder": 2,
       "location": "",
-      "subtitle": "Album Artwork & \u201cSpend It\u201d Single",
+      "subtitle": "Album Artwork & “Spend It” Single",
       "title": "Summer Walker",
       "featuredFocalPoint": "top",
       "hero": true,
@@ -524,9 +524,24 @@
       "seoDescription": ""
     },
     {
-      "heroImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
+      "heroImage": "",
       "externalUrl": "",
       "media": [
+        {
+          "type": "video",
+          "url": "https://youtu.be/PsHI0HXt1GY",
+          "caption": "Interlude directed by Rahul"
+        },
+        {
+          "type": "video",
+          "url": "https://youtu.be/uccm9Q-RQ8g",
+          "caption": "Interlude directed by Rahul"
+        },
+        {
+          "type": "video",
+          "url": "https://youtu.be/mdB-cahp2go",
+          "caption": "Interlude directed by Rahul"
+        },
         {
           "type": "image",
           "image": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
@@ -586,7 +601,7 @@
       "accent": "#d24f9e",
       "slug": "camila-cabello-yours-c-tour",
       "client": "",
-      "featuredImage": "/images/uploads/camila-cabello-yours-c-tour/01.jpg",
+      "featuredImage": "/images/uploads/cr522519.jpg",
       "featured": false,
       "order": 8,
       "location": "",
@@ -852,7 +867,7 @@
       "featured": false,
       "order": 12,
       "location": "",
-      "subtitle": "Hit Me Hard and Soft \u2014 3D Film",
+      "subtitle": "Hit Me Hard and Soft — 3D Film",
       "title": "Billie Eilish",
       "hero": false,
       "seoTitle": "",
@@ -928,6 +943,7 @@
       "location": "",
       "subtitle": "Director, Music Videos",
       "title": "KATSEYE",
+      "featuredFocalPoint": "50% 65%",
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -936,8 +952,7 @@
       "placeholderCount": 6,
       "description": "Directed two lyric videos for KATSEYE.",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "50% 65%"
+      "seoDescription": ""
     },
     {
       "featuredOrder": 3,
@@ -1166,7 +1181,7 @@
       "featured": false,
       "order": 16,
       "location": "",
-      "subtitle": "Havana \u2014 Music Video",
+      "subtitle": "Havana — Music Video",
       "title": "Camila Cabello",
       "hero": false,
       "seoTitle": "",
@@ -1240,8 +1255,9 @@
       "featured": false,
       "order": 17,
       "location": "",
-      "subtitle": "Pinky Up \u2014 Music Video",
+      "subtitle": "Pinky Up — Music Video",
       "title": "KATSEYE",
+      "featuredFocalPoint": "50% 27%",
       "hero": false,
       "seoTitle": "",
       "categories": [
@@ -1252,8 +1268,7 @@
       "placeholderCount": 6,
       "description": "Campaign hero imagery for Pinky Up, running across PR, marketing and DSPs, with short-form content for the rollout.",
       "year": "",
-      "seoDescription": "",
-      "featuredFocalPoint": "50% 27%"
+      "seoDescription": ""
     },
     {
       "heroImage": "/images/uploads/olivia-rodrigo-lancome/06.jpg",
@@ -1318,7 +1333,7 @@
       "order": 18,
       "heroOrder": 4,
       "location": "",
-      "subtitle": "Lanc\u00f4me",
+      "subtitle": "Lancôme",
       "title": "Olivia Rodrigo",
       "featuredFocalPoint": "50% 16%",
       "hero": true,
@@ -1327,7 +1342,7 @@
         "photo"
       ],
       "placeholderCount": 6,
-      "description": "Behind-the-scenes imagery on set for the Lanc\u00f4me commercial.",
+      "description": "Behind-the-scenes imagery on set for the Lancôme commercial.",
       "year": "",
       "seoDescription": ""
     },
@@ -1541,7 +1556,7 @@
       "featured": false,
       "order": 20,
       "location": "",
-      "subtitle": "Gabriela \u2014 Music Video",
+      "subtitle": "Gabriela — Music Video",
       "title": "KATSEYE",
       "featuredFocalPoint": "top",
       "hero": false,
@@ -1617,7 +1632,7 @@
         "campaigns"
       ],
       "placeholderCount": 6,
-      "description": "Creative director for the rollout of James Arthur's album \"You,\" building the social plan from the ground up \u2014 hiring the photographer, soliciting music video treatments, and shaping the content and world of the campaign.",
+      "description": "Creative director for the rollout of James Arthur's album \"You,\" building the social plan from the ground up — hiring the photographer, soliciting music video treatments, and shaping the content and world of the campaign.",
       "year": "",
       "seoDescription": ""
     },
@@ -2203,7 +2218,7 @@
       "featured": false,
       "order": 29,
       "location": "",
-      "subtitle": "Cherry On Top \u2014 Music Video",
+      "subtitle": "Cherry On Top — Music Video",
       "title": "Ben Platt",
       "hero": false,
       "seoTitle": "",
@@ -2355,7 +2370,7 @@
       "featured": false,
       "order": 31,
       "location": "",
-      "subtitle": "Debut \u2014 Music Video",
+      "subtitle": "Debut — Music Video",
       "title": "KATSEYE",
       "hero": false,
       "seoTitle": "",
@@ -2483,33 +2498,33 @@
       "seoDescription": ""
     },
     {
-      "slug": "numero-fashion-film",
-      "title": "Numero",
-      "subtitle": "Fashion Film",
-      "description": "",
-      "categories": [
-        "video"
-      ],
-      "accent": "#c65f3f",
-      "featured": false,
-      "hero": false,
-      "order": 35,
-      "placeholderCount": 6,
-      "client": "",
-      "location": "",
-      "year": "",
-      "externalUrl": "",
-      "seoTitle": "",
-      "seoDescription": "",
-      "featuredImage": "/images/uploads/numero-fashion-film/01.jpg",
       "heroImage": "/images/uploads/numero-fashion-film/01.jpg",
-      "featuredFocalPoint": "top",
+      "externalUrl": "",
       "media": [
         {
           "type": "video",
           "url": "https://player.vimeo.com/video/667991874?h=7354f94e1e"
         }
-      ]
+      ],
+      "accent": "#c65f3f",
+      "slug": "numero-fashion-film",
+      "client": "",
+      "featuredImage": "/images/uploads/numero-fashion-film/01.jpg",
+      "featured": false,
+      "order": 35,
+      "location": "",
+      "subtitle": "Fashion Film",
+      "title": "Numero",
+      "featuredFocalPoint": "top",
+      "hero": false,
+      "seoTitle": "",
+      "categories": [
+        "video"
+      ],
+      "placeholderCount": 6,
+      "description": "",
+      "year": "",
+      "seoDescription": ""
     }
   ]
 }
