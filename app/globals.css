@@ -246,6 +246,17 @@ body {
     letter-spacing: 0.04em;
     color: var(--muted);
   }
+  /* A project's category tags — quieter than .meta so a project with
+     several categories doesn't read as a heavy, wrapping block of
+     shouting capitals. */
+  .tags {
+    font-family: var(--font-mono);
+    font-style: italic;
+    font-size: 0.625rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: var(--muted);
+  }
 
   /* Underline that draws in from the left on hover. */
   .ul-link {

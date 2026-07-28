@@ -33,7 +33,7 @@ function Meta({ p, className = "" }: { p: Project; className?: string }) {
       {p.subtitle && <p className="meta mt-1.5 opacity-70">{p.subtitle}</p>}
       {p.year && <p className="meta mt-0.5 opacity-70">{p.year}</p>}
       <div className="mt-3 flex items-end justify-between gap-4">
-        <p className="meta max-w-[18ch] leading-snug opacity-70">{roleLine(p)}</p>
+        <p className="tags max-w-[18ch] leading-snug">{roleLine(p)}</p>
         <span
           aria-hidden
           className="text-sm transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

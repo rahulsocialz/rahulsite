@@ -24,12 +24,12 @@ export async function generateMetadata({
 
 /* A metadata line in the editorial rail. Renders nothing when the CMS field
    is empty, so optional fields never leave a gap. */
-function Spec({ label, value }: { label: string; value?: string }) {
+function Spec({ label, value, tag = false }: { label: string; value?: string; tag?: boolean }) {
   if (!value) return null;
   return (
     <div>
       <p className="label text-[var(--muted)]">{label}</p>
-      <p className="meta mt-1.5">{value}</p>
+      <p className={tag ? "tags mt-1.5" : "meta mt-1.5"}>{value}</p>
     </div>
   );
 }
@@ -60,7 +60,7 @@ export default async function ProjectDetail({
 
         <div className="mt-6 space-y-5">
           <Spec label="Client" value={project.client} />
-          <Spec label="Role" value={services} />
+          <Spec label="Role" value={services} tag />
           <Spec label="Location" value={project.location} />
           <Spec label="Year" value={project.year} />
         </div>
