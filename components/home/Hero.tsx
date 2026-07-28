@@ -202,8 +202,8 @@ export function Hero() {
               <OverlayModule
                 p={c}
                 caption={false}
-                sizes="(min-width:1024px) 34vw, 100vw"
-                className="aspect-[16/9] sm:col-span-6"
+                sizes="(min-width:1024px) 17vw, 100vw"
+                className="aspect-[4/3] sm:col-span-3 sm:aspect-auto"
               />
             )}
 
@@ -221,8 +221,8 @@ export function Hero() {
             {d && (
               <OverlayModule
                 p={d}
-                sizes="(min-width:1024px) 30vw, 100vw"
-                className="aspect-[4/3] sm:col-span-3 sm:aspect-auto"
+                sizes="(min-width:1024px) 34vw, 100vw"
+                className="aspect-[16/9] sm:col-span-6"
               />
             )}
           </div>
