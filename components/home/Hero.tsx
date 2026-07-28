@@ -10,8 +10,17 @@ const cover = (p: Project) => p.heroImage || p.featuredImage || "";
 
 /* Artist / project / year / arrow — the caption block that sits with each
    module in the collage. Optional fields simply don't render. */
-function Caption({ p, tone = "light" }: { p: Project; tone?: "light" | "dark" }) {
+function Caption({
+  p,
+  tone = "light",
+  arrow = "↗",
+}: {
+  p: Project;
+  tone?: "light" | "dark";
+  arrow?: "↗" | "↖";
+}) {
   const muted = tone === "light" ? "opacity-70" : "text-[var(--muted)]";
+  const hoverShift = arrow === "↖" ? "group-hover:-translate-x-0.5" : "group-hover:translate-x-0.5";
   return (
     <>
       <p className="meta font-medium">{p.title}</p>
@@ -19,9 +28,9 @@ function Caption({ p, tone = "light" }: { p: Project; tone?: "light" | "dark" })
       {p.year && <p className={`meta mt-0.5 ${muted}`}>{p.year}</p>}
       <span
         aria-hidden
-        className="mt-3 block text-sm transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+        className={`mt-3 block text-sm transition-transform duration-300 group-hover:-translate-y-0.5 ${hoverShift}`}
       >
-        ↗
+        {arrow}
       </span>
     </>
   );
@@ -214,7 +223,7 @@ export function Hero() {
                 href={`/projects/${c.slug}`}
                 className="group hidden flex-col justify-center border border-[var(--line-soft)] bg-[var(--paper-2)] p-4 sm:col-span-3 sm:flex"
               >
-                <Caption p={c} tone="dark" />
+                <Caption p={c} tone="dark" arrow="↖" />
               </Link>
             )}
 
